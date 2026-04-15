@@ -1,237 +1,479 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RodiNote - Hukuki Belgeler / Legal Documents</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f6fa; color: #2d3436; line-height: 1.7; }
-  .header { background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%); color: white; padding: 40px 20px; text-align: center; }
-  .header h1 { font-size: 28px; letter-spacing: 2px; margin-bottom: 6px; }
-  .header p { font-size: 14px; opacity: 0.7; }
-  .tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 20px; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 10; }
-  .tab { padding: 10px 18px; border: 2px solid #ddd; border-radius: 25px; cursor: pointer; font-size: 14px; font-weight: 500; transition: all 0.2s; background: #fff; color: #636e72; }
-  .tab:hover { border-color: #1A1A2E; color: #1A1A2E; }
-  .tab.active { background: #1A1A2E; color: #fff; border-color: #1A1A2E; }
-  .content { max-width: 800px; margin: 30px auto; padding: 0 20px 60px; }
-  .doc { display: none; background: #fff; border-radius: 12px; padding: 40px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-  .doc.active { display: block; }
-  .doc h2 { font-size: 22px; color: #1A1A2E; margin: 30px 0 12px; padding-top: 15px; border-top: 1px solid #eee; }
-  .doc h2:first-of-type { border-top: none; margin-top: 10px; }
-  .doc h1 { font-size: 26px; color: #1A1A2E; margin-bottom: 8px; }
-  .doc p { margin: 10px 0; font-size: 15px; color: #2d3436; }
-  .doc .meta { color: #999; font-size: 13px; margin-bottom: 20px; }
-  .doc .copyright { margin-top: 30px; padding-top: 20px; border-top: 2px solid #eee; color: #999; font-size: 13px; }
-  .footer { text-align: center; padding: 30px; color: #999; font-size: 13px; }
-  @media (max-width: 600px) {
-    .doc { padding: 24px 18px; }
-    .tabs { gap: 6px; padding: 14px; }
-    .tab { padding: 8px 14px; font-size: 13px; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RodiNote - Hukuki Belgeler / Legal Documents</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-secondary: #555;
+            --accent: #2563eb;
+            --accent-light: #e8f0fe;
+            --border: #e2e8f0;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 48px 0 32px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--card-bg);
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        .section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px 36px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow);
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--accent);
+        }
+
+        .section .update-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+        }
+
+        .section h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 28px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .section strong {
+            font-weight: 600;
+        }
+
+        .section ul {
+            margin: 8px 0 12px 20px;
+            font-size: 0.95rem;
+        }
+
+        .section ul li {
+            margin-bottom: 6px;
+        }
+
+        .contact-box {
+            background: var(--accent-light);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .contact-box a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 32px 0;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px 16px 60px; }
+            .section { padding: 28px 20px; }
+            .header h1 { font-size: 1.6rem; }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
 
-<div class="header">
-  <h1>RODİ NOTE</h1>
-  <p>Hukuki Belgeler / Legal Documents</p>
-</div>
+        <div class="header">
+            <h1>RODİ NOTE</h1>
+            <p>Hukuki Belgeler / Legal Documents</p>
+        </div>
 
-<div class="tabs">
-  <div class="tab active" onclick="show('privacy-tr')">Gizlilik Politikası</div>
-  <div class="tab" onclick="show('privacy-en')">Privacy Policy</div>
-  <div class="tab" onclick="show('terms-tr')">Kullanım Koşulları</div>
-  <div class="tab" onclick="show('terms-en')">Terms of Use</div>
-</div>
+        <div class="nav-links">
+            <a href="#gizlilik">Gizlilik Politikası</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#kullanim">Kullanım Koşulları</a>
+            <a href="#terms">Terms of Use</a>
+        </div>
 
-<div class="content">
+        <!-- ==================== GİZLİLİK POLİTİKASI ==================== -->
+        <div class="section" id="gizlilik">
+            <h2>Gizlilik Politikası</h2>
+            <p class="update-date">Son Güncelleme: 16 Nisan 2026</p>
 
-<!-- GIZLILIK POLITIKASI - TURKCE -->
-<div id="privacy-tr" class="doc active">
-<h1>Gizlilik Politikası</h1>
-<p class="meta">Son Güncelleme: 12 Nisan 2026</p>
-<p>Bu Gizlilik Politikası, RodiNote ("RODİ NOTE") mobil uygulamasının kullanıcılarının kişisel verilerinin nasıl toplandığını, kullanıldığını, saklandığını ve korunduğunu açıklamaktadır.</p>
-<p>İletişim: rodinoteapp@gmail.com</p>
+            <p>Bu Gizlilik Politikası, RodiNote ("RODİ NOTE") mobil uygulamasının kullanıcılarının kişisel verilerinin nasıl toplandığını, kullanıldığını, saklandığını ve korunduğunu açıklamaktadır.</p>
 
-<h2>1. Toplanan Veriler</h2>
-<p>RodiNote, kullanıcı gizliliğine büyük önem vermektedir. Uygulamamız aşağıdaki verileri toplar ve işler:</p>
-<p><strong>a) Cihazda Yerel Olarak Saklanan Veriler</strong></p>
-<p>Oluşturduğunuz klasörler, konular ve notlar (flashcard'lar); oyun skorları ve performans istatistikleri; uygulama ayarları ve tema tercihleri; rozet ve başarı verileri; haftalık aktivite verileri. Bu veriler yalnızca cihazınızda saklanır ve sunucularımıza gönderilmez.</p>
-<p><strong>b) Yapay Zeka (AI) Özelliği Kapsamında İşlenen Veriler</strong></p>
-<p>Uygulamamızın AI kart oluşturma özelliğini kullandığınızda, girdiğiniz metin veya yüklediğiniz PDF içeriği Google Gemini API'ye gönderilir. Bu veriler yalnızca kart oluşturma amacıyla kullanılır ve RodiNote tarafından saklanmaz. Google'ın veri işleme politikası için Google Gizlilik Politikası'nı inceleyebilirsiniz.</p>
-<p><strong>c) Otomatik Olarak Toplanan Veriler</strong></p>
-<p>Uygulamamız analitik veya izleme amaçlı herhangi bir üçüncü taraf SDK kullanmamaktadır. IP adresi, cihaz kimliği veya konum bilgisi toplanmamaktadır.</p>
+            <p>İletişim: <strong>rodinoteapp@gmail.com</strong></p>
 
-<h2>2. Verilerin Kullanım Amaçları</h2>
-<p>Toplanan veriler yalnızca şu amaçlarla kullanılır: uygulamanın temel işlevlerini sağlamak (not oluşturma, oyun oynama, istatistik takibi); AI özelliği aracılığıyla otomatik kart oluşturmak; kullanıcı deneyimini iyileştirmek.</p>
+            <h3>1. Toplanan Veriler</h3>
+            <p>RodiNote, kullanıcı gizliliğine büyük önem vermektedir. Uygulamamız aşağıdaki verileri toplar ve işler:</p>
 
-<h2>3. Veri Paylaşımı</h2>
-<p>RodiNote, kişisel verilerinizi üçüncü taraflarla satmaz, kiralamaz veya paylaşmaz. Tek istisna, AI kart oluşturma özelliğini kullandığınızda girdiğiniz içeriğin Google Gemini API'ye iletilmesidir. Bu iletim, yalnızca hizmetin sağlanması amacıyla gerçekleştirilir.</p>
+            <p><strong>a) Cihazda Yerel Olarak Saklanan Veriler</strong></p>
+            <p>Oluşturduğunuz klasörler, konular ve notlar (flashcard'lar); oyun skorları ve performans istatistikleri; uygulama ayarları ve tema tercihleri; rozet ve başarı verileri; haftalık aktivite verileri. Bu veriler yalnızca cihazınızda saklanır ve sunucularımıza gönderilmez.</p>
 
-<h2>4. Veri Güvenliği</h2>
-<p>Verileriniz cihazınızda yerel olarak saklanır ve cihazınızın güvenlik önlemleriyle korunur. Uygulama, verilerinizi harici sunuculara aktarmaz. JSON yedekleme özelliğini kullanarak verilerinizi dışa aktarabilir ve güvende tutabilirsiniz.</p>
+            <p><strong>b) Hesap ve Kimlik Doğrulama Verileri (Firebase Authentication)</strong></p>
+            <p>RodiNote, Apple ile Giriş ve Google ile Giriş seçenekleri sunmaktadır. Bu yöntemlerle giriş yaptığınızda; görünen adınız ve benzersiz kullanıcı kimliğiniz (UID) Firebase Authentication tarafından işlenir ve saklanır. Apple ile Giriş kullanıcıları e-posta adreslerini gizlemeyi tercih edebilir. Bu veriler hesabınızı yönetmek, abonelik durumunuzu eşleştirmek ve kişiselleştirilmiş deneyim sunmak amacıyla kullanılır. Firebase'in veri işleme politikası için <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Gizlilik Politikası</a>'nı inceleyebilirsiniz.</p>
 
-<h2>5. Çocukların Gizliliği</h2>
-<p>RodiNote, 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamaz. Uygulamayı kullanan küçük yaştaki kullanıcıların ebeveyn gözetiminde kullanması tavsiye edilir.</p>
+            <p><strong>c) Yapay Zeka (AI) Özelliği Kapsamında İşlenen Veriler</strong></p>
+            <p>Uygulamamızın AI kart oluşturma özelliğini kullandığınızda, girdiğiniz metin, yüklediğiniz PDF dosyası veya çektiğiniz/seçtiğiniz fotoğraf içeriği Google Gemini API'ye gönderilir. Bu veriler yalnızca kart oluşturma amacıyla kullanılır ve RodiNote tarafından saklanmaz. Google'ın veri işleme politikası için <a href="https://policies.google.com/privacy" target="_blank">Google Gizlilik Politikası</a>'nı inceleyebilirsiniz.</p>
 
-<h2>6. Uygulama İçi Satın Almalar</h2>
-<p>RodiNote, freemium bir model sunmaktadır. Premium özellikler uygulama içi satın alma yoluyla sunulabilir. Ödeme işlemleri Apple App Store veya Google Play Store altyapısı üzerinden gerçekleştirilir ve ödeme bilgileriniz RodiNote tarafından görülmez veya saklanmaz.</p>
+            <p><strong>d) Reklam Verileri (Google AdMob)</strong></p>
+            <p>Ücretsiz (Free) kullanıcılara reklam göstermek amacıyla Google AdMob SDK kullanılmaktadır. AdMob, reklam kimliği (IDFA/GAID), cihaz bilgileri, IP adresi ve uygulama kullanım verileri gibi bilgileri toplayabilir. Bu veriler kişiselleştirilmiş veya kişiselleştirilmemiş reklam sunmak amacıyla kullanılır. Premium veya Max aboneleri reklam görmez ve bu veriler toplanmaz. Detaylar için <a href="https://policies.google.com/technologies/ads" target="_blank">Google Reklam Politikası</a>'nı inceleyebilirsiniz.</p>
 
-<h2>7. Kullanıcı Hakları</h2>
-<p>Verileriniz cihazınızda saklandığından, istediğiniz zaman uygulamayı silerek tüm verilerinizi kaldırabilirsiniz. JSON yedekleme özelliğiyle verilerinizi dışa aktarabilirsiniz. AI özelliğini kullanıp kullanmamak tamamen sizin tercihinizdir.</p>
+            <p><strong>e) Abonelik Yönetimi Verileri (RevenueCat)</strong></p>
+            <p>Uygulama içi abonelikleri yönetmek amacıyla RevenueCat SDK kullanılmaktadır. RevenueCat, anonim kullanıcı kimliği, satın alma geçmişi, abonelik durumu ve platform bilgisi gibi verileri işler. Ödeme bilgileriniz (kredi kartı vb.) RevenueCat veya RodiNote tarafından görülmez; bu bilgiler yalnızca Apple App Store veya Google Play Store tarafından işlenir. Detaylar için <a href="https://www.revenuecat.com/privacy/" target="_blank">RevenueCat Gizlilik Politikası</a>'nı inceleyebilirsiniz.</p>
 
-<h2>8. Politika Değişiklikleri</h2>
-<p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinden bildirilecektir. Uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
+            <p><strong>f) Fotoğraf ve Kamera Erişimi</strong></p>
+            <p>AI kart oluşturma özelliğinin fotoğraf modunu kullandığınızda, uygulama cihazınızın kamerasına veya fotoğraf galerisine erişim izni isteyebilir. Erişim yalnızca AI'ya görsel içerik göndermek amacıyla kullanılır; fotoğraflarınız RodiNote sunucularında saklanmaz.</p>
 
-<h2>9. İletişim</h2>
-<p>Gizlilik politikamız hakkında sorularınız için bize ulaşabilirsiniz:</p>
-<p>E-posta: rodinoteapp@gmail.com</p>
+            <h3>2. Üçüncü Taraf Hizmetler</h3>
+            <p>RodiNote aşağıdaki üçüncü taraf hizmetlerini kullanmaktadır:</p>
+            <ul>
+                <li><strong>Firebase Authentication</strong> — Hesap oluşturma ve kimlik doğrulama</li>
+                <li><strong>Google Gemini API</strong> — AI destekli kart oluşturma</li>
+                <li><strong>Google AdMob</strong> — Ücretsiz kullanıcılara reklam gösterimi</li>
+                <li><strong>RevenueCat</strong> — Abonelik yönetimi</li>
+                <li><strong>Apple App Store / Google Play Store</strong> — Ödeme işlemleri</li>
+            </ul>
 
-<p class="copyright">© 2025 RodiNote. Tüm hakları saklıdır.</p>
-</div>
+            <h3>3. Verilerin Kullanım Amaçları</h3>
+            <p>Toplanan veriler yalnızca şu amaçlarla kullanılır: uygulamanın temel işlevlerini sağlamak (not oluşturma, oyun oynama, istatistik takibi); hesap yönetimi ve kimlik doğrulama; AI özelliği aracılığıyla otomatik kart oluşturmak; abonelik durumunu yönetmek; ücretsiz kullanıcılara reklam sunmak; kullanıcı deneyimini iyileştirmek.</p>
 
-<!-- PRIVACY POLICY - ENGLISH -->
-<div id="privacy-en" class="doc">
-<h1>Privacy Policy</h1>
-<p class="meta">Last Updated: April 12, 2026</p>
-<p>This Privacy Policy explains how RodiNote ("RODİ NOTE") mobile application collects, uses, stores, and protects the personal data of its users.</p>
-<p>Contact: rodinoteapp@gmail.com</p>
+            <h3>4. Veri Paylaşımı</h3>
+            <p>RodiNote, kişisel verilerinizi üçüncü taraflarla satmaz veya kiralamaz. Veriler yalnızca yukarıda belirtilen üçüncü taraf hizmet sağlayıcılarla, hizmetin sağlanması amacıyla paylaşılır.</p>
 
-<h2>1. Data We Collect</h2>
-<p>RodiNote places great importance on user privacy. Our application collects and processes the following data:</p>
-<p><strong>a) Data Stored Locally on Your Device</strong></p>
-<p>Folders, topics, and notes (flashcards) you create; game scores and performance statistics; app settings and theme preferences; badge and achievement data; weekly activity data. This data is stored only on your device and is not sent to our servers.</p>
-<p><strong>b) Data Processed Through AI Feature</strong></p>
-<p>When you use our AI card generation feature, the text you enter or PDF content you upload is sent to Google Gemini API. This data is used solely for card generation purposes and is not stored by RodiNote. Please refer to Google's Privacy Policy for their data processing practices.</p>
-<p><strong>c) Automatically Collected Data</strong></p>
-<p>Our application does not use any third-party SDKs for analytics or tracking purposes. No IP addresses, device identifiers, or location data are collected.</p>
+            <h3>5. Veri Güvenliği</h3>
+            <p>Yerel verileriniz cihazınızda saklanır ve cihazınızın güvenlik önlemleriyle korunur. Hesap verileri Firebase'in güvenlik altyapısıyla korunmaktadır. JSON yedekleme özelliğini kullanarak yerel verilerinizi dışa aktarabilir ve güvende tutabilirsiniz.</p>
 
-<h2>2. How We Use Data</h2>
-<p>Collected data is used solely for the following purposes: providing core app functionality (note creation, gameplay, statistics tracking); generating automatic cards through the AI feature; improving user experience.</p>
+            <h3>6. Çocukların Gizliliği</h3>
+            <p>RodiNote'un hesap oluşturma özelliği 13 yaş ve üzeri kullanıcılar için tasarlanmıştır. 13 yaşın altındaki kullanıcıların uygulamayı ebeveyn gözetiminde kullanması tavsiye edilir. RodiNote, 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamaz. 13 yaş altı bir kullanıcının veri paylaştığını fark ederseniz, lütfen bizimle iletişime geçin.</p>
 
-<h2>3. Data Sharing</h2>
-<p>RodiNote does not sell, rent, or share your personal data with third parties. The only exception is when you use the AI card generation feature, where your input content is transmitted to Google Gemini API solely for the purpose of providing the service.</p>
+            <h3>7. Uygulama İçi Satın Almalar</h3>
+            <p>RodiNote üç katmanlı bir üyelik modeli sunmaktadır:</p>
+            <ul>
+                <li><strong>Free (Ücretsiz)</strong> — Reklamlı, temel özellikler</li>
+                <li><strong>Premium</strong> — Reklamsız, AI metin ile kart oluşturma</li>
+                <li><strong>Max</strong> — Tüm AI modları (metin, PDF, fotoğraf), gelişmiş özellikler</li>
+            </ul>
+            <p>Ödeme işlemleri Apple App Store veya Google Play Store üzerinden gerçekleştirilir ve ödeme bilgileriniz RodiNote tarafından görülmez veya saklanmaz.</p>
 
-<h2>4. Data Security</h2>
-<p>Your data is stored locally on your device and is protected by your device's security measures. The app does not transfer your data to external servers. You can export and safeguard your data using the JSON backup feature.</p>
+            <h3>8. Kullanıcı Hakları</h3>
+            <p>Yerel verilerinizi istediğiniz zaman uygulamayı silerek kaldırabilirsiniz. Firebase hesabınızı uygulama ayarlarından veya bizimle iletişime geçerek silebilirsiniz. JSON yedekleme özelliğiyle verilerinizi dışa aktarabilirsiniz. AI, reklam ve hesap özelliklerini kullanıp kullanmamak tamamen sizin tercihinizdir.</p>
 
-<h2>5. Children's Privacy</h2>
-<p>RodiNote does not knowingly collect personal data from children under the age of 13. It is recommended that younger users use the application under parental supervision.</p>
+            <h3>9. Politika Değişiklikleri</h3>
+            <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinden bildirilecektir. Uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
 
-<h2>6. In-App Purchases</h2>
-<p>RodiNote offers a freemium model. Premium features may be offered through in-app purchases. Payment transactions are processed through Apple App Store or Google Play Store infrastructure, and your payment information is neither visible to nor stored by RodiNote.</p>
+            <h3>10. İletişim</h3>
+            <div class="contact-box">
+                Gizlilik politikamız hakkında sorularınız için bize ulaşabilirsiniz:<br>
+                E-posta: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
+            </div>
+        </div>
 
-<h2>7. User Rights</h2>
-<p>Since your data is stored on your device, you can remove all your data at any time by deleting the application. You can export your data using the JSON backup feature. Whether to use the AI feature is entirely your choice.</p>
+        <!-- ==================== PRIVACY POLICY ==================== -->
+        <div class="section" id="privacy">
+            <h2>Privacy Policy</h2>
+            <p class="update-date">Last Updated: April 16, 2026</p>
 
-<h2>8. Policy Changes</h2>
-<p>This Privacy Policy may be updated from time to time. Significant changes will be communicated through the application. Your continued use of the application constitutes acceptance of the updated policy.</p>
+            <p>This Privacy Policy explains how RodiNote ("RODİ NOTE") mobile application collects, uses, stores, and protects the personal data of its users.</p>
 
-<h2>9. Contact</h2>
-<p>For questions about our privacy policy, you can reach us at:</p>
-<p>Email: rodinoteapp@gmail.com</p>
+            <p>Contact: <strong>rodinoteapp@gmail.com</strong></p>
 
-<p class="copyright">© 2025 RodiNote. All rights reserved.</p>
-</div>
+            <h3>1. Data We Collect</h3>
+            <p>RodiNote places great importance on user privacy. Our application collects and processes the following data:</p>
 
-<!-- KULLANIM KOSULLARI - TURKCE -->
-<div id="terms-tr" class="doc">
-<h1>Kullanım Koşulları</h1>
-<p class="meta">Son Güncelleme: 12 Nisan 2026</p>
-<p>Bu Kullanım Koşulları, RodiNote ("RODİ NOTE") mobil uygulamasının kullanımına ilişkin şartları belirlemektedir. Uygulamayı indirerek ve kullanarak bu koşulları kabul etmiş sayılırsınız.</p>
+            <p><strong>a) Data Stored Locally on Your Device</strong></p>
+            <p>Folders, topics, and notes (flashcards) you create; game scores and performance statistics; app settings and theme preferences; badge and achievement data; weekly activity data. This data is stored only on your device and is not sent to our servers.</p>
 
-<h2>1. Hizmet Tanımı</h2>
-<p>RodiNote, öğrencilere yönelik bir çalışma ve not uygulamasıdır. Uygulama; flashcard oluşturma ve düzenleme, 7 farklı interaktif öğrenme oyunu, yapay zeka destekli otomatik kart oluşturma, hazır şablon mağazası (YKS, genel kültür vb.), JSON formatında yedekleme ve dışa aktarma, performans takibi ve istatistikler gibi özellikler sunmaktadır.</p>
+            <p><strong>b) Account and Authentication Data (Firebase Authentication)</strong></p>
+            <p>RodiNote offers Sign in with Apple and Sign in with Google options. When you sign in using these methods, your display name and unique user identifier (UID) are processed and stored by Firebase Authentication. Sign in with Apple users may choose to hide their email address. This data is used to manage your account, match your subscription status, and provide a personalized experience. For Firebase's data processing practices, please refer to the <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>.</p>
 
-<h2>2. Kullanım Şartları</h2>
-<p>Uygulamayı kullanarak aşağıdaki şartları kabul edersiniz: Uygulamayı yalnızca yasal amaçlarla kullanacaksınız. Uygulamayı tersine mühendislik, kaynak kodu çıkarma veya değiştirme girişiminde bulunmayacaksınız. Uygulamayı kopyalamayacak, dağıtmayacak veya başka bir ürün olarak sunmayacaksınız. AI özelliğini kötüye kullanmayacak, uygunsuz veya yasadışı içerik oluşturmak için kullanmayacaksınız.</p>
+            <p><strong>c) Data Processed Through AI Feature</strong></p>
+            <p>When you use our AI card generation feature, the text you enter, PDF files you upload, or photos you take/select are sent to Google Gemini API. This data is used solely for card generation purposes and is not stored by RodiNote. Please refer to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> for their data processing practices.</p>
 
-<h2>3. Fikri Mülkiyet Hakları</h2>
-<p>RodiNote uygulamasının tüm hakları saklıdır. Uygulamanın tasarımı, kodu, grafikleri, oyun mekanikleri, hazır şablonları ve tüm içeriği telif hakkı ile korunmaktadır. Bu materyallerin izinsiz kopyalanması, dağıtılması, değiştirilmesi veya ticari amaçla kullanılması kesinlikle yasaktır ve yasal işlem başlatılabilir.</p>
-<p>Kullanıcıların uygulama içinde oluşturdukları kişisel notlar ve kartlar, kullanıcının kendi mülkiyetindedir.</p>
+            <p><strong>d) Advertising Data (Google AdMob)</strong></p>
+            <p>Google AdMob SDK is used to display advertisements to Free (unpaid) users. AdMob may collect information such as advertising identifier (IDFA/GAID), device information, IP address, and app usage data. This data is used to serve personalized or non-personalized ads. Premium and Max subscribers do not see ads and this data is not collected. For details, please refer to <a href="https://policies.google.com/technologies/ads" target="_blank">Google's Advertising Policy</a>.</p>
 
-<h2>4. Premium Üyelik ve Ödemeler</h2>
-<p>RodiNote, ücretsiz (freemium) ve premium üyelik seçenekleri sunmaktadır. Premium özellikler uygulama içi satın alma yoluyla sunulur. Ödemeler Apple App Store veya Google Play Store üzerinden işlenir. İptal ve iade politikaları, ilgili mağazanın kurallarına tabidir. Abonelik otomatik olarak yenilenebilir; iptal etmek için ilgili mağazanın abonelik ayarlarını kullanmanız gerekmektedir.</p>
+            <p><strong>e) Subscription Management Data (RevenueCat)</strong></p>
+            <p>RevenueCat SDK is used to manage in-app subscriptions. RevenueCat processes data such as anonymous user identifier, purchase history, subscription status, and platform information. Your payment information (credit card, etc.) is not visible to RevenueCat or RodiNote; this information is processed solely by Apple App Store or Google Play Store. For details, please refer to the <a href="https://www.revenuecat.com/privacy/" target="_blank">RevenueCat Privacy Policy</a>.</p>
 
-<h2>5. AI (Yapay Zeka) Özelliği</h2>
-<p>AI kart oluşturma özelliği Google Gemini API altyapısını kullanmaktadır. AI tarafından oluşturulan içeriklerin doğruluğu garanti edilmez; kullanıcı, oluşturulan kartları kontrol etmelidir. AI özelliğinin kullanım limitleri, üyelik türüne göre farklılık gösterebilir. RodiNote, AI hizmetinin kesintisiz çalışacağını garanti etmez.</p>
+            <p><strong>f) Photo and Camera Access</strong></p>
+            <p>When you use the photo mode of the AI card generation feature, the app may request access to your device's camera or photo library. Access is used solely to send visual content to the AI; your photos are not stored on RodiNote servers.</p>
 
-<h2>6. Sorumluluk Sınırları</h2>
-<p>RodiNote, eğitim amaçlı bir yardımcı araç olarak sunulmaktadır. Uygulama içeriğinin akademik doğruluğu garanti edilmez. Veri kaybından kaynaklanan zararlardan RodiNote sorumlu tutulamaz; kullanıcıların düzenli yedekleme yapması önerilir. Uygulama "olduğu gibi" sunulmaktadır ve herhangi bir açık veya zımni garanti verilmemektedir.</p>
+            <h3>2. Third-Party Services</h3>
+            <p>RodiNote uses the following third-party services:</p>
+            <ul>
+                <li><strong>Firebase Authentication</strong> — Account creation and authentication</li>
+                <li><strong>Google Gemini API</strong> — AI-powered card generation</li>
+                <li><strong>Google AdMob</strong> — Advertising for free users</li>
+                <li><strong>RevenueCat</strong> — Subscription management</li>
+                <li><strong>Apple App Store / Google Play Store</strong> — Payment processing</li>
+            </ul>
 
-<h2>7. Hesap Sonlandırma</h2>
-<p>RodiNote, kullanım koşullarını ihlal eden kullanıcıların hizmete erişimini kısıtlama veya sonlandırma hakkını saklı tutar.</p>
+            <h3>3. How We Use Data</h3>
+            <p>Collected data is used solely for the following purposes: providing core app functionality (note creation, gameplay, statistics tracking); account management and authentication; generating automatic cards through the AI feature; managing subscription status; serving advertisements to free users; improving user experience.</p>
 
-<h2>8. Değişiklikler</h2>
-<p>Bu Kullanım Koşulları zaman zaman güncellenebilir. Güncellemeler uygulama içinden bildirilecektir. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, yeni koşulları kabul ettiğiniz anlamına gelir.</p>
+            <h3>4. Data Sharing</h3>
+            <p>RodiNote does not sell or rent your personal data to third parties. Data is shared only with the third-party service providers listed above, solely for the purpose of providing the service.</p>
 
-<h2>9. Uygulanacak Hukuk</h2>
-<p>Bu Kullanım Koşulları, Türkiye Cumhuriyeti kanunlarına tabi olup, uyuşmazlıklarda Türkiye Cumhuriyeti mahkemeleri yetkilidir.</p>
+            <h3>5. Data Security</h3>
+            <p>Your local data is stored on your device and is protected by your device's security measures. Account data is protected by Firebase's security infrastructure. You can export and safeguard your local data using the JSON backup feature.</p>
 
-<h2>10. İletişim</h2>
-<p>Kullanım koşullarımız hakkında sorularınız için bize ulaşabilirsiniz:</p>
-<p>E-posta: rodinoteapp@gmail.com</p>
+            <h3>6. Children's Privacy</h3>
+            <p>RodiNote's account creation feature is designed for users aged 13 and above. It is recommended that users under 13 use the application under parental supervision. RodiNote does not knowingly collect personal data from children under the age of 13. If you become aware that a child under 13 has shared data, please contact us.</p>
 
-<p class="copyright">© 2025 RodiNote. Tüm hakları saklıdır.</p>
-</div>
+            <h3>7. In-App Purchases</h3>
+            <p>RodiNote offers a three-tier membership model:</p>
+            <ul>
+                <li><strong>Free</strong> — Ad-supported, basic features</li>
+                <li><strong>Premium</strong> — Ad-free, AI text-based card generation</li>
+                <li><strong>Max</strong> — All AI modes (text, PDF, photo), advanced features</li>
+            </ul>
+            <p>Payment transactions are processed through Apple App Store or Google Play Store, and your payment information is neither visible to nor stored by RodiNote.</p>
 
-<!-- TERMS OF USE - ENGLISH -->
-<div id="terms-en" class="doc">
-<h1>Terms of Use</h1>
-<p class="meta">Last Updated: April 12, 2026</p>
-<p>These Terms of Use set forth the conditions regarding the use of the RodiNote ("RODİ NOTE") mobile application. By downloading and using the application, you agree to these terms.</p>
+            <h3>8. User Rights</h3>
+            <p>You can remove your local data at any time by deleting the application. You can delete your Firebase account through the app settings or by contacting us. You can export your data using the JSON backup feature. Whether to use the AI, advertising, and account features is entirely your choice.</p>
 
-<h2>1. Service Description</h2>
-<p>RodiNote is a study and note-taking application designed for students. The app offers features including: flashcard creation and editing, 7 different interactive learning games, AI-powered automatic card generation, ready-made template store (university entrance exams, general knowledge, etc.), JSON format backup and export, and performance tracking and statistics.</p>
+            <h3>9. Policy Changes</h3>
+            <p>This Privacy Policy may be updated from time to time. Significant changes will be communicated through the application. Your continued use of the application constitutes acceptance of the updated policy.</p>
 
-<h2>2. Terms of Use</h2>
-<p>By using the application, you agree to the following: You will use the application only for lawful purposes. You will not attempt to reverse engineer, extract source code, or modify the application. You will not copy, distribute, or present the application as another product. You will not misuse the AI feature or use it to generate inappropriate or illegal content.</p>
+            <h3>10. Contact</h3>
+            <div class="contact-box">
+                For questions about our privacy policy, you can reach us at:<br>
+                Email: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
+            </div>
+        </div>
 
-<h2>3. Intellectual Property Rights</h2>
-<p>All rights to the RodiNote application are reserved. The application's design, code, graphics, game mechanics, ready-made templates, and all content are protected by copyright. Unauthorized copying, distribution, modification, or commercial use of these materials is strictly prohibited and may result in legal action.</p>
-<p>Personal notes and cards created by users within the application remain the property of the user.</p>
+        <div class="divider"></div>
 
-<h2>4. Premium Membership and Payments</h2>
-<p>RodiNote offers free (freemium) and premium membership options. Premium features are offered through in-app purchases. Payments are processed through Apple App Store or Google Play Store. Cancellation and refund policies are subject to the rules of the respective store. Subscriptions may renew automatically; to cancel, you must use the subscription settings of the respective store.</p>
+        <!-- ==================== KULLANIM KOŞULLARI ==================== -->
+        <div class="section" id="kullanim">
+            <h2>Kullanım Koşulları</h2>
+            <p class="update-date">Son Güncelleme: 16 Nisan 2026</p>
 
-<h2>5. AI (Artificial Intelligence) Feature</h2>
-<p>The AI card generation feature uses Google Gemini API infrastructure. The accuracy of AI-generated content is not guaranteed; users should review generated cards. Usage limits of the AI feature may vary based on membership type. RodiNote does not guarantee uninterrupted operation of the AI service.</p>
+            <p>Bu Kullanım Koşulları, RodiNote ("RODİ NOTE") mobil uygulamasının kullanımına ilişkin şartları belirlemektedir. Uygulamayı indirerek ve kullanarak bu koşulları kabul etmiş sayılırsınız.</p>
 
-<h2>6. Limitation of Liability</h2>
-<p>RodiNote is provided as an educational support tool. The academic accuracy of application content is not guaranteed. RodiNote cannot be held responsible for damages resulting from data loss; users are advised to perform regular backups. The application is provided "as is" without any express or implied warranties.</p>
+            <h3>1. Hizmet Tanımı</h3>
+            <p>RodiNote, öğrencilere yönelik bir çalışma ve not uygulamasıdır. Uygulama şu özellikleri sunmaktadır:</p>
+            <ul>
+                <li>Flashcard oluşturma ve düzenleme</li>
+                <li>8 farklı interaktif öğrenme oyunu</li>
+                <li>Yapay zeka destekli otomatik kart oluşturma (metin, PDF ve fotoğraf desteği)</li>
+                <li>Hazır şablon mağazası (YKS/TYT/AYT ve LGS müfredatları)</li>
+                <li>JSON formatında yedekleme ve dışa aktarma</li>
+                <li>Performans takibi ve istatistikler</li>
+                <li>7 farklı renk teması</li>
+            </ul>
 
-<h2>7. Account Termination</h2>
-<p>RodiNote reserves the right to restrict or terminate access to the service for users who violate these Terms of Use.</p>
+            <h3>2. Üyelik Katmanları ve Reklamlar</h3>
+            <p>RodiNote üç katmanlı bir üyelik modeli sunmaktadır:</p>
+            <ul>
+                <li><strong>Free (Ücretsiz):</strong> Temel özellikler, reklamlı deneyim. AI kart oluşturma sınırlıdır. Şablon mağazasına erişim yoktur.</li>
+                <li><strong>Premium:</strong> Reklamsız deneyim. AI ile metin tabanlı kart oluşturma. Şablon mağazasına tam erişim.</li>
+                <li><strong>Max:</strong> Tüm Premium özellikler. AI ile metin, PDF ve fotoğraf tabanlı kart oluşturma. Gelişmiş AI limitleri ve özellikler.</li>
+            </ul>
+            <p>Ücretsiz kullanıcılara Google AdMob aracılığıyla reklamlar gösterilir. Premium ve Max aboneleri reklam görmez.</p>
+            <p>Ödemeler Apple App Store veya Google Play Store üzerinden işlenir. İptal ve iade politikaları ilgili mağazanın kurallarına tabidir. Abonelikler otomatik olarak yenilenir; iptal etmek için ilgili mağazanın abonelik ayarlarını kullanmanız gerekmektedir.</p>
 
-<h2>8. Changes</h2>
-<p>These Terms of Use may be updated from time to time. Updates will be communicated through the application. Your continued use of the application after changes constitutes acceptance of the new terms.</p>
+            <h3>3. Kullanım Şartları</h3>
+            <p>Uygulamayı kullanarak aşağıdaki şartları kabul edersiniz:</p>
+            <ul>
+                <li>Uygulamayı yalnızca yasal amaçlarla kullanacaksınız.</li>
+                <li>Uygulamayı tersine mühendislik, kaynak kodu çıkarma veya değiştirme girişiminde bulunmayacaksınız.</li>
+                <li>Uygulamayı kopyalamayacak, dağıtmayacak veya başka bir ürün olarak sunmayacaksınız.</li>
+                <li>AI özelliğini kötüye kullanmayacak, uygunsuz veya yasadışı içerik oluşturmak için kullanmayacaksınız.</li>
+                <li>Hesabınızı başkalarıyla paylaşmayacaksınız.</li>
+            </ul>
 
-<h2>9. Governing Law</h2>
-<p>These Terms of Use are governed by the laws of the Republic of Turkey, and Turkish courts shall have jurisdiction in case of disputes.</p>
+            <h3>4. Fikri Mülkiyet Hakları</h3>
+            <p>RodiNote uygulamasının tüm hakları saklıdır. Uygulamanın tasarımı, kodu, grafikleri, oyun mekanikleri, hazır şablonları ve tüm içeriği telif hakkı ile korunmaktadır. Bu materyallerin izinsiz kopyalanması, dağıtılması, değiştirilmesi veya ticari amaçla kullanılması kesinlikle yasaktır ve yasal işlem başlatılabilir.</p>
+            <p>Kullanıcıların uygulama içinde oluşturdukları kişisel notlar ve kartlar, kullanıcının kendi mülkiyetindedir.</p>
 
-<h2>10. Contact</h2>
-<p>For questions about our terms of use, you can reach us at:</p>
-<p>Email: rodinoteapp@gmail.com</p>
+            <h3>5. Hesap ve Kimlik Doğrulama</h3>
+            <p>RodiNote, Apple ile Giriş ve Google ile Giriş seçenekleri sunmaktadır. Hesabınızın güvenliğinden siz sorumlusunuz. Hesabınızı uygulama ayarlarından veya rodinoteapp@gmail.com adresine yazarak silebilirsiniz. Hesap silindiğinde, hesabınızla ilişkili sunucu verileri kalıcı olarak kaldırılır.</p>
 
-<p class="copyright">© 2025 RodiNote. All rights reserved.</p>
-</div>
+            <h3>6. AI (Yapay Zeka) Özelliği</h3>
+            <p>AI kart oluşturma özelliği Google Gemini API altyapısını kullanmaktadır ve metin, PDF ve fotoğraf girişlerini destekler. AI tarafından oluşturulan içeriklerin doğruluğu garanti edilmez; kullanıcı, oluşturulan kartları kontrol etmelidir. AI özelliğinin kullanım limitleri üyelik türüne göre farklılık gösterir. RodiNote, AI hizmetinin kesintisiz çalışacağını garanti etmez.</p>
 
-</div>
+            <h3>7. Sorumluluk Sınırları</h3>
+            <p>RodiNote, eğitim amaçlı bir yardımcı araç olarak sunulmaktadır. Uygulama içeriğinin akademik doğruluğu garanti edilmez. Veri kaybından kaynaklanan zararlardan RodiNote sorumlu tutulamaz; kullanıcıların düzenli yedekleme yapması önerilir. Uygulama "olduğu gibi" sunulmaktadır ve herhangi bir açık veya zımni garanti verilmemektedir.</p>
 
-<div class="footer">
-  <p>© 2025 RodiNote. Tüm hakları saklıdır. / All rights reserved.</p>
-  <p>rodinoteapp@gmail.com</p>
-</div>
+            <h3>8. Hesap Sonlandırma</h3>
+            <p>RodiNote, kullanım koşullarını ihlal eden kullanıcıların hizmete erişimini kısıtlama veya sonlandırma hakkını saklı tutar.</p>
 
-<script>
-function show(id) {
-  document.querySelectorAll('.doc').forEach(d => d.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  event.target.classList.add('active');
-  window.scrollTo({ top: document.querySelector('.content').offsetTop - 80, behavior: 'smooth' });
-}
-</script>
+            <h3>9. Değişiklikler</h3>
+            <p>Bu Kullanım Koşulları zaman zaman güncellenebilir. Güncellemeler uygulama içinden bildirilecektir. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, yeni koşulları kabul ettiğiniz anlamına gelir.</p>
+
+            <h3>10. Uygulanacak Hukuk</h3>
+            <p>Bu Kullanım Koşulları, Türkiye Cumhuriyeti kanunlarına tabi olup, uyuşmazlıklarda Türkiye Cumhuriyeti mahkemeleri yetkilidir.</p>
+
+            <h3>11. İletişim</h3>
+            <div class="contact-box">
+                Kullanım koşullarımız hakkında sorularınız için bize ulaşabilirsiniz:<br>
+                E-posta: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
+            </div>
+        </div>
+
+        <!-- ==================== TERMS OF USE ==================== -->
+        <div class="section" id="terms">
+            <h2>Terms of Use</h2>
+            <p class="update-date">Last Updated: April 16, 2026</p>
+
+            <p>These Terms of Use set forth the conditions regarding the use of the RodiNote ("RODİ NOTE") mobile application. By downloading and using the application, you agree to these terms.</p>
+
+            <h3>1. Service Description</h3>
+            <p>RodiNote is a study and note-taking application designed for students. The app offers the following features:</p>
+            <ul>
+                <li>Flashcard creation and editing</li>
+                <li>8 different interactive learning games</li>
+                <li>AI-powered automatic card generation (text, PDF, and photo input support)</li>
+                <li>Ready-made template store (YKS/TYT/AYT and LGS curricula for Turkish national exams)</li>
+                <li>JSON format backup and export</li>
+                <li>Performance tracking and statistics</li>
+                <li>7 different color themes</li>
+            </ul>
+
+            <h3>2. Membership Tiers and Advertising</h3>
+            <p>RodiNote offers a three-tier membership model:</p>
+            <ul>
+                <li><strong>Free:</strong> Basic features, ad-supported experience. AI card generation is limited. No access to the template store.</li>
+                <li><strong>Premium:</strong> Ad-free experience. AI text-based card generation. Full access to the template store.</li>
+                <li><strong>Max:</strong> All Premium features. AI text, PDF, and photo-based card generation. Enhanced AI limits and features.</li>
+            </ul>
+            <p>Advertisements are displayed to free users through Google AdMob. Premium and Max subscribers do not see ads.</p>
+            <p>Payments are processed through Apple App Store or Google Play Store. Cancellation and refund policies are subject to the rules of the respective store. Subscriptions renew automatically; to cancel, you must use the subscription settings of the respective store.</p>
+
+            <h3>3. Terms of Use</h3>
+            <p>By using the application, you agree to the following:</p>
+            <ul>
+                <li>You will use the application only for lawful purposes.</li>
+                <li>You will not attempt to reverse engineer, extract source code, or modify the application.</li>
+                <li>You will not copy, distribute, or present the application as another product.</li>
+                <li>You will not misuse the AI feature or use it to generate inappropriate or illegal content.</li>
+                <li>You will not share your account with others.</li>
+            </ul>
+
+            <h3>4. Intellectual Property Rights</h3>
+            <p>All rights to the RodiNote application are reserved. The application's design, code, graphics, game mechanics, ready-made templates, and all content are protected by copyright. Unauthorized copying, distribution, modification, or commercial use of these materials is strictly prohibited and may result in legal action.</p>
+            <p>Personal notes and cards created by users within the application remain the property of the user.</p>
+
+            <h3>5. Account and Authentication</h3>
+            <p>RodiNote offers Sign in with Apple and Sign in with Google options. You are responsible for the security of your account. You can delete your account through the app settings or by contacting rodinoteapp@gmail.com. When an account is deleted, server-side data associated with your account is permanently removed.</p>
+
+            <h3>6. AI (Artificial Intelligence) Feature</h3>
+            <p>The AI card generation feature uses Google Gemini API infrastructure and supports text, PDF, and photo inputs. The accuracy of AI-generated content is not guaranteed; users should review generated cards. Usage limits of the AI feature vary based on membership type. RodiNote does not guarantee uninterrupted operation of the AI service.</p>
+
+            <h3>7. Limitation of Liability</h3>
+            <p>RodiNote is provided as an educational support tool. The academic accuracy of application content is not guaranteed. RodiNote cannot be held responsible for damages resulting from data loss; users are advised to perform regular backups. The application is provided "as is" without any express or implied warranties.</p>
+
+            <h3>8. Account Termination</h3>
+            <p>RodiNote reserves the right to restrict or terminate access to the service for users who violate these Terms of Use.</p>
+
+            <h3>9. Changes</h3>
+            <p>These Terms of Use may be updated from time to time. Updates will be communicated through the application. Your continued use of the application after changes constitutes acceptance of the new terms.</p>
+
+            <h3>10. Governing Law</h3>
+            <p>These Terms of Use are governed by the laws of the Republic of Turkey, and Turkish courts shall have jurisdiction in case of disputes.</p>
+
+            <h3>11. Contact</h3>
+            <div class="contact-box">
+                For questions about our terms of use, you can reach us at:<br>
+                Email: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 RodiNote. Tüm hakları saklıdır. / All rights reserved.</p>
+            <p><a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a></p>
+        </div>
+
+    </div>
 </body>
 </html>
