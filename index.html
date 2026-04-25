@@ -161,6 +161,19 @@
             margin: 32px 0;
         }
 
+        .ai-warning-box {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: 0.9rem;
+        }
+
+        .ai-warning-box strong {
+            color: #92400E;
+        }
+
         @media (max-width: 600px) {
             .container { padding: 20px 16px 60px; }
             .section { padding: 28px 20px; }
@@ -186,7 +199,7 @@
         <!-- ==================== GİZLİLİK POLİTİKASI ==================== -->
         <div class="section" id="gizlilik">
             <h2>Gizlilik Politikası</h2>
-            <p class="update-date">Son Güncelleme: 18 Nisan 2026</p>
+            <p class="update-date">Son Güncelleme: 26 Nisan 2026</p>
 
             <p>Bu Gizlilik Politikası, RodiNote ("RODİ NOTE") mobil uygulamasının kullanıcılarının kişisel verilerinin nasıl toplandığını, kullanıldığını, saklandığını ve korunduğunu açıklamaktadır.</p>
 
@@ -202,7 +215,16 @@
             <p>RodiNote, Apple ile Giriş ve Google ile Giriş seçenekleri sunmaktadır. Bu yöntemlerle giriş yaptığınızda; görünen adınız ve benzersiz kullanıcı kimliğiniz (UID) Firebase Authentication tarafından işlenir ve saklanır. Apple ile Giriş kullanıcıları e-posta adreslerini gizlemeyi tercih edebilir. Bu veriler hesabınızı yönetmek, abonelik durumunuzu eşleştirmek ve kişiselleştirilmiş deneyim sunmak amacıyla kullanılır. Firebase'in veri işleme politikası için <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Gizlilik Politikası</a>'nı inceleyebilirsiniz.</p>
 
             <p><strong>c) Yapay Zeka (AI) Özelliği Kapsamında İşlenen Veriler</strong></p>
-            <p>Uygulamamızın AI kart oluşturma özelliğini kullandığınızda, girdiğiniz metin, yüklediğiniz PDF dosyası veya çektiğiniz/seçtiğiniz fotoğraf içeriği Google Gemini API'ye gönderilir. Bu veriler yalnızca kart oluşturma amacıyla kullanılır ve RodiNote tarafından saklanmaz. Google'ın veri işleme politikası için <a href="https://policies.google.com/privacy" target="_blank">Google Gizlilik Politikası</a>'nı inceleyebilirsiniz.</p>
+            <p>Uygulamamızın AI kart oluşturma özelliğini kullandığınızda, girdiğiniz metin, yüklediğiniz PDF dosyası veya çektiğiniz/seçtiğiniz fotoğraf içeriği Google Gemini API'ye gönderilir. Bu veriler yalnızca kart oluşturma amacıyla kullanılır, RodiNote sunucularında saklanmaz ve Google'ın resmi politikasına göre AI eğitiminde kullanılmaz.</p>
+
+            <div class="ai-warning-box">
+                <p><strong>⚠️ AI Çıktılarının Doğruluğu ve Sorumluluk Reddi:</strong></p>
+                <p>Yapay zeka tarafından üretilen flashcard kartları <strong>hatalı, eksik, güncel olmayan veya yanıltıcı bilgi içerebilir</strong>. Kullanıcı, üretilen kartları kaynak materyalle mutlaka doğrulamakla yükümlüdür. AI çıktıları <strong>sınav, sağlık, hukuk, finans veya diğer önemli kararlar için tek başına güvenilir kaynak olarak kullanılmamalıdır</strong>. RodiNote, AI tarafından üretilen içeriklerin doğruluğu, bütünlüğü veya güncelliği hakkında hiçbir açık veya zımni garanti vermez ve AI çıktıları nedeniyle oluşabilecek doğrudan veya dolaylı zararlardan sorumlu tutulamaz.</p>
+            </div>
+
+            <p><strong>Kullanıcı Onayı:</strong> "AI Kart Üretici" özelliğini ilk kez kullanırken kullanıcıya kapsamlı bir bilgilendirme uyarısı gösterilir. Bu uyarıyı onaylayıp özelliği kullanmaya devam etmek, yukarıdaki tüm şartların ve sorumluluk sınırlamalarının kabul edilmesi anlamına gelir.</p>
+
+            <p>Google'ın veri işleme politikası için <a href="https://policies.google.com/privacy" target="_blank">Google Gizlilik Politikası</a>'nı inceleyebilirsiniz.</p>
 
             <p><strong>d) Reklam Verileri (Google AdMob)</strong></p>
             <p>Ücretsiz (Free) kullanıcılara reklam göstermek amacıyla Google AdMob SDK kullanılmaktadır. AdMob, reklam kimliği (IDFA/GAID), cihaz bilgileri, IP adresi ve uygulama kullanım verileri gibi bilgileri toplayabilir. Bu veriler kişiselleştirilmiş veya kişiselleştirilmemiş reklam sunmak amacıyla kullanılır. Premium veya Max aboneleri reklam görmez ve bu veriler toplanmaz. Detaylar için <a href="https://policies.google.com/technologies/ads" target="_blank">Google Reklam Politikası</a>'nı inceleyebilirsiniz.</p>
@@ -213,7 +235,7 @@
             <p><strong>f) Fotoğraf ve Kamera Erişimi</strong></p>
             <p>AI kart oluşturma özelliğinin fotoğraf modunu kullandığınızda, uygulama cihazınızın kamerasına veya fotoğraf galerisine erişim izni isteyebilir. Erişim yalnızca AI'ya görsel içerik göndermek amacıyla kullanılır; fotoğraflarınız RodiNote sunucularında saklanmaz.</p>
 
-            <p><strong>g) Bildirim Verileri </strong></p>
+            <p><strong>g) Bildirim Verileri</strong></p>
             <p>RodiNote, çalışma hatırlatmaları göndermek amacıyla yerel bildirimler kullanmaktadır. Bu bildirimler cihazınızda planlanır ve herhangi bir sunucuya gönderilmez. Bildirim tercihleri (saat ayarları, açma/kapama) yalnızca cihazınızda yerel olarak saklanır. Bildirimleri uygulama ayarlarından istediğiniz zaman kapatabilirsiniz.</p>
 
             <h3>2. Üçüncü Taraf Hizmetler</h3>
@@ -247,8 +269,9 @@
             </ul>
             <p>Ödeme işlemleri Apple App Store veya Google Play Store üzerinden gerçekleştirilir ve ödeme bilgileriniz RodiNote tarafından görülmez veya saklanmaz.</p>
 
-            <h3>8. Kullanıcı Hakları</h3>
-            <p>Yerel verilerinizi istediğiniz zaman uygulamayı silerek kaldırabilirsiniz. Firebase hesabınızı uygulama ayarlarından veya bizimle iletişime geçerek silebilirsiniz. JSON yedekleme özelliğiyle verilerinizi dışa aktarabilirsiniz. AI, reklam, bildirim ve hesap özelliklerini kullanıp kullanmamak tamamen sizin tercihinizdir.</p>
+            <h3>8. Kullanıcı Hakları (KVKK)</h3>
+            <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında aşağıdaki haklara sahipsiniz: kişisel verilerinizin işlenip işlenmediğini öğrenme; işlenmişse buna ilişkin bilgi talep etme; verilerin işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme; verilerin silinmesini veya yok edilmesini isteme; verilerinizin üçüncü kişilere aktarılması durumunda bilgi talep etme. Bu haklarınızı kullanmak için rodinoteapp@gmail.com adresine yazılı talepte bulunabilirsiniz.</p>
+            <p>Yerel verilerinizi istediğiniz zaman uygulamayı silerek kaldırabilirsiniz. Firebase hesabınızı uygulama ayarlarından veya bizimle iletişime geçerek silebilirsiniz. JSON yedekleme özelliğiyle verilerinizi dışa aktarabilirsiniz.</p>
 
             <h3>9. Politika Değişiklikleri</h3>
             <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinden bildirilecektir. Uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
@@ -263,7 +286,7 @@
         <!-- ==================== PRIVACY POLICY ==================== -->
         <div class="section" id="privacy">
             <h2>Privacy Policy</h2>
-            <p class="update-date">Last Updated: April 18, 2026</p>
+            <p class="update-date">Last Updated: April 26, 2026</p>
 
             <p>This Privacy Policy explains how RodiNote ("RODİ NOTE") mobile application collects, uses, stores, and protects the personal data of its users.</p>
 
@@ -279,7 +302,16 @@
             <p>RodiNote offers Sign in with Apple and Sign in with Google options. When you sign in using these methods, your display name and unique user identifier (UID) are processed and stored by Firebase Authentication. Sign in with Apple users may choose to hide their email address. This data is used to manage your account, match your subscription status, and provide a personalized experience. For Firebase's data processing practices, please refer to the <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>.</p>
 
             <p><strong>c) Data Processed Through AI Feature</strong></p>
-            <p>When you use our AI card generation feature, the text you enter, PDF files you upload, or photos you take/select are sent to Google Gemini API. This data is used solely for card generation purposes and is not stored by RodiNote. Please refer to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> for their data processing practices.</p>
+            <p>When you use our AI card generation feature, the text you enter, PDF files you upload, or photos you take/select are sent to Google Gemini API. This data is used solely for card generation purposes, is not stored on RodiNote servers, and according to Google's official policy, is not used for AI training.</p>
+
+            <div class="ai-warning-box">
+                <p><strong>⚠️ Accuracy of AI Outputs and Disclaimer of Liability:</strong></p>
+                <p>Flashcards generated by artificial intelligence may contain <strong>incorrect, incomplete, outdated, or misleading information</strong>. Users are obligated to verify generated cards against source materials. AI outputs <strong>should not be used as a sole reliable source for exams, health, legal, financial, or other important decisions</strong>. RodiNote provides no express or implied warranty regarding the accuracy, completeness, or timeliness of AI-generated content and cannot be held responsible for direct or indirect damages arising from AI outputs.</p>
+            </div>
+
+            <p><strong>User Consent:</strong> A comprehensive informational warning is displayed to users when they first use the "AI Card Generator" feature. By acknowledging this warning and continuing to use the feature, the user accepts all of the above terms and limitations of liability.</p>
+
+            <p>Please refer to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> for their data processing practices.</p>
 
             <p><strong>d) Advertising Data (Google AdMob)</strong></p>
             <p>Google AdMob SDK is used to display advertisements to Free (unpaid) users. AdMob may collect information such as advertising identifier (IDFA/GAID), device information, IP address, and app usage data. This data is used to serve personalized or non-personalized ads. Premium and Max subscribers do not see ads and this data is not collected. For details, please refer to <a href="https://policies.google.com/technologies/ads" target="_blank">Google's Advertising Policy</a>.</p>
@@ -290,7 +322,7 @@
             <p><strong>f) Photo and Camera Access</strong></p>
             <p>When you use the photo mode of the AI card generation feature, the app may request access to your device's camera or photo library. Access is used solely to send visual content to the AI; your photos are not stored on RodiNote servers.</p>
 
-            <p><strong>g) Notification Data </strong></p>
+            <p><strong>g) Notification Data</strong></p>
             <p>RodiNote uses local notifications to send study reminders. These notifications are scheduled on your device and are not sent to any server. Notification preferences (time settings, enable/disable) are stored locally on your device only. You can disable notifications at any time from the app settings.</p>
 
             <h3>2. Third-Party Services</h3>
@@ -325,7 +357,7 @@
             <p>Payment transactions are processed through Apple App Store or Google Play Store, and your payment information is neither visible to nor stored by RodiNote.</p>
 
             <h3>8. User Rights</h3>
-            <p>You can remove your local data at any time by deleting the application. You can delete your Firebase account through the app settings or by contacting us. You can export your data using the JSON backup feature. Whether to use the AI, advertising, notification, and account features is entirely your choice.</p>
+            <p>You can remove your local data at any time by deleting the application. You can delete your Firebase account through the app settings or by contacting us. You can export your data using the JSON backup feature. Whether to use the AI, advertising, notification, and account features is entirely your choice. Under applicable data protection laws (GDPR, CCPA, etc.), you may have additional rights including access, rectification, erasure, and data portability. To exercise these rights, contact us at rodinoteapp@gmail.com.</p>
 
             <h3>9. Policy Changes</h3>
             <p>This Privacy Policy may be updated from time to time. Significant changes will be communicated through the application. Your continued use of the application constitutes acceptance of the updated policy.</p>
@@ -342,7 +374,7 @@
         <!-- ==================== KULLANIM KOŞULLARI ==================== -->
         <div class="section" id="kullanim">
             <h2>Kullanım Koşulları</h2>
-            <p class="update-date">Son Güncelleme: 18 Nisan 2026</p>
+            <p class="update-date">Son Güncelleme: 26 Nisan 2026</p>
 
             <p>Bu Kullanım Koşulları, RodiNote ("RODİ NOTE") mobil uygulamasının kullanımına ilişkin şartları belirlemektedir. Uygulamayı indirerek ve kullanarak bu koşulları kabul etmiş sayılırsınız.</p>
 
@@ -386,11 +418,21 @@
             <h3>5. Hesap ve Kimlik Doğrulama</h3>
             <p>RodiNote, Apple ile Giriş ve Google ile Giriş seçenekleri sunmaktadır. Hesabınızın güvenliğinden siz sorumlusunuz. Hesabınızı uygulama ayarlarından veya rodinoteapp@gmail.com adresine yazarak silebilirsiniz. Hesap silindiğinde, hesabınızla ilişkili sunucu verileri kalıcı olarak kaldırılır.</p>
 
-            <h3>6. AI (Yapay Zeka) Özelliği</h3>
-            <p>AI kart oluşturma özelliği Google Gemini API altyapısını kullanmaktadır ve metin, PDF ve fotoğraf girişlerini destekler. AI tarafından oluşturulan içeriklerin doğruluğu garanti edilmez; kullanıcı, oluşturulan kartları kontrol etmelidir. AI özelliğinin kullanım limitleri üyelik türüne göre farklılık gösterir. RodiNote, AI hizmetinin kesintisiz çalışacağını garanti etmez.</p>
+            <h3>6. AI (Yapay Zeka) Özelliği — Detaylı Sorumluluk Reddi</h3>
+            <p>AI kart oluşturma özelliği Google Gemini API altyapısını kullanmaktadır ve metin, PDF ve fotoğraf girişlerini destekler. AI özelliğinin kullanım limitleri üyelik türüne göre farklılık gösterir. RodiNote, AI hizmetinin kesintisiz veya hatasız çalışacağını garanti etmez.</p>
+
+            <div class="ai-warning-box">
+                <p><strong>⚠️ ÖNEMLİ — AI ÇIKTILARI HAKKINDA UYARI:</strong></p>
+                <p><strong>1. Doğruluk Garantisi Yoktur:</strong> Yapay zeka tarafından üretilen flashcard kartları hatalı, eksik, güncel olmayan, çelişkili veya tamamen yanlış bilgi içerebilir. AI çıktılarının akademik, bilimsel, tıbbi, hukuki veya başka türlü doğruluğu garanti edilmez.</p>
+                <p><strong>2. Doğrulama Yükümlülüğü:</strong> Kullanıcı, AI tarafından üretilen tüm kartları kaynak materyalle veya güvenilir başka kaynaklarla doğrulamakla yükümlüdür. Doğrulama yapılmadan kullanılan AI çıktılarından doğacak her türlü sonuç kullanıcının sorumluluğundadır.</p>
+                <p><strong>3. Önemli Kararlar İçin Uyarı:</strong> AI çıktıları sınav hazırlığı (YKS, LGS, KPSS, vb.), sağlık veya tıbbi kararlar, hukuki konular, finansal yatırım kararları, eğitim sertifikaları veya diğer önemli kararlar için tek başına güvenilir kaynak olarak kullanılmamalıdır. Bu tür konularda mutlaka uzman görüşü alınmalı ve resmi kaynaklara başvurulmalıdır.</p>
+                <p><strong>4. Sorumluluk Sınırlaması:</strong> RodiNote, AI tarafından üretilen içeriklerin doğruluğu, bütünlüğü, güncelliği veya uygunluğu hakkında hiçbir açık veya zımni garanti vermez. AI çıktılarına dayalı olarak alınan kararlardan, kaçırılan sınavlardan, yanlış öğrenmelerden, akademik veya mesleki kayıplardan, sağlık sorunlarından, finansal zararlardan veya diğer doğrudan/dolaylı zararlardan RodiNote, sahibi, geliştiricileri veya çalışanları sorumlu tutulamaz.</p>
+                <p><strong>5. Kullanıcı Onayı:</strong> "AI Kart Üretici" özelliğini ilk kez kullanırken kullanıcıya kapsamlı bir bilgilendirme uyarısı gösterilir. Bu uyarıyı onaylayıp özelliği kullanmaya devam etmek, bu maddenin tamamının ve sorumluluk sınırlamalarının kabul edilmesi anlamına gelir.</p>
+            </div>
 
             <h3>7. Sorumluluk Sınırları</h3>
             <p>RodiNote, eğitim amaçlı bir yardımcı araç olarak sunulmaktadır. Uygulama içeriğinin akademik doğruluğu garanti edilmez. Veri kaybından kaynaklanan zararlardan RodiNote sorumlu tutulamaz; kullanıcıların düzenli yedekleme yapması önerilir. Uygulama "olduğu gibi" sunulmaktadır ve herhangi bir açık veya zımni garanti verilmemektedir.</p>
+            <p>Yürürlükteki yasaların izin verdiği azami ölçüde, RodiNote'un toplam sorumluluğu, kullanıcının uygulamaya ödediği son 12 aylık abonelik ücretiyle sınırlıdır.</p>
 
             <h3>8. Hesap Sonlandırma</h3>
             <p>RodiNote, kullanım koşullarını ihlal eden kullanıcıların hizmete erişimini kısıtlama veya sonlandırma hakkını saklı tutar.</p>
@@ -411,7 +453,7 @@
         <!-- ==================== TERMS OF USE ==================== -->
         <div class="section" id="terms">
             <h2>Terms of Use</h2>
-            <p class="update-date">Last Updated: April 18, 2026</p>
+            <p class="update-date">Last Updated: April 26, 2026</p>
 
             <p>These Terms of Use set forth the conditions regarding the use of the RodiNote ("RODİ NOTE") mobile application. By downloading and using the application, you agree to these terms.</p>
 
@@ -455,11 +497,21 @@
             <h3>5. Account and Authentication</h3>
             <p>RodiNote offers Sign in with Apple and Sign in with Google options. You are responsible for the security of your account. You can delete your account through the app settings or by contacting rodinoteapp@gmail.com. When an account is deleted, server-side data associated with your account is permanently removed.</p>
 
-            <h3>6. AI (Artificial Intelligence) Feature</h3>
-            <p>The AI card generation feature uses Google Gemini API infrastructure and supports text, PDF, and photo inputs. The accuracy of AI-generated content is not guaranteed; users should review generated cards. Usage limits of the AI feature vary based on membership type. RodiNote does not guarantee uninterrupted operation of the AI service.</p>
+            <h3>6. AI (Artificial Intelligence) Feature — Detailed Disclaimer</h3>
+            <p>The AI card generation feature uses Google Gemini API infrastructure and supports text, PDF, and photo inputs. Usage limits of the AI feature vary based on membership type. RodiNote does not guarantee uninterrupted or error-free operation of the AI service.</p>
+
+            <div class="ai-warning-box">
+                <p><strong>⚠️ IMPORTANT — WARNING ABOUT AI OUTPUTS:</strong></p>
+                <p><strong>1. No Accuracy Guarantee:</strong> Flashcards generated by artificial intelligence may contain incorrect, incomplete, outdated, contradictory, or entirely false information. The accuracy of AI outputs—academic, scientific, medical, legal, or otherwise—is not guaranteed.</p>
+                <p><strong>2. Verification Obligation:</strong> Users are obligated to verify all AI-generated cards against source materials or other reliable sources. Any consequences arising from the use of unverified AI outputs are the sole responsibility of the user.</p>
+                <p><strong>3. Warning for Important Decisions:</strong> AI outputs should not be used as a sole reliable source for exam preparation (YKS, LGS, KPSS, SAT, etc.), health or medical decisions, legal matters, financial investment decisions, educational certifications, or other important decisions. For such matters, expert advice should be sought and official sources should be consulted.</p>
+                <p><strong>4. Limitation of Liability:</strong> RodiNote provides no express or implied warranty regarding the accuracy, completeness, timeliness, or suitability of AI-generated content. RodiNote, its owner, developers, or employees cannot be held responsible for decisions made based on AI outputs, missed exams, incorrect learning, academic or professional losses, health issues, financial damages, or other direct/indirect damages.</p>
+                <p><strong>5. User Consent:</strong> A comprehensive informational warning is displayed to users when they first use the "AI Card Generator" feature. By acknowledging this warning and continuing to use the feature, the user accepts this entire clause and the limitations of liability herein.</p>
+            </div>
 
             <h3>7. Limitation of Liability</h3>
             <p>RodiNote is provided as an educational support tool. The academic accuracy of application content is not guaranteed. RodiNote cannot be held responsible for damages resulting from data loss; users are advised to perform regular backups. The application is provided "as is" without any express or implied warranties.</p>
+            <p>To the maximum extent permitted by applicable law, RodiNote's total liability shall be limited to the subscription fees paid by the user to the application during the last 12 months.</p>
 
             <h3>8. Account Termination</h3>
             <p>RodiNote reserves the right to restrict or terminate access to the service for users who violate these Terms of Use.</p>
