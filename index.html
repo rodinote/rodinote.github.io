@@ -131,16 +131,60 @@
 
         .contact-box {
             background: var(--accent-light);
-            border-radius: 8px;
             padding: 16px 20px;
-            margin-top: 20px;
-            font-size: 0.9rem;
+            border-radius: 8px;
+            margin-top: 16px;
+            font-size: 0.95rem;
         }
 
         .contact-box a {
             color: var(--accent);
             text-decoration: none;
             font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        .ai-warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .ai-warning-box p {
+            font-size: 0.92rem;
+            margin-bottom: 8px;
+        }
+
+        .ai-warning-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-warning-box {
+            background: #e0f2fe;
+            border-left: 4px solid #0284c7;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .content-warning-box p {
+            font-size: 0.92rem;
+            margin-bottom: 8px;
+        }
+
+        .content-warning-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 32px 0;
         }
 
         .footer {
@@ -153,30 +197,13 @@
         .footer a {
             color: var(--accent);
             text-decoration: none;
-        }
-
-        .divider {
-            height: 1px;
-            background: var(--border);
-            margin: 32px 0;
-        }
-
-        .ai-warning-box {
-            background: #FEF3C7;
-            border-left: 4px solid #F59E0B;
-            border-radius: 6px;
-            padding: 14px 18px;
-            margin: 16px 0;
-            font-size: 0.9rem;
-        }
-
-        .ai-warning-box strong {
-            color: #92400E;
+            font-weight: 600;
         }
 
         @media (max-width: 600px) {
-            .container { padding: 20px 16px 60px; }
-            .section { padding: 28px 20px; }
+            .section {
+                padding: 28px 20px;
+            }
             .header h1 { font-size: 1.6rem; }
         }
     </style>
@@ -199,7 +226,7 @@
         <!-- ==================== GİZLİLİK POLİTİKASI ==================== -->
         <div class="section" id="gizlilik">
             <h2>Gizlilik Politikası</h2>
-            <p class="update-date">Son Güncelleme: 26 Nisan 2026</p>
+            <p class="update-date">Son Güncelleme: 28 Nisan 2026</p>
 
             <p>Bu Gizlilik Politikası, RodiNote ("RODİ NOTE") mobil uygulamasının kullanıcılarının kişisel verilerinin nasıl toplandığını, kullanıldığını, saklandığını ve korunduğunu açıklamaktadır.</p>
 
@@ -269,9 +296,8 @@
             </ul>
             <p>Ödeme işlemleri Apple App Store veya Google Play Store üzerinden gerçekleştirilir ve ödeme bilgileriniz RodiNote tarafından görülmez veya saklanmaz.</p>
 
-            <h3>8. Kullanıcı Hakları (KVKK)</h3>
-            <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında aşağıdaki haklara sahipsiniz: kişisel verilerinizin işlenip işlenmediğini öğrenme; işlenmişse buna ilişkin bilgi talep etme; verilerin işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme; verilerin silinmesini veya yok edilmesini isteme; verilerinizin üçüncü kişilere aktarılması durumunda bilgi talep etme. Bu haklarınızı kullanmak için rodinoteapp@gmail.com adresine yazılı talepte bulunabilirsiniz.</p>
-            <p>Yerel verilerinizi istediğiniz zaman uygulamayı silerek kaldırabilirsiniz. Firebase hesabınızı uygulama ayarlarından veya bizimle iletişime geçerek silebilirsiniz. JSON yedekleme özelliğiyle verilerinizi dışa aktarabilirsiniz.</p>
+            <h3>8. Kullanıcı Hakları</h3>
+            <p>Uygulamayı silerek yerel verilerinizi istediğiniz zaman kaldırabilirsiniz. Firebase hesabınızı uygulama ayarlarından veya bizimle iletişime geçerek silebilirsiniz. JSON yedekleme özelliği ile verilerinizi dışa aktarabilirsiniz. AI, reklam, bildirim ve hesap özelliklerinin kullanılıp kullanılmaması tamamen sizin tercihinizdir. Yürürlükteki veri koruma yasaları (KVKK, GDPR, CCPA, vb.) kapsamında erişim, düzeltme, silme ve veri taşınabilirliği gibi ek haklara sahip olabilirsiniz. Bu haklarınızı kullanmak için rodinoteapp@gmail.com adresinden bizimle iletişime geçebilirsiniz.</p>
 
             <h3>9. Politika Değişiklikleri</h3>
             <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinden bildirilecektir. Uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
@@ -283,38 +309,38 @@
             </div>
         </div>
 
-        <!-- ==================== PRIVACY POLICY ==================== -->
+        <!-- ==================== PRIVACY POLICY (EN) ==================== -->
         <div class="section" id="privacy">
             <h2>Privacy Policy</h2>
-            <p class="update-date">Last Updated: April 26, 2026</p>
+            <p class="update-date">Last Updated: April 28, 2026</p>
 
-            <p>This Privacy Policy explains how RodiNote ("RODİ NOTE") mobile application collects, uses, stores, and protects the personal data of its users.</p>
+            <p>This Privacy Policy explains how the personal data of users of the RodiNote ("RODİ NOTE") mobile application is collected, used, stored, and protected.</p>
 
             <p>Contact: <strong>rodinoteapp@gmail.com</strong></p>
 
-            <h3>1. Data We Collect</h3>
+            <h3>1. Data Collected</h3>
             <p>RodiNote places great importance on user privacy. Our application collects and processes the following data:</p>
 
-            <p><strong>a) Data Stored Locally on Your Device</strong></p>
+            <p><strong>a) Data Stored Locally on Device</strong></p>
             <p>Folders, topics, and notes (flashcards) you create; game scores and performance statistics; app settings and theme preferences; badge and achievement data; weekly activity data. This data is stored only on your device and is not sent to our servers.</p>
 
             <p><strong>b) Account and Authentication Data (Firebase Authentication)</strong></p>
-            <p>RodiNote offers Sign in with Apple and Sign in with Google options. When you sign in using these methods, your display name and unique user identifier (UID) are processed and stored by Firebase Authentication. Sign in with Apple users may choose to hide their email address. This data is used to manage your account, match your subscription status, and provide a personalized experience. For Firebase's data processing practices, please refer to the <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>.</p>
+            <p>RodiNote offers Sign in with Apple and Sign in with Google options. When you sign in using these methods, your display name and unique user identifier (UID) are processed and stored by Firebase Authentication. Sign in with Apple users may choose to hide their email addresses. This data is used to manage your account, sync your subscription status, and provide a personalized experience. For Firebase's data processing policy, please refer to the <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>.</p>
 
-            <p><strong>c) Data Processed Through AI Feature</strong></p>
-            <p>When you use our AI card generation feature, the text you enter, PDF files you upload, or photos you take/select are sent to Google Gemini API. This data is used solely for card generation purposes, is not stored on RodiNote servers, and according to Google's official policy, is not used for AI training.</p>
+            <p><strong>c) Data Processed Within the Artificial Intelligence (AI) Feature</strong></p>
+            <p>When you use the AI card generation feature of our application, the text you input, PDF files you upload, or photos you take/select are sent to the Google Gemini API. This data is used solely for card generation purposes, is not stored on RodiNote servers, and is not used for AI training according to Google's official policy.</p>
 
             <div class="ai-warning-box">
-                <p><strong>⚠️ Accuracy of AI Outputs and Disclaimer of Liability:</strong></p>
-                <p>Flashcards generated by artificial intelligence may contain <strong>incorrect, incomplete, outdated, or misleading information</strong>. Users are obligated to verify generated cards against source materials. AI outputs <strong>should not be used as a sole reliable source for exams, health, legal, financial, or other important decisions</strong>. RodiNote provides no express or implied warranty regarding the accuracy, completeness, or timeliness of AI-generated content and cannot be held responsible for direct or indirect damages arising from AI outputs.</p>
+                <p><strong>⚠️ Accuracy of AI Outputs and Disclaimer:</strong></p>
+                <p>Flashcards generated by artificial intelligence <strong>may contain incorrect, incomplete, outdated, or misleading information</strong>. Users are obligated to verify generated cards against source materials. AI outputs <strong>should not be used as a sole reliable source for exams, health, legal, financial, or other important decisions</strong>. RodiNote provides no express or implied warranty regarding the accuracy, completeness, or timeliness of AI-generated content and cannot be held responsible for direct or indirect damages arising from AI outputs.</p>
             </div>
 
             <p><strong>User Consent:</strong> A comprehensive informational warning is displayed to users when they first use the "AI Card Generator" feature. By acknowledging this warning and continuing to use the feature, the user accepts all of the above terms and limitations of liability.</p>
 
-            <p>Please refer to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> for their data processing practices.</p>
+            <p>For Google's data processing policy, please refer to the <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</p>
 
             <p><strong>d) Advertising Data (Google AdMob)</strong></p>
-            <p>Google AdMob SDK is used to display advertisements to Free (unpaid) users. AdMob may collect information such as advertising identifier (IDFA/GAID), device information, IP address, and app usage data. This data is used to serve personalized or non-personalized ads. Premium and Max subscribers do not see ads and this data is not collected. For details, please refer to <a href="https://policies.google.com/technologies/ads" target="_blank">Google's Advertising Policy</a>.</p>
+            <p>Google AdMob SDK is used to display ads to free users. AdMob may collect information such as advertising identifier (IDFA/GAID), device information, IP address, and app usage data. This data is used to serve personalized or non-personalized advertisements. Premium and Max subscribers do not see ads, and this data is not collected. For details, please refer to the <a href="https://policies.google.com/technologies/ads" target="_blank">Google Ads Policy</a>.</p>
 
             <p><strong>e) Subscription Management Data (RevenueCat)</strong></p>
             <p>RevenueCat SDK is used to manage in-app subscriptions. RevenueCat processes data such as anonymous user identifier, purchase history, subscription status, and platform information. Your payment information (credit card, etc.) is not visible to RevenueCat or RodiNote; this information is processed solely by Apple App Store or Google Play Store. For details, please refer to the <a href="https://www.revenuecat.com/privacy/" target="_blank">RevenueCat Privacy Policy</a>.</p>
@@ -374,7 +400,7 @@
         <!-- ==================== KULLANIM KOŞULLARI ==================== -->
         <div class="section" id="kullanim">
             <h2>Kullanım Koşulları</h2>
-            <p class="update-date">Son Güncelleme: 26 Nisan 2026</p>
+            <p class="update-date">Son Güncelleme: 28 Nisan 2026</p>
 
             <p>Bu Kullanım Koşulları, RodiNote ("RODİ NOTE") mobil uygulamasının kullanımına ilişkin şartları belirlemektedir. Uygulamayı indirerek ve kullanarak bu koşulları kabul etmiş sayılırsınız.</p>
 
@@ -430,20 +456,33 @@
                 <p><strong>5. Kullanıcı Onayı:</strong> "AI Kart Üretici" özelliğini ilk kez kullanırken kullanıcıya kapsamlı bir bilgilendirme uyarısı gösterilir. Bu uyarıyı onaylayıp özelliği kullanmaya devam etmek, bu maddenin tamamının ve sorumluluk sınırlamalarının kabul edilmesi anlamına gelir.</p>
             </div>
 
-            <h3>7. Sorumluluk Sınırları</h3>
+            <h3>7. Hazır Şablon Mağaza İçerikleri Hakkında</h3>
+            <p>RodiNote uygulaması, kullanıcılara hızlı tekrar amacıyla TYT, AYT, LGS ve diğer müfredat konularını kapsayan hazır şablon kart setleri sunmaktadır. Bu içerikler hakkında aşağıdaki şartlar geçerlidir:</p>
+
+            <div class="content-warning-box">
+                <p><strong>📚 ÖNEMLİ — HAZIR ŞABLON İÇERİKLERİ HAKKINDA UYARI:</strong></p>
+                <p><strong>1. İçerik Niteliği:</strong> Mağazada sunulan TYT, AYT, LGS ve diğer hazır şablon kart setleri, eğitim amaçlı <strong>hızlı tekrar materyalleridir</strong>. Bu içerikler MEB resmi ders kitapları, müfredatları veya benzer akademik kaynakların yerini tutmaz ve birincil kaynak olarak kullanılmamalıdır.</p>
+                <p><strong>2. Doğruluk Garantisi Yoktur:</strong> Hazır şablon içerikleri hatalı, eksik, güncel olmayan, tartışmalı veya yanlış bilgiler içerebilir. İçerikler periyodik olarak güncellenebilir, değiştirilebilir veya kaldırılabilir. Müfredat değişikliklerine göre güncellenme garantisi verilmez.</p>
+                <p><strong>3. Kullanıcı Sorumluluğu:</strong> Sınava hazırlık sürecinde <strong>resmi MEB müfredatı, ders kitapları, okul öğretmenlerinizin ders notları ve diğer güvenilir akademik kaynaklar esas alınmalıdır.</strong> Hazır şablon içerikleri yalnızca yardımcı tekrar materyali olarak değerlendirilmelidir. Kullanıcı, içeriklerin doğruluğunu kendi kaynaklarıyla karşılaştırma sorumluluğunu kabul eder.</p>
+                <p><strong>4. Sorumluluk Sınırlaması:</strong> RodiNote, hazır şablon içeriklerinin doğruluğu, bütünlüğü, güncelliği, müfredat uyumluluğu veya akademik uygunluğu hakkında hiçbir açık veya zımni garanti vermez. Bu içeriklere dayalı olarak alınan kararlardan, sınav başarısızlıklarından, yanlış öğrenmelerden, akademik kayıplardan, eğitim hayatınıza etkilerinden veya diğer doğrudan/dolaylı zararlardan RodiNote, sahibi, geliştiricileri veya çalışanları hiçbir şekilde sorumlu tutulamaz.</p>
+                <p><strong>5. Hata Bildirimi:</strong> Hazır şablonlarda fark ettiğiniz hataları rodinoteapp@gmail.com adresine bildirebilirsiniz. Bildirimler değerlendirilecek ancak güncelleme zamanı veya yapılıp yapılmayacağı RodiNote'un takdirindedir.</p>
+                <p><strong>6. Kullanıcı Onayı:</strong> Mağazadan herhangi bir hazır şablon içeriği indirerek, görüntüleyerek veya kullanarak bu maddenin tamamını ve sorumluluk sınırlamalarını kabul etmiş sayılırsınız.</p>
+            </div>
+
+            <h3>8. Sorumluluk Sınırları</h3>
             <p>RodiNote, eğitim amaçlı bir yardımcı araç olarak sunulmaktadır. Uygulama içeriğinin akademik doğruluğu garanti edilmez. Veri kaybından kaynaklanan zararlardan RodiNote sorumlu tutulamaz; kullanıcıların düzenli yedekleme yapması önerilir. Uygulama "olduğu gibi" sunulmaktadır ve herhangi bir açık veya zımni garanti verilmemektedir.</p>
             <p>Yürürlükteki yasaların izin verdiği azami ölçüde, RodiNote'un toplam sorumluluğu, kullanıcının uygulamaya ödediği son 12 aylık abonelik ücretiyle sınırlıdır.</p>
 
-            <h3>8. Hesap Sonlandırma</h3>
+            <h3>9. Hesap Sonlandırma</h3>
             <p>RodiNote, kullanım koşullarını ihlal eden kullanıcıların hizmete erişimini kısıtlama veya sonlandırma hakkını saklı tutar.</p>
 
-            <h3>9. Değişiklikler</h3>
+            <h3>10. Değişiklikler</h3>
             <p>Bu Kullanım Koşulları zaman zaman güncellenebilir. Güncellemeler uygulama içinden bildirilecektir. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, yeni koşulları kabul ettiğiniz anlamına gelir.</p>
 
-            <h3>10. Uygulanacak Hukuk</h3>
+            <h3>11. Uygulanacak Hukuk</h3>
             <p>Bu Kullanım Koşulları, Türkiye Cumhuriyeti kanunlarına tabi olup, uyuşmazlıklarda Türkiye Cumhuriyeti mahkemeleri yetkilidir.</p>
 
-            <h3>11. İletişim</h3>
+            <h3>12. İletişim</h3>
             <div class="contact-box">
                 Kullanım koşullarımız hakkında sorularınız için bize ulaşabilirsiniz:<br>
                 E-posta: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
@@ -453,7 +492,7 @@
         <!-- ==================== TERMS OF USE ==================== -->
         <div class="section" id="terms">
             <h2>Terms of Use</h2>
-            <p class="update-date">Last Updated: April 26, 2026</p>
+            <p class="update-date">Last Updated: April 28, 2026</p>
 
             <p>These Terms of Use set forth the conditions regarding the use of the RodiNote ("RODİ NOTE") mobile application. By downloading and using the application, you agree to these terms.</p>
 
@@ -509,20 +548,33 @@
                 <p><strong>5. User Consent:</strong> A comprehensive informational warning is displayed to users when they first use the "AI Card Generator" feature. By acknowledging this warning and continuing to use the feature, the user accepts this entire clause and the limitations of liability herein.</p>
             </div>
 
-            <h3>7. Limitation of Liability</h3>
+            <h3>7. Ready-Made Template Store Content</h3>
+            <p>RodiNote provides users with ready-made template card sets covering TYT, AYT, LGS, and other curriculum topics for quick review purposes. The following terms apply to this content:</p>
+
+            <div class="content-warning-box">
+                <p><strong>📚 IMPORTANT — WARNING ABOUT READY-MADE TEMPLATE CONTENT:</strong></p>
+                <p><strong>1. Content Nature:</strong> Ready-made template card sets offered in the store, including TYT, AYT, LGS and other materials, are <strong>quick review materials</strong> for educational purposes. This content does not replace official MEB textbooks, curricula, or similar academic sources and should not be used as a primary source.</p>
+                <p><strong>2. No Accuracy Guarantee:</strong> Ready-made template content may contain incorrect, incomplete, outdated, contested, or false information. Content may be periodically updated, changed, or removed. There is no guarantee of updates according to curriculum changes.</p>
+                <p><strong>3. User Responsibility:</strong> During exam preparation, <strong>official MEB curriculum, textbooks, your school teachers' lecture notes, and other reliable academic sources should be the primary basis.</strong> Ready-made template content should be considered only as supplementary review material. The user accepts the responsibility of verifying content accuracy with their own sources.</p>
+                <p><strong>4. Limitation of Liability:</strong> RodiNote provides no express or implied warranty regarding the accuracy, completeness, timeliness, curriculum compliance, or academic suitability of ready-made template content. RodiNote, its owner, developers, or employees cannot be held responsible in any way for decisions made based on this content, exam failures, incorrect learning, academic losses, impacts on educational life, or other direct/indirect damages.</p>
+                <p><strong>5. Error Reporting:</strong> You can report errors you notice in ready-made templates to rodinoteapp@gmail.com. Reports will be evaluated, but the timing of updates or whether they will be made is at RodiNote's discretion.</p>
+                <p><strong>6. User Consent:</strong> By downloading, viewing, or using any ready-made template content from the store, you are deemed to have accepted this entire clause and the limitations of liability herein.</p>
+            </div>
+
+            <h3>8. Limitation of Liability</h3>
             <p>RodiNote is provided as an educational support tool. The academic accuracy of application content is not guaranteed. RodiNote cannot be held responsible for damages resulting from data loss; users are advised to perform regular backups. The application is provided "as is" without any express or implied warranties.</p>
             <p>To the maximum extent permitted by applicable law, RodiNote's total liability shall be limited to the subscription fees paid by the user to the application during the last 12 months.</p>
 
-            <h3>8. Account Termination</h3>
+            <h3>9. Account Termination</h3>
             <p>RodiNote reserves the right to restrict or terminate access to the service for users who violate these Terms of Use.</p>
 
-            <h3>9. Changes</h3>
+            <h3>10. Changes</h3>
             <p>These Terms of Use may be updated from time to time. Updates will be communicated through the application. Your continued use of the application after changes constitutes acceptance of the new terms.</p>
 
-            <h3>10. Governing Law</h3>
+            <h3>11. Governing Law</h3>
             <p>These Terms of Use are governed by the laws of the Republic of Turkey, and Turkish courts shall have jurisdiction in case of disputes.</p>
 
-            <h3>11. Contact</h3>
+            <h3>12. Contact</h3>
             <div class="contact-box">
                 For questions about our terms of use, you can reach us at:<br>
                 Email: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
