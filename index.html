@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RodiNote - Hukuki Belgeler / Legal Documents</title>
+    <title>RodiNote — Hukuki Belgeler / Legal Documents</title>
     <meta name="description" content="RodiNote Gizlilik Politikası ve Kullanım Koşulları / Privacy Policy and Terms of Use">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --bg: #f8f9fa;
@@ -58,7 +54,6 @@
             font-weight: 700;
             letter-spacing: -0.5px;
             margin-bottom: 8px;
-            color: var(--text);
         }
 
         .header p {
@@ -104,54 +99,29 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 8px;
-            color: var(--text);
-            padding-bottom: 12px;
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border);
         }
 
         .section h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-top: 28px;
-            margin-bottom: 12px;
-            color: var(--text);
-        }
-
-        .section h4 {
-            font-size: 0.98rem;
+            font-size: 1.15rem;
             font-weight: 600;
-            margin-top: 20px;
-            margin-bottom: 8px;
+            margin: 32px 0 12px;
             color: var(--text);
         }
 
-        .section p {
-            margin-bottom: 14px;
-            color: var(--text-secondary);
+        .section p, .section li {
             font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
         }
 
         .section ul, .section ol {
-            margin-bottom: 14px;
-            padding-left: 24px;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+            margin: 12px 0 16px 24px;
         }
 
-        .section ul li, .section ol li {
+        .section li {
             margin-bottom: 6px;
-        }
-
-        .section a {
-            color: var(--accent);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.15s;
-        }
-
-        .section a:hover {
-            border-color: var(--accent);
         }
 
         .section strong {
@@ -159,114 +129,67 @@
             font-weight: 600;
         }
 
+        .section a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .section a:hover {
+            text-decoration: underline;
+        }
+
         .update-date {
-            color: var(--text-secondary);
             font-size: 0.85rem;
-            margin-top: 4px;
-            margin-bottom: 24px;
+            color: var(--text-secondary);
             font-style: italic;
+            margin-bottom: 24px;
         }
 
-        .data-controller-box {
-            background: var(--info-bg);
-            border-left: 4px solid var(--info-border);
-            padding: 16px 20px;
-            border-radius: 8px;
-            margin: 16px 0 24px 0;
-            font-size: 0.92rem;
-            color: var(--info-text);
-        }
-
-        .data-controller-box strong {
-            color: var(--info-text);
-            display: block;
-            margin-bottom: 6px;
-            font-weight: 700;
+        .contact-box {
+            background: var(--accent-light);
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin: 16px 0;
+            font-size: 0.9rem;
+            border: 1px solid #c7dafd;
         }
 
         .ai-warning-box {
             background: var(--warning-bg);
-            border: 1px solid var(--warning-border);
             border-left: 4px solid var(--warning-border);
             padding: 18px 22px;
             border-radius: 8px;
             margin: 20px 0;
+            color: var(--warning-text);
         }
 
         .ai-warning-box p {
-            color: var(--warning-text);
-            font-size: 0.92rem;
-            margin-bottom: 10px;
-            line-height: 1.65;
-        }
-
-        .ai-warning-box p:last-child {
-            margin-bottom: 0;
+            color: var(--warning-text) !important;
+            margin-bottom: 8px;
         }
 
         .ai-warning-box strong {
-            color: var(--warning-text);
-            font-weight: 700;
-        }
-
-        .content-warning-box {
-            background: var(--info-bg);
-            border: 1px solid var(--info-border);
-            border-left: 4px solid var(--info-border);
-            padding: 18px 22px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-
-        .content-warning-box p {
-            color: var(--info-text);
-            font-size: 0.92rem;
-            margin-bottom: 10px;
-            line-height: 1.65;
-        }
-
-        .content-warning-box p:last-child {
-            margin-bottom: 0;
-        }
-
-        .content-warning-box strong {
-            color: var(--info-text);
+            color: var(--warning-text) !important;
             font-weight: 700;
         }
 
         .critical-box {
             background: var(--critical-bg);
-            border: 1px solid var(--critical-border);
             border-left: 4px solid var(--critical-border);
             padding: 18px 22px;
             border-radius: 8px;
             margin: 20px 0;
+            color: var(--critical-text);
         }
 
         .critical-box p {
-            color: var(--critical-text);
-            font-size: 0.92rem;
-            margin-bottom: 10px;
-            line-height: 1.65;
-        }
-
-        .critical-box p:last-child {
-            margin-bottom: 0;
+            color: var(--critical-text) !important;
+            margin-bottom: 8px;
         }
 
         .critical-box strong {
-            color: var(--critical-text);
+            color: var(--critical-text) !important;
             font-weight: 700;
-        }
-
-        .contact-box {
-            background: var(--accent-light);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 16px 0;
-            font-size: 0.92rem;
-            color: var(--text);
-            line-height: 1.8;
         }
 
         .data-table {
@@ -279,13 +202,13 @@
         .data-table th, .data-table td {
             padding: 10px 14px;
             text-align: left;
-            border: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
 
         .data-table th {
-            background: var(--accent-light);
-            color: var(--text);
+            background: #f8fafc;
             font-weight: 600;
+            color: var(--text);
         }
 
         .data-table td {
@@ -293,47 +216,21 @@
         }
 
         .divider {
-            border-top: 2px solid var(--border);
-            margin: 56px 0;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 32px 16px 16px;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-
-        .footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .footer p {
-            margin-bottom: 6px;
+            height: 1px;
+            background: var(--border);
+            margin: 60px 0;
         }
 
         @media (max-width: 600px) {
-            .section {
-                padding: 28px 20px;
-            }
+            .container { padding: 24px 16px 60px; }
+            .section { padding: 28px 22px; }
             .header h1 { font-size: 1.6rem; }
-            .nav-links a {
-                font-size: 0.82rem;
-                padding: 8px 14px;
-            }
-            .data-table {
-                font-size: 0.82rem;
-            }
-            .data-table th, .data-table td {
-                padding: 8px 10px;
-            }
+            .section h2 { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-
         <div class="header">
             <h1>RodiNote</h1>
             <p>Hukuki Belgeler / Legal Documents</p>
@@ -349,280 +246,106 @@
         <!-- ==================== GİZLİLİK POLİTİKASI (TR) ==================== -->
         <div class="section" id="gizlilik">
             <h2>Gizlilik Politikası</h2>
-            <p class="update-date">Son Güncelleme: 4 Mayıs 2026 / Yürürlük Tarihi: 4 Mayıs 2026</p>
+            <p class="update-date">Son Güncelleme: 10 Mayıs 2026</p>
 
-            <p>Bu Gizlilik Politikası, RodiNote mobil uygulamasının ("Uygulama") kullanıcılarının kişisel verilerinin nasıl toplandığını, işlendiğini, saklandığını, paylaşıldığını ve korunduğunu açıklamaktadır. Uygulamayı indirerek ve kullanarak bu politikayı okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan etmiş olursunuz.</p>
+            <p>Bu politika, RodiNote uygulamasını kullanırken kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar. Uygulamayı kullanarak bu politikayı kabul etmiş olursunuz.</p>
 
-            <div class="data-controller-box">
-                <strong>Veri Sorumlusu (KVKK Madde 10 Kapsamında)</strong>
-                Veri Sorumlusu: ROBİN ÖZTUNÇ (Bireysel Geliştirici)<br>
-                İletişim: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
-                Apple Geliştirici Hesabı: ROBiN ÖZTUNÇ<br>
-                Uygulama: RodiNote (Bundle ID: com.rodinote.app)
+            <div class="contact-box">
+                <strong>Veri Sorumlusu:</strong> Robin Öztunç<br>
+                <strong>İletişim:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
             </div>
 
-            <h3>1. Toplanan ve İşlenen Veriler</h3>
-            <p>RodiNote, kullanıcı gizliliğine büyük önem vermektedir. Uygulamamız aşağıdaki veri kategorilerini toplar ve işler:</p>
+            <h3>1. Toplanan Veriler</h3>
 
-            <h4>1.1. Cihazda Yerel Olarak Saklanan Veriler</h4>
-            <p>Aşağıdaki veriler cihazınızın yerel deposunda (AsyncStorage) tutulur:</p>
-            <ul>
-                <li>Uygulama içi tema tercihiniz, ses ve titreşim ayarlarınız</li>
-                <li>Bildirim tercihleriniz (saat ayarları, açma/kapama durumu)</li>
-                <li>Uygulama önbelleği (cache) ve oturum bilgileri</li>
-                <li>Çöp Sepetindeki silinen geçici öğeler (30 gün otomatik silinir)</li>
-            </ul>
-            <p>Bu yerel veriler cihazınızdan ayrılmaz; uygulamayı silmeniz halinde tamamen kalıcı olarak kaldırılır.</p>
+            <p><strong>Cihazınızda saklanan veriler:</strong> Uygulama tercihleriniz, tema ayarı, bildirim ayarları, çöp sepeti içeriği. Bu veriler cihazınızdan ayrılmaz ve uygulamayı sildiğinizde tamamen silinir.</p>
 
-            <h4>1.2. Bulut Sunucularında Saklanan Veriler</h4>
-            <p>Hesap oluşturup giriş yaptığınızda aşağıdaki veriler, hizmetin sürekliliği ve cihazlar arası senkronizasyonun sağlanması amacıyla Google Firebase (Firestore Database) sunucularında saklanır:</p>
-            <ul>
-                <li><strong>Kullanıcı içeriği:</strong> Oluşturduğunuz klasörler, konular ve flashcard notlarınız</li>
-                <li><strong>Performans verileri:</strong> Oyun skorları, konu bazında performans istatistikleri, oyun geçmişi (en son 100 oyun)</li>
-                <li><strong>İlerleme verileri:</strong> Günlük çalışma serisi (streak), kazanılan rozetler, yanlış yanıtlanan kart geçmişi (konu başına en fazla 100 kart)</li>
-                <li><strong>Profil bilgileri:</strong> Avatar tercihiniz, görünen adınız, tema tercihiniz, kayıt tarihi</li>
-                <li><strong>AI kullanım kotası:</strong> Aylık AI üretim sayacı, günlük reklam izleme sayacı (suistimal koruması amacıyla)</li>
-                <li><strong>Senkronizasyon meta verileri:</strong> Son senkronizasyon zaman damgası, bekleyen yazma kuyruğu</li>
-            </ul>
+            <p><strong>Bulutta (Firebase) saklanan veriler:</strong> Hesap oluşturduğunuzda; oluşturduğunuz notlar, oyun istatistikleri, rozetler, profil bilgileri (avatar, görünen ad), AI kullanım kotaları. Bu veriler Avrupa (eur3) veri merkezlerinde, GDPR uyumlu olarak saklanır.</p>
 
-            <h4>1.3. Veri Saklama Lokasyonu</h4>
-            <p>Bulut verileri Google Firebase tarafından <strong>"eur3" (Avrupa - Çoklu Bölge)</strong> lokasyonunda saklanmaktadır. Bu lokasyon Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) standartlarına uygun olup, veriler farklı Avrupa veri merkezleri arasında yedeklenmektedir.</p>
-            <p><strong>KVKK Madde 9 Kapsamında Yurt Dışına Veri Aktarımı:</strong> Hizmet sağlayıcı Google'ın merkezi Amerika Birleşik Devletleri'nde olup veri işleme operasyonları küresel altyapı üzerinden yürütülebilmektedir. Bu durum, hizmetin verilebilmesi için zorunlu altyapı gereksinimidir. Google, EU-U.S. Data Privacy Framework çerçevesinde sertifikalıdır.</p>
+            <p><strong>Hesap bilgileri:</strong> Apple veya Google ile giriş yaptığınızda; e-posta adresiniz (Apple gizleme tercihinizi destekler), görünen adınız ve benzersiz kimliğiniz Firebase Authentication tarafından işlenir.</p>
 
-            <h4>1.4. Hesap ve Kimlik Doğrulama Verileri (Firebase Authentication)</h4>
-            <p>RodiNote, "Apple ile Giriş" ve "Google ile Giriş" seçenekleri sunmaktadır. Bu yöntemlerle giriş yaptığınızda; görünen adınız, e-posta adresiniz (Apple gizleme tercihinizi destekler) ve benzersiz kullanıcı kimliğiniz (UID) Firebase Authentication tarafından işlenir ve saklanır. Bu veriler hesabınızı yönetmek, abonelik durumunuzu eşleştirmek, cihazlar arası senkronizasyonu sağlamak ve kişiselleştirilmiş deneyim sunmak amacıyla kullanılır.</p>
-            <p>Firebase'in veri işleme politikası için <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Gizlilik Politikası</a>'nı inceleyebilirsiniz.</p>
+            <p><strong>AI özelliği için işlenen içerik:</strong> AI kart oluşturma özelliğini kullandığınızda; girdiğiniz metin, PDF veya fotoğraf, sunucumuz üzerinden Google Gemini API'ye iletilir. Bu içerik <strong>saklanmaz</strong>, yalnızca isteğin işlenmesi süresince geçici olarak bellekte tutulur. Google'ın resmi politikasına göre AI eğitiminde kullanılmaz.</p>
 
-            <h4>1.5. Yapay Zeka (AI) Özelliği Kapsamında İşlenen Veriler</h4>
-            <p>Uygulamamızın AI kart oluşturma özelliğini kullandığınızda, girdiğiniz metin, yüklediğiniz PDF dosyası veya çektiğiniz/seçtiğiniz fotoğraf içeriği, kendi bulut altyapımız (Cloud Functions proxy) üzerinden Google Gemini API'ye iletilir. Bu içerikler:</p>
-            <ul>
-                <li>Yalnızca kart oluşturma amacıyla işlenir</li>
-                <li>RodiNote sunucularında saklanmaz (yalnızca isteğin işlenmesi süresince geçici olarak bellekte tutulur)</li>
-                <li>Google'ın resmi politikasına göre AI eğitiminde kullanılmaz</li>
-                <li>Üretilen sonuç (flashcard çıktısı) yalnızca cihazınıza döndürülür ve siz kaydedene kadar hiçbir yerde kalıcı olarak tutulmaz</li>
-            </ul>
+            <p><strong>Reklam verileri (sadece ücretsiz kullanıcılar):</strong> Google AdMob aracılığıyla reklam göstermek için reklam kimliği (IDFA/GAID), cihaz türü, yaklaşık konum (IP tabanlı) ve etkileşim verileri toplanır. iOS'ta App Tracking Transparency (ATT) izni sorulur — reddedebilirsiniz. Premium ve Max kullanıcılar reklam görmez ve bu veriler toplanmaz.</p>
 
-            <div class="ai-warning-box">
-                <p><strong>AI Çıktılarının Doğruluğu ve Sorumluluk Reddi (KISA ÖZET):</strong></p>
-                <p>Yapay zeka tarafından üretilen flashcard kartları <strong>hatalı, eksik, güncel olmayan veya yanıltıcı bilgi içerebilir</strong>. Kullanıcı, üretilen kartları kaynak materyalle mutlaka doğrulamakla yükümlüdür. AI çıktıları <strong>sınav, sağlık, hukuk, finans veya diğer önemli kararlar için tek başına güvenilir kaynak olarak kullanılmamalıdır</strong>. Detaylı sorumluluk reddi için Kullanım Koşulları Madde 7'ye bakınız.</p>
-            </div>
+            <p><strong>Abonelik verileri:</strong> RevenueCat, anonim kullanıcı ID'si, satın alma geçmişi ve platform bilgisi işler. Ödeme bilgileriniz (kredi kartı vb.) yalnızca Apple App Store veya Google Play tarafından işlenir; biz görmeyiz.</p>
 
-            <p><strong>Kullanıcı Onayı:</strong> "AI Kart Üretici" özelliğini ilk kez kullanırken kullanıcıya kapsamlı bir bilgilendirme uyarısı gösterilir. Bu uyarıyı onaylayıp özelliği kullanmaya devam etmek, yukarıdaki tüm şartların kabul edilmesi anlamına gelir. Onay bilgisi cihazınızda yerel olarak saklanır.</p>
+            <h3>2. Üçüncü Taraf Hizmetler</h3>
 
-            <p>Google'ın veri işleme politikası için <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>'nı ve Gemini API kullanım şartları için <a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Google AI Terms</a>'i inceleyebilirsiniz.</p>
-
-            <h4>1.6. Reklam Verileri (Google AdMob - Yalnızca Ücretsiz Kullanıcılar)</h4>
-            <p>Ücretsiz (Free) plan kullanıcılarına reklam göstermek amacıyla Google AdMob SDK kullanılmaktadır. AdMob aşağıdaki bilgileri toplayabilir:</p>
-            <ul>
-                <li>Reklam Kimliği (iOS'ta IDFA, Android'de GAID)</li>
-                <li>Cihaz bilgileri (cihaz tipi, işletim sistemi sürümü, dil ayarı)</li>
-                <li>Yaklaşık konum bilgisi (IP adresi tabanlı)</li>
-                <li>Uygulama içi etkileşim verileri (reklam görüntülenme ve tıklanma bilgileri)</li>
-            </ul>
-            <p>Bu veriler kişiselleştirilmiş veya kişiselleştirilmemiş reklam sunmak amacıyla kullanılır. iOS kullanıcılarına ilk açılışta App Tracking Transparency (ATT) izin sorgusu gösterilir; izin vermemeyi tercih edebilirsiniz. Premium veya Max aboneleri reklam görmez ve bu reklamla ilgili veriler toplanmaz.</p>
-            <p>Detaylar için <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Reklam Politikası</a>'nı inceleyebilirsiniz.</p>
-
-            <h4>1.7. Abonelik Yönetimi Verileri (RevenueCat)</h4>
-            <p>Uygulama içi abonelikleri yönetmek amacıyla RevenueCat SDK kullanılmaktadır. RevenueCat aşağıdaki verileri işler:</p>
-            <ul>
-                <li>Anonim kullanıcı kimliği (RevenueCat'in kendi UID'si)</li>
-                <li>Satın alma geçmişi ve abonelik durumu</li>
-                <li>Platform bilgisi (iOS/Android), uygulama versiyonu</li>
-                <li>Ülke kodu (fiyatlandırma için)</li>
-            </ul>
-            <p>Ödeme bilgileriniz (kredi kartı bilgileri, banka hesabı vb.) RevenueCat veya RodiNote tarafından <strong>hiçbir zaman görülmez ve saklanmaz</strong>; bu bilgiler yalnızca Apple App Store veya Google Play Store tarafından işlenir.</p>
-            <p>Detaylar için <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat Gizlilik Politikası</a>'nı inceleyebilirsiniz.</p>
-
-            <h4>1.8. Fotoğraf, Kamera ve Dosya Erişimi</h4>
-            <p>AI kart oluşturma özelliğinin fotoğraf veya PDF modunu kullandığınızda, uygulama cihazınızın kamerasına, fotoğraf galerisine veya dosya sistemine erişim izni isteyebilir. Bu izinler:</p>
-            <ul>
-                <li>Yalnızca AI'ya görsel/belge içeriği göndermek amacıyla kullanılır</li>
-                <li>Fotoğraflarınız ve dosyalarınız RodiNote sunucularında saklanmaz</li>
-                <li>İzni istediğiniz zaman cihaz ayarlarından geri alabilirsiniz</li>
-            </ul>
-
-            <h4>1.9. Bildirim Verileri</h4>
-            <p>RodiNote, çalışma hatırlatmaları göndermek amacıyla yerel bildirimler (local notifications) kullanmaktadır. Bu bildirimler:</p>
-            <ul>
-                <li>Cihazınızda planlanır, herhangi bir sunucuya gönderilmez</li>
-                <li>Push notification altyapısı (FCM/APNs) kullanılmaz</li>
-                <li>Bildirim tercihleri yalnızca cihazınızda yerel olarak saklanır</li>
-                <li>Uygulama ayarlarından veya cihaz ayarlarından istediğiniz zaman kapatabilirsiniz</li>
-            </ul>
-
-            <h3>2. Üçüncü Taraf Hizmetler ve Veri Paylaşımı</h3>
-            <p>RodiNote aşağıdaki üçüncü taraf hizmetlerini kullanmaktadır:</p>
             <table class="data-table">
                 <thead>
                     <tr>
                         <th>Hizmet</th>
                         <th>Amaç</th>
-                        <th>İşlenen Veri Türü</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Firebase Authentication</td>
-                        <td>Hesap oluşturma ve kimlik doğrulama</td>
-                        <td>UID, e-posta, görünen ad</td>
-                    </tr>
-                    <tr>
-                        <td>Firebase Firestore</td>
-                        <td>Bulut veri saklama ve senkronizasyon</td>
-                        <td>Notlar, performans, profil verileri</td>
-                    </tr>
-                    <tr>
-                        <td>Firebase Cloud Functions</td>
-                        <td>Güvenli API proxy ve iş mantığı</td>
-                        <td>Geçici istek verileri</td>
-                    </tr>
-                    <tr>
-                        <td>Google Gemini API</td>
-                        <td>AI destekli kart oluşturma</td>
-                        <td>Metin, PDF, fotoğraf girişi (geçici)</td>
-                    </tr>
-                    <tr>
-                        <td>Google AdMob</td>
-                        <td>Ücretsiz kullanıcılara reklam</td>
-                        <td>Reklam ID, cihaz bilgisi, IP</td>
-                    </tr>
-                    <tr>
-                        <td>RevenueCat</td>
-                        <td>Abonelik yönetimi</td>
-                        <td>Anonim ID, satın alma geçmişi</td>
-                    </tr>
-                    <tr>
-                        <td>Apple App Store / Google Play</td>
-                        <td>Ödeme işlemleri</td>
-                        <td>Ödeme bilgileri (RodiNote görmez)</td>
-                    </tr>
+                    <tr><td>Firebase (Authentication, Firestore, Functions)</td><td>Hesap, veri saklama, sunucu işlemleri</td></tr>
+                    <tr><td>Google Gemini API</td><td>AI ile kart oluşturma</td></tr>
+                    <tr><td>Google AdMob</td><td>Reklam (sadece ücretsiz kullanıcılar)</td></tr>
+                    <tr><td>RevenueCat</td><td>Abonelik yönetimi</td></tr>
+                    <tr><td>Apple / Google Play</td><td>Ödeme işlemleri</td></tr>
                 </tbody>
             </table>
-            <p><strong>Veri Satışı Yapılmaz:</strong> RodiNote, kişisel verilerinizi üçüncü taraflara <strong>satmaz veya kiralamaz</strong>. Veriler yalnızca yukarıda belirtilen üçüncü taraf hizmet sağlayıcılarla, hizmetin sağlanması amacıyla, gerektiği kadar paylaşılır.</p>
 
-            <h3>3. Verilerin Kullanım Amaçları (KVKK Madde 4)</h3>
-            <p>Toplanan veriler aşağıdaki açık ve meşru amaçlarla, sınırlı ve ölçülü şekilde işlenir:</p>
+            <p>Verileriniz <strong>satılmaz veya kiralanmaz</strong>. Yalnızca yukarıdaki hizmetlerle, hizmetin sağlanması için gereken kadar paylaşılır.</p>
+
+            <h3>3. Veri Saklama</h3>
+
             <ul>
-                <li>Uygulamanın temel işlevlerini sağlamak (not oluşturma, oyun oynama, istatistik takibi)</li>
-                <li>Hesap yönetimi ve kimlik doğrulama</li>
-                <li>Cihazlar arası senkronizasyon ve veri kaybı önleme</li>
-                <li>AI özelliği aracılığıyla otomatik kart oluşturmak</li>
-                <li>Abonelik durumunu yönetmek ve doğrulamak</li>
-                <li>AI kullanım kotasını izlemek ve suistimali önlemek</li>
-                <li>Ücretsiz kullanıcılara reklam sunmak (gelir modeli)</li>
-                <li>Çalışma hatırlatmaları göndermek</li>
-                <li>Hata ve performans sorunlarını tespit etmek (anonim olarak)</li>
-                <li>Kullanıcı deneyimini iyileştirmek</li>
-                <li>Yasal yükümlülüklere uymak</li>
+                <li><strong>Hesap aktif olduğu sürece:</strong> Tüm kullanıcı içeriği saklanır</li>
+                <li><strong>Hesap silindikten sonra:</strong> Tüm sunucu verileri en geç 30 gün içinde kalıcı olarak silinir</li>
+                <li><strong>Çöp sepeti:</strong> 30 gün sonra otomatik silinir</li>
+                <li><strong>Yasal zorunluluk:</strong> Apple/Google ödeme kayıtları yasanın gerektirdiği süre kadar saklanabilir</li>
             </ul>
 
-            <h3>4. Veri Saklama Süreleri (GDPR Madde 13(2)(a))</h3>
-            <p>Verileriniz aşağıdaki sürelerle saklanır:</p>
+            <h3>4. Veri Güvenliği</h3>
+
+            <p>Verileriniz şifreli iletişim (HTTPS/TLS) ve Firebase'in endüstri standardı güvenlik altyapısı (ISO 27001, SOC 2 sertifikalı) ile korunur. Verilerinize yalnızca giriş yapmış kullanıcı kendisi erişebilir. Hiçbir sistem %100 güvenli olmasa da güvenliği sağlamak için sürekli çaba gösteririz.</p>
+
+            <h3>5. Çocukların Gizliliği</h3>
+
+            <p>RodiNote, 13 yaşından küçük çocuklardan bilerek veri toplamaz. 13-18 yaş arası kullanıcılar için ebeveyn/yasal vasi gözetimi tavsiye edilir. 13 yaşın altındaki bir çocuğun veri paylaştığını fark ederseniz <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a> adresinden bizimle iletişime geçin; veri en kısa sürede silinecektir. COPPA, GDPR-K ve KVKK çocuk koruma hükümlerine uygun davranılır.</p>
+
+            <h3>6. Kullanıcı Haklarınız (KVKK / GDPR / CCPA)</h3>
+
+            <p>Yürürlükteki veri koruma yasaları kapsamında şu haklara sahipsiniz:</p>
             <ul>
-                <li><strong>Hesap aktif olduğu sürece:</strong> Kullanıcı tarafından oluşturulan tüm içerik (notlar, performans, rozetler, profil) ve hesap verileri</li>
-                <li><strong>AI kotası verileri:</strong> Aylık döngüye göre (UTC ay başında otomatik sıfırlanır), günlük sayaçlar UTC günü sonunda sıfırlanır</li>
-                <li><strong>Hesap silindikten sonra:</strong> Tüm sunucu verileri en geç 30 gün içinde kalıcı olarak silinir (yedek sistemlerden de dahil)</li>
-                <li><strong>Yasal zorunluluk durumunda:</strong> Yasanın gerektirdiği süre kadar (örneğin Apple/Google ödeme kayıtları için 7-10 yıl)</li>
-                <li><strong>Çöp Sepeti:</strong> Silinmiş öğeler 30 gün sonra otomatik kalıcı silinir</li>
-                <li><strong>Geçmiş limiti:</strong> Oyun geçmişi son 100 oyun ile, yanlış kartlar konu başına 100 kart ile sınırlıdır (eski kayıtlar otomatik silinir)</li>
+                <li>Verilerinize erişim talep etme</li>
+                <li>Yanlış veya eksik verilerin düzeltilmesini isteme</li>
+                <li>Verilerinizin silinmesini isteme ("unutulma hakkı")</li>
+                <li>Veri işlemeyi sınırlandırma veya itiraz etme</li>
+                <li>Verilerinizi taşınabilir formatta alma (uygulamada JSON yedekleme özelliği)</li>
+                <li>Veri koruma otoritesine şikayette bulunma</li>
             </ul>
 
-            <h3>5. Veri Güvenliği</h3>
-            <p>Verilerinizin güvenliği için aşağıdaki teknik ve idari önlemler alınmıştır:</p>
-            <ul>
-                <li><strong>Şifreli iletişim:</strong> Tüm veri transferleri TLS 1.3 ile şifrelenir</li>
-                <li><strong>Sunucu güvenliği:</strong> Firebase'in endüstri standardı güvenlik altyapısı (ISO 27001, SOC 2 sertifikalı)</li>
-                <li><strong>Erişim kontrolü:</strong> Verilerinize yalnızca giriş yapmış kullanıcı kendisi erişebilir (Firebase Authentication token doğrulaması)</li>
-                <li><strong>API koruması:</strong> Cloud Functions proxy katmanı, oran sınırlaması (rate limiting) ve uygulama secret koruması</li>
-                <li><strong>Cihazda şifreleme:</strong> iOS ve Android cihazların yerleşik tam disk şifrelemesi</li>
-                <li><strong>Yetkisiz erişim koruması:</strong> Şüpheli aktivite tespitinde otomatik koruma mekanizmaları</li>
-            </ul>
-            <p>Hiçbir sistem %100 güvenli olmasa da, sektördeki en iyi uygulamaları takip ederek verilerinizi korumak için sürekli çaba göstermekteyiz.</p>
+            <p><strong>California sakinleri (CCPA):</strong> Yukarıdaki haklara ek olarak, kişisel bilgilerinizin satışına itiraz etme hakkına sahipsiniz. RodiNote veri satışı yapmaz.</p>
 
-            <h3>6. Çocukların Gizliliği</h3>
-            <p>RodiNote, 13 yaşından küçük çocuklardan bilerek kişisel veri toplamaz. Hesap oluşturma özelliği 13 yaş ve üzeri kullanıcılar için tasarlanmıştır. 13-18 yaş arası kullanıcılar için ebeveyn/yasal vasi gözetimi tavsiye edilir. 13 yaşın altındaki bir çocuğun veri paylaştığını fark ederseniz, lütfen <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a> adresinden bizimle iletişime geçin; ilgili veri en kısa sürede silinecektir. ABD COPPA, GDPR-K ve KVKK çocuk koruma hükümlerine uygun davranılmaktadır.</p>
+            <h3>7. Yapay Zeka (AI) Özelliği — Önemli Uyarı</h3>
 
-            <h3>7. Uygulama İçi Satın Almalar ve Hesap Paylaşımı Yasağı</h3>
-            <p>RodiNote üç katmanlı bir üyelik modeli sunmaktadır:</p>
-            <ul>
-                <li><strong>Free (Ücretsiz)</strong> — Reklam destekli, temel özellikler</li>
-                <li><strong>Premium</strong> — Reklamsız, AI metin tabanlı kart oluşturma</li>
-                <li><strong>Max</strong> — Tüm AI modları (metin, PDF, fotoğraf), gelişmiş özellikler</li>
-            </ul>
-            <p>Ödeme işlemleri Apple App Store veya Google Play Store üzerinden gerçekleştirilir; ödeme bilgileriniz RodiNote tarafından görülmez veya saklanmaz.</p>
-
-            <div class="critical-box">
-                <p><strong>Hesap Paylaşımı Yasağı:</strong></p>
-                <p>RodiNote hesabınız <strong>kişiseldir ve devredilemez</strong>. Hesabınızı başka kişilerle paylaşmak, ödediğiniz aboneliği üçüncü kişilerle ortak kullanmak veya hesap bilgilerinizi başkalarına temin etmek <strong>kesinlikle yasaktır</strong>. Bu kuralın ihlali halinde RodiNote, hizmeti askıya alma veya hesabı tamamen sonlandırma hakkını saklı tutar. Şüpheli çoklu cihaz erişimleri otomatik olarak izlenir ve gerekli durumlarda erişim kısıtlanabilir.</p>
+            <div class="ai-warning-box">
+                <p><strong>AI Çıktılarının Doğruluğu Garanti Edilmez:</strong></p>
+                <p>RodiNote'un yapay zeka tarafından üretilen flashcard kartları <strong>hatalı, eksik, güncel olmayan veya yanıltıcı bilgi içerebilir</strong>. Üretilen içerik, kaynak materyal veya güvenilir akademik kaynaklarla doğrulanmadan kullanılmamalıdır.</p>
+                <p>AI çıktıları <strong>sınav, sağlık, hukuk, finans veya diğer önemli kararlar için tek başına güvenilir kaynak olarak kullanılmamalıdır</strong>. Bu özelliğin kullanımından doğan her türlü sonuç kullanıcının sorumluluğundadır.</p>
+                <p>İlk kullanımda kullanıcıya kapsamlı bir bilgilendirme uyarısı gösterilir. Kullanıcı bu uyarıyı onaylamadan AI özelliğini kullanamaz. Detaylı sorumluluk sınırlaması Kullanım Koşulları'nda yer almaktadır.</p>
             </div>
 
-            <h3>8. Kullanıcı Hakları (KVKK Madde 11 / GDPR Madde 15-22 / CCPA)</h3>
-            <p>Yürürlükteki veri koruma yasaları kapsamında aşağıdaki haklara sahipsiniz:</p>
-            <ul>
-                <li><strong>Erişim Hakkı:</strong> Hangi verilerinizin işlendiğini öğrenme</li>
-                <li><strong>Düzeltme Hakkı:</strong> Yanlış veya eksik verilerin düzeltilmesini talep etme</li>
-                <li><strong>Silme Hakkı ("Unutulma Hakkı"):</strong> Verilerinizin silinmesini talep etme</li>
-                <li><strong>İşleme Kısıtlama Hakkı:</strong> Verilerinizin işlenmesinin sınırlandırılmasını isteme</li>
-                <li><strong>Veri Taşınabilirliği Hakkı:</strong> Verilerinizi yapılandırılmış formatta alma (JSON yedekleme özelliği)</li>
-                <li><strong>İtiraz Hakkı:</strong> Veri işlemeye itiraz etme</li>
-                <li><strong>Otomatik Karar Verme:</strong> Otomatik karar verme süreçlerine itiraz etme (RodiNote bu tür kararlar almamaktadır)</li>
-                <li><strong>Şikayet Hakkı:</strong> İlgili veri koruma otoritesine şikayette bulunma (KVKK için Kişisel Verileri Koruma Kurumu - kvkk.gov.tr)</li>
-            </ul>
+            <h3>8. Hesap Silme</h3>
 
-            <h4>8.1. Hesap Silme Prosedürü</h4>
-            <p>Hesabınızı ve tüm sunucu verilerinizi silmek için iki yol vardır:</p>
+            <p>Hesabınızı ve tüm verilerinizi iki yolla silebilirsiniz:</p>
             <ol>
-                <li><strong>Uygulama Üzerinden:</strong> Ayarlar → Hesabım → Hesabımı Sil seçeneğini kullanın</li>
-                <li><strong>E-posta Yoluyla:</strong> <a href="mailto:rodinoteapp@gmail.com?subject=Hesap%20Silme%20Talebi">rodinoteapp@gmail.com</a> adresine "Hesap Silme Talebi" konulu mesaj gönderin (kayıtlı hesap e-postanızdan)</li>
+                <li><strong>Uygulama içinden:</strong> Ayarlar → Hesabım → Hesabımı Sil</li>
+                <li><strong>E-posta ile:</strong> <a href="mailto:rodinoteapp@gmail.com?subject=Hesap%20Silme%20Talebi">rodinoteapp@gmail.com</a> adresine "Hesap Silme Talebi" konulu mesaj gönderin (kayıtlı e-postanızdan)</li>
             </ol>
-            <p>Talep alındıktan sonra hesap verileriniz <strong>en geç 30 gün içinde</strong> kalıcı olarak silinir. Bu süre yedek sistemlerden silinmeyi de kapsar. Silme işlemi geri alınamaz; verilerinizi yedeklemek isterseniz JSON yedekleme özelliğini kullanmanız önerilir.</p>
+            <p>Talep alındıktan sonra verileriniz en geç 30 gün içinde kalıcı olarak silinir. Bu işlem geri alınamaz; verilerinizi yedeklemek için JSON dışa aktarma özelliğini kullanabilirsiniz.</p>
 
-            <h4>8.2. Diğer Talepler İçin İletişim</h4>
-            <p>Yukarıdaki haklarınızı kullanmak için <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a> adresinden bizimle iletişime geçebilirsiniz. Talepleriniz en geç 30 gün içinde yanıtlanacaktır. Kimliğinizi doğrulamak amacıyla ek bilgi istenebilir.</p>
+            <h3>9. Politika Değişiklikleri ve İletişim</h3>
 
-            <h3>9. Çerezler ve Benzer Teknolojiler</h3>
-            <p>RodiNote mobil uygulamasında web çerezleri kullanılmaz. Bunun yerine:</p>
-            <ul>
-                <li>Cihazınızda yerel depolama (AsyncStorage) — uygulama ayarları için</li>
-                <li>Reklam Kimliği (yalnızca Free kullanıcılar için, izin verirseniz)</li>
-                <li>Firebase oturum tokenları (giriş yaptığınız sürece)</li>
-            </ul>
+            <p>Bu politika güncellenebilir. Önemli değişiklikler uygulama içinde bildirilecek ve "Son Güncelleme" tarihi yenilenecektir. Uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
 
-            <h3>10. Uluslararası Veri Aktarımları</h3>
-            <p>Verileriniz Avrupa Birliği (eur3) lokasyonunda saklanmakla birlikte, hizmet sağlayıcılarımız (Google, RevenueCat) küresel altyapı kullanmaktadır. Bu nedenle verileriniz, hizmetin verilebilmesi amacıyla:</p>
-            <ul>
-                <li>EU-U.S. Data Privacy Framework çerçevesinde sertifikalı sağlayıcılar üzerinden ABD'ye</li>
-                <li>Standart Sözleşme Maddeleri (Standard Contractual Clauses) ile diğer üçüncü ülkelere</li>
-            </ul>
-            <p>aktarılabilir. Bu aktarımlar GDPR ve KVKK gereksinimlerini karşılayan yeterli koruma önlemleri ile yapılır.</p>
-
-            <h3>11. California Sakinleri İçin Ek Bilgiler (CCPA)</h3>
-            <p>California Tüketici Gizliliği Yasası (CCPA) kapsamında California sakinleri:</p>
-            <ul>
-                <li>Hangi kişisel bilgilerin toplandığını öğrenme hakkına sahiptir</li>
-                <li>Kişisel bilgilerinin silinmesini talep edebilir</li>
-                <li>Kişisel bilgilerinin satışına itiraz edebilir (RodiNote veri satışı yapmamaktadır)</li>
-                <li>Bu hakları kullandığı için ayrımcılığa uğramama hakkına sahiptir</li>
-            </ul>
-
-            <h3>12. Politika Değişiklikleri</h3>
-            <p>Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler:</p>
-            <ul>
-                <li>Uygulama içinde bildirim olarak gösterilecektir</li>
-                <li>"Son Güncelleme" tarihi belge başında yenilenecektir</li>
-                <li>Yeni izin gerektiren değişikliklerde açık onayınız istenecektir</li>
-            </ul>
-            <p>Politikanın güncel sürümünü düzenli olarak kontrol etmenizi öneririz. Uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
-
-            <h3>13. İletişim ve Şikayet</h3>
             <div class="contact-box">
-                <strong>Veri Sorumlusu İletişim:</strong><br>
-                ROBİN ÖZTUNÇ (Bireysel Geliştirici)<br>
-                E-posta: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
-                Yanıt Süresi: En geç 30 gün<br><br>
-                <strong>KVKK Şikayet Mercii:</strong><br>
-                Kişisel Verileri Koruma Kurumu<br>
-                <a href="https://www.kvkk.gov.tr" target="_blank" rel="noopener">www.kvkk.gov.tr</a>
+                <strong>İletişim:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
+                <strong>Yanıt Süresi:</strong> En geç 30 gün<br>
+                <strong>KVKK Şikayet:</strong> <a href="https://www.kvkk.gov.tr" target="_blank" rel="noopener">www.kvkk.gov.tr</a>
             </div>
         </div>
 
@@ -631,280 +354,105 @@
         <!-- ==================== PRIVACY POLICY (EN) ==================== -->
         <div class="section" id="privacy">
             <h2>Privacy Policy</h2>
-            <p class="update-date">Last Updated: May 4, 2026 / Effective Date: May 4, 2026</p>
+            <p class="update-date">Last Updated: May 10, 2026</p>
 
-            <p>This Privacy Policy explains how the personal data of users of the RodiNote mobile application ("App") is collected, processed, stored, shared, and protected. By downloading and using the App, you acknowledge that you have read, understood, and accepted this policy.</p>
+            <p>This policy explains how your personal data is collected, used, and protected when using RodiNote. By using the app, you accept this policy.</p>
 
-            <div class="data-controller-box">
-                <strong>Data Controller (Pursuant to GDPR Article 4(7) and KVKK Article 10)</strong>
-                Data Controller: ROBİN ÖZTUNÇ (Individual Developer)<br>
-                Contact: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
-                Apple Developer Account: ROBiN ÖZTUNÇ<br>
-                Application: RodiNote (Bundle ID: com.rodinote.app)
+            <div class="contact-box">
+                <strong>Data Controller:</strong> Robin Öztunç<br>
+                <strong>Contact:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
             </div>
 
-            <h3>1. Data Collected and Processed</h3>
-            <p>RodiNote places great importance on user privacy. Our application collects and processes the following data categories:</p>
+            <h3>1. Data We Collect</h3>
 
-            <h4>1.1. Data Stored Locally on Device</h4>
-            <p>The following data is stored in your device's local storage (AsyncStorage):</p>
-            <ul>
-                <li>In-app theme preference, sound and haptic settings</li>
-                <li>Notification preferences (time settings, enable/disable status)</li>
-                <li>Application cache and session information</li>
-                <li>Items in Trash that have been temporarily deleted (auto-deleted after 30 days)</li>
-            </ul>
-            <p>This local data does not leave your device; if you delete the app, it is permanently removed entirely.</p>
+            <p><strong>Stored on your device:</strong> App preferences, theme, notification settings, trash bin contents. This data never leaves your device and is removed when you uninstall the app.</p>
 
-            <h4>1.2. Data Stored on Cloud Servers</h4>
-            <p>When you create an account and sign in, the following data is stored on Google Firebase (Firestore Database) servers for service continuity and cross-device synchronization:</p>
-            <ul>
-                <li><strong>User content:</strong> Folders, topics, and flashcard notes you create</li>
-                <li><strong>Performance data:</strong> Game scores, topic-based performance statistics, game history (last 100 games)</li>
-                <li><strong>Progress data:</strong> Daily study streak, earned badges, history of incorrectly answered cards (max 100 cards per topic)</li>
-                <li><strong>Profile information:</strong> Avatar preference, display name, theme preference, registration date</li>
-                <li><strong>AI usage quota:</strong> Monthly AI generation counter, daily ad viewing counter (for abuse prevention)</li>
-                <li><strong>Synchronization metadata:</strong> Last sync timestamp, pending write queue</li>
-            </ul>
+            <p><strong>Stored in the cloud (Firebase):</strong> When you create an account; your notes, game statistics, badges, profile info (avatar, display name), and AI usage quotas. Data is stored in European data centers (eur3), GDPR-compliant.</p>
 
-            <h4>1.3. Data Storage Location</h4>
-            <p>Cloud data is stored by Google Firebase in the <strong>"eur3" (Europe - Multi-region)</strong> location. This location complies with European Union General Data Protection Regulation (GDPR) standards, with data being backed up across multiple European data centers.</p>
-            <p><strong>International Data Transfers:</strong> Service provider Google is headquartered in the United States, and data processing operations may be conducted via global infrastructure. This is a necessary infrastructure requirement for service delivery. Google is certified under the EU-U.S. Data Privacy Framework.</p>
+            <p><strong>Account information:</strong> When signing in with Apple or Google; your email (Apple's hide-email is supported), display name, and unique ID are processed by Firebase Authentication.</p>
 
-            <h4>1.4. Account and Authentication Data (Firebase Authentication)</h4>
-            <p>RodiNote offers "Sign in with Apple" and "Sign in with Google" options. When you sign in using these methods, your display name, email address (Apple's hide-email preference is supported), and unique user identifier (UID) are processed and stored by Firebase Authentication. This data is used to manage your account, sync your subscription status, enable cross-device synchronization, and provide a personalized experience.</p>
-            <p>For Firebase's data processing policy, please refer to the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</p>
+            <p><strong>Content processed for AI:</strong> When you use the AI card generator; your text, PDF, or photo input is sent through our server proxy to Google Gemini API. This content is <strong>not stored</strong> — only held in memory temporarily during processing. Per Google's official policy, it is not used for AI training.</p>
 
-            <h4>1.5. Data Processed Within the AI Feature</h4>
-            <p>When you use the AI card generation feature of our application, the text you input, PDF files you upload, or photos you take/select are forwarded to the Google Gemini API through our own cloud infrastructure (Cloud Functions proxy). This content:</p>
-            <ul>
-                <li>Is processed solely for card generation purposes</li>
-                <li>Is not stored on RodiNote servers (only temporarily held in memory during request processing)</li>
-                <li>Is not used for AI training, according to Google's official policy</li>
-                <li>The generated result (flashcard output) is returned only to your device and is not persistently stored anywhere until you save it</li>
-            </ul>
+            <p><strong>Advertising data (free users only):</strong> Google AdMob collects advertising ID (IDFA/GAID), device type, approximate location (IP-based), and interaction data to serve ads. iOS shows the App Tracking Transparency (ATT) prompt — you can decline. Premium and Max users see no ads, and this data is not collected.</p>
 
-            <div class="ai-warning-box">
-                <p><strong>AI Output Accuracy and Disclaimer (BRIEF SUMMARY):</strong></p>
-                <p>Flashcards generated by artificial intelligence <strong>may contain incorrect, incomplete, outdated, or misleading information</strong>. Users are obligated to verify generated cards against source materials. AI outputs <strong>should not be used as a sole reliable source for exams, health, legal, financial, or other important decisions</strong>. For detailed disclaimer, see Terms of Use Section 7.</p>
-            </div>
+            <p><strong>Subscription data:</strong> RevenueCat processes anonymous user ID, purchase history, and platform info. Payment details (card numbers, etc.) are processed only by Apple App Store or Google Play; we never see them.</p>
 
-            <p><strong>User Consent:</strong> A comprehensive informational warning is displayed to users when they first use the "AI Card Generator" feature. By acknowledging this warning and continuing to use the feature, the user accepts all of the above terms. Consent information is stored locally on your device.</p>
+            <h3>2. Third-Party Services</h3>
 
-            <p>For Google's data processing policy, please refer to the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and Gemini API usage terms at <a href="https://ai.google.dev/terms" target="_blank" rel="noopener">Google AI Terms</a>.</p>
-
-            <h4>1.6. Advertising Data (Google AdMob - Free Users Only)</h4>
-            <p>Google AdMob SDK is used to display ads to Free plan users. AdMob may collect the following information:</p>
-            <ul>
-                <li>Advertising Identifier (IDFA on iOS, GAID on Android)</li>
-                <li>Device information (device type, OS version, language setting)</li>
-                <li>Approximate location (IP address-based)</li>
-                <li>In-app interaction data (ad impression and click information)</li>
-            </ul>
-            <p>This data is used to serve personalized or non-personalized ads. iOS users are shown an App Tracking Transparency (ATT) consent prompt on first launch; you may choose not to consent. Premium and Max subscribers do not see ads, and this advertising-related data is not collected.</p>
-            <p>For details, please refer to the <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ads Policy</a>.</p>
-
-            <h4>1.7. Subscription Management Data (RevenueCat)</h4>
-            <p>RevenueCat SDK is used to manage in-app subscriptions. RevenueCat processes the following data:</p>
-            <ul>
-                <li>Anonymous user identifier (RevenueCat's own UID)</li>
-                <li>Purchase history and subscription status</li>
-                <li>Platform information (iOS/Android), app version</li>
-                <li>Country code (for pricing)</li>
-            </ul>
-            <p>Your payment information (credit card details, bank account, etc.) is <strong>never visible to or stored by RevenueCat or RodiNote</strong>; this information is processed solely by Apple App Store or Google Play Store.</p>
-            <p>For details, please refer to the <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</p>
-
-            <h4>1.8. Photo, Camera, and File Access</h4>
-            <p>When you use the photo or PDF mode of the AI card generation feature, the app may request access to your device's camera, photo library, or file system. These permissions:</p>
-            <ul>
-                <li>Are used solely to send visual/document content to the AI</li>
-                <li>Your photos and files are not stored on RodiNote servers</li>
-                <li>You can revoke permission at any time from your device settings</li>
-            </ul>
-
-            <h4>1.9. Notification Data</h4>
-            <p>RodiNote uses local notifications to send study reminders. These notifications:</p>
-            <ul>
-                <li>Are scheduled on your device, never sent to any server</li>
-                <li>Push notification infrastructure (FCM/APNs) is not used</li>
-                <li>Notification preferences are stored locally on your device only</li>
-                <li>Can be disabled at any time from app settings or device settings</li>
-            </ul>
-
-            <h3>2. Third-Party Services and Data Sharing</h3>
-            <p>RodiNote uses the following third-party services:</p>
             <table class="data-table">
                 <thead>
                     <tr>
                         <th>Service</th>
                         <th>Purpose</th>
-                        <th>Data Type Processed</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Firebase Authentication</td>
-                        <td>Account creation and authentication</td>
-                        <td>UID, email, display name</td>
-                    </tr>
-                    <tr>
-                        <td>Firebase Firestore</td>
-                        <td>Cloud data storage and sync</td>
-                        <td>Notes, performance, profile data</td>
-                    </tr>
-                    <tr>
-                        <td>Firebase Cloud Functions</td>
-                        <td>Secure API proxy and business logic</td>
-                        <td>Temporary request data</td>
-                    </tr>
-                    <tr>
-                        <td>Google Gemini API</td>
-                        <td>AI-powered card generation</td>
-                        <td>Text, PDF, photo input (temporary)</td>
-                    </tr>
-                    <tr>
-                        <td>Google AdMob</td>
-                        <td>Ads for free users</td>
-                        <td>Ad ID, device info, IP</td>
-                    </tr>
-                    <tr>
-                        <td>RevenueCat</td>
-                        <td>Subscription management</td>
-                        <td>Anonymous ID, purchase history</td>
-                    </tr>
-                    <tr>
-                        <td>Apple App Store / Google Play</td>
-                        <td>Payment processing</td>
-                        <td>Payment info (RodiNote does not see)</td>
-                    </tr>
+                    <tr><td>Firebase (Authentication, Firestore, Functions)</td><td>Account, data storage, server operations</td></tr>
+                    <tr><td>Google Gemini API</td><td>AI card generation</td></tr>
+                    <tr><td>Google AdMob</td><td>Advertising (free users only)</td></tr>
+                    <tr><td>RevenueCat</td><td>Subscription management</td></tr>
+                    <tr><td>Apple / Google Play</td><td>Payment processing</td></tr>
                 </tbody>
             </table>
-            <p><strong>No Data Sale:</strong> RodiNote does <strong>not sell or rent</strong> your personal data to third parties. Data is shared only with the third-party service providers listed above, solely as needed for service delivery.</p>
 
-            <h3>3. Purposes of Data Use (GDPR Article 5(1)(b), KVKK Article 4)</h3>
-            <p>Collected data is processed for the following explicit and legitimate purposes, in a limited and proportionate manner:</p>
+            <p>Your data is <strong>never sold or rented</strong>. It is shared only with the services above, only as needed to provide the service.</p>
+
+            <h3>3. Data Retention</h3>
+
             <ul>
-                <li>Providing core app functionality (note creation, gameplay, statistics tracking)</li>
-                <li>Account management and authentication</li>
-                <li>Cross-device synchronization and data loss prevention</li>
-                <li>Generating automatic cards through the AI feature</li>
-                <li>Managing and verifying subscription status</li>
-                <li>Tracking AI usage quota and preventing abuse</li>
-                <li>Serving advertisements to free users (revenue model)</li>
-                <li>Sending study reminders</li>
-                <li>Detecting errors and performance issues (anonymously)</li>
-                <li>Improving user experience</li>
-                <li>Complying with legal obligations</li>
+                <li><strong>While account is active:</strong> All your content is retained</li>
+                <li><strong>After account deletion:</strong> All server data is permanently deleted within 30 days</li>
+                <li><strong>Trash bin:</strong> Auto-deleted after 30 days</li>
+                <li><strong>Legal requirements:</strong> Apple/Google payment records may be retained as required by law</li>
             </ul>
 
-            <h3>4. Data Retention Periods (GDPR Article 13(2)(a))</h3>
-            <p>Your data is retained for the following periods:</p>
+            <h3>4. Data Security</h3>
+
+            <p>Your data is protected with encrypted communication (HTTPS/TLS) and Firebase's industry-standard infrastructure (ISO 27001, SOC 2 certified). Only the authenticated user can access their own data. While no system is 100% secure, we continuously work to keep your data safe.</p>
+
+            <h3>5. Children's Privacy</h3>
+
+            <p>RodiNote does not knowingly collect data from children under 13. Users aged 13-18 are advised to use the app under parental/guardian supervision. If you become aware that a child under 13 has shared data, please contact <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a> and we will delete it as soon as possible. We comply with COPPA, GDPR-K, and KVKK child protection provisions.</p>
+
+            <h3>6. Your Rights (GDPR / CCPA / KVKK)</h3>
+
+            <p>Under applicable data protection laws, you have the right to:</p>
             <ul>
-                <li><strong>While account is active:</strong> All user-created content (notes, performance, badges, profile) and account data</li>
-                <li><strong>AI quota data:</strong> On a monthly cycle (auto-reset at start of UTC month), daily counters reset at end of UTC day</li>
-                <li><strong>After account deletion:</strong> All server data is permanently deleted within at most 30 days (including from backup systems)</li>
-                <li><strong>Legal obligation:</strong> As long as required by law (e.g., 7-10 years for Apple/Google payment records)</li>
-                <li><strong>Trash:</strong> Deleted items are permanently removed automatically after 30 days</li>
-                <li><strong>History limit:</strong> Game history limited to last 100 games, wrong cards limited to 100 per topic (older records auto-deleted)</li>
+                <li>Request access to your data</li>
+                <li>Request correction of inaccurate or incomplete data</li>
+                <li>Request deletion of your data ("right to be forgotten")</li>
+                <li>Restrict or object to processing</li>
+                <li>Receive your data in a portable format (JSON export available in-app)</li>
+                <li>Lodge a complaint with a data protection authority</li>
             </ul>
 
-            <h3>5. Data Security</h3>
-            <p>The following technical and administrative measures are in place to ensure your data security:</p>
-            <ul>
-                <li><strong>Encrypted communication:</strong> All data transfers are encrypted with TLS 1.3</li>
-                <li><strong>Server security:</strong> Firebase's industry-standard security infrastructure (ISO 27001, SOC 2 certified)</li>
-                <li><strong>Access control:</strong> Only the signed-in user can access their data (Firebase Authentication token verification)</li>
-                <li><strong>API protection:</strong> Cloud Functions proxy layer with rate limiting and application secret protection</li>
-                <li><strong>On-device encryption:</strong> Built-in full-disk encryption of iOS and Android devices</li>
-                <li><strong>Unauthorized access protection:</strong> Automatic protection mechanisms upon detection of suspicious activity</li>
-            </ul>
-            <p>While no system is 100% secure, we follow industry best practices and continuously work to protect your data.</p>
+            <p><strong>California residents (CCPA):</strong> In addition to the rights above, you have the right to opt out of the sale of personal information. RodiNote does not sell data.</p>
 
-            <h3>6. Children's Privacy</h3>
-            <p>RodiNote does not knowingly collect personal data from children under the age of 13. The account creation feature is designed for users aged 13 and above. Parental/legal guardian supervision is recommended for users aged 13-18. If you become aware that a child under 13 has shared data, please contact us at <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>; the relevant data will be deleted as soon as possible. This complies with U.S. COPPA, GDPR-K, and KVKK child protection provisions.</p>
+            <h3>7. Artificial Intelligence (AI) Feature — Important Notice</h3>
 
-            <h3>7. In-App Purchases and Account Sharing Prohibition</h3>
-            <p>RodiNote offers a three-tier membership model:</p>
-            <ul>
-                <li><strong>Free</strong> — Ad-supported, basic features</li>
-                <li><strong>Premium</strong> — Ad-free, AI text-based card generation</li>
-                <li><strong>Max</strong> — All AI modes (text, PDF, photo), advanced features</li>
-            </ul>
-            <p>Payment transactions are processed through Apple App Store or Google Play Store; your payment information is neither visible to nor stored by RodiNote.</p>
-
-            <div class="critical-box">
-                <p><strong>Account Sharing Prohibition:</strong></p>
-                <p>Your RodiNote account is <strong>personal and non-transferable</strong>. Sharing your account with other people, jointly using your subscription with third parties, or providing your account credentials to others is <strong>strictly prohibited</strong>. In case of violation, RodiNote reserves the right to suspend service or terminate the account entirely. Suspicious multi-device access is automatically monitored, and access may be restricted as needed.</p>
+            <div class="ai-warning-box">
+                <p><strong>AI Output Accuracy Is Not Guaranteed:</strong></p>
+                <p>Flashcards generated by RodiNote's artificial intelligence <strong>may contain incorrect, incomplete, outdated, or misleading information</strong>. Generated content must not be used without verification against source material or reliable academic sources.</p>
+                <p>AI outputs <strong>must not be used as the sole reliable source for exam preparation, health, legal, financial, or other important decisions</strong>. Any consequences arising from the use of this feature are the user's responsibility.</p>
+                <p>On first use, the user is shown a comprehensive disclaimer notice. The user cannot use the AI feature without acknowledging this notice. Detailed liability limitations are in the Terms of Use.</p>
             </div>
 
-            <h3>8. User Rights (GDPR Articles 15-22 / KVKK Article 11 / CCPA)</h3>
-            <p>You have the following rights under applicable data protection laws:</p>
-            <ul>
-                <li><strong>Right of Access:</strong> To know what data is being processed</li>
-                <li><strong>Right to Rectification:</strong> To request correction of inaccurate or incomplete data</li>
-                <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> To request deletion of your data</li>
-                <li><strong>Right to Restrict Processing:</strong> To request limitation of data processing</li>
-                <li><strong>Right to Data Portability:</strong> To receive your data in a structured format (JSON backup feature)</li>
-                <li><strong>Right to Object:</strong> To object to data processing</li>
-                <li><strong>Automated Decision-Making:</strong> To object to automated decision-making (RodiNote does not make such decisions)</li>
-                <li><strong>Right to Lodge a Complaint:</strong> To lodge a complaint with the relevant data protection authority</li>
-            </ul>
+            <h3>8. Account Deletion</h3>
 
-            <h4>8.1. Account Deletion Procedure</h4>
-            <p>There are two ways to delete your account and all server data:</p>
+            <p>You can delete your account and all data in two ways:</p>
             <ol>
-                <li><strong>Through the App:</strong> Use the Settings → My Account → Delete My Account option</li>
-                <li><strong>By Email:</strong> Send a message titled "Account Deletion Request" to <a href="mailto:rodinoteapp@gmail.com?subject=Account%20Deletion%20Request">rodinoteapp@gmail.com</a> (from your registered account email)</li>
+                <li><strong>In-app:</strong> Settings → Account → Delete My Account</li>
+                <li><strong>By email:</strong> Send a message titled "Account Deletion Request" to <a href="mailto:rodinoteapp@gmail.com?subject=Account%20Deletion%20Request">rodinoteapp@gmail.com</a> (from your registered email)</li>
             </ol>
-            <p>Once the request is received, your account data will be permanently deleted <strong>within at most 30 days</strong>. This timeframe includes deletion from backup systems. The deletion is irreversible; if you want to back up your data, it is recommended to use the JSON backup feature.</p>
+            <p>Once requested, your data will be permanently deleted within 30 days. This action is irreversible; you can use the JSON export feature to back up your data first.</p>
 
-            <h4>8.2. Contact for Other Requests</h4>
-            <p>To exercise any of the above rights, you may contact us at <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>. Your requests will be answered within at most 30 days. Additional information may be requested to verify your identity.</p>
+            <h3>9. Policy Changes and Contact</h3>
 
-            <h3>9. Cookies and Similar Technologies</h3>
-            <p>Web cookies are not used in the RodiNote mobile application. Instead:</p>
-            <ul>
-                <li>Local storage on your device (AsyncStorage) — for app settings</li>
-                <li>Advertising Identifier (only for Free users, with your consent)</li>
-                <li>Firebase session tokens (while you are signed in)</li>
-            </ul>
+            <p>This policy may be updated. Significant changes will be announced in-app and the "Last Updated" date will be revised. Continued use of the app means you accept the updated policy.</p>
 
-            <h3>10. International Data Transfers</h3>
-            <p>While your data is stored in the European Union (eur3) location, our service providers (Google, RevenueCat) use global infrastructure. For this reason, your data may be transferred for service delivery purposes:</p>
-            <ul>
-                <li>To the United States via providers certified under the EU-U.S. Data Privacy Framework</li>
-                <li>To other third countries via Standard Contractual Clauses</li>
-            </ul>
-            <p>These transfers are made with adequate safeguards meeting GDPR and KVKK requirements.</p>
-
-            <h3>11. Additional Information for California Residents (CCPA)</h3>
-            <p>Under the California Consumer Privacy Act (CCPA), California residents:</p>
-            <ul>
-                <li>Have the right to know what personal information is being collected</li>
-                <li>May request deletion of their personal information</li>
-                <li>May object to the sale of their personal information (RodiNote does not sell data)</li>
-                <li>Have the right not to be discriminated against for exercising these rights</li>
-            </ul>
-
-            <h3>12. Policy Changes</h3>
-            <p>This Privacy Policy may be updated from time to time. Significant changes:</p>
-            <ul>
-                <li>Will be displayed as in-app notifications</li>
-                <li>The "Last Updated" date at the top of the document will be renewed</li>
-                <li>Changes requiring new permissions will require your explicit consent</li>
-            </ul>
-            <p>It is recommended to regularly check the current version of the policy. Your continued use of the application constitutes acceptance of the updated policy.</p>
-
-            <h3>13. Contact and Complaints</h3>
             <div class="contact-box">
-                <strong>Data Controller Contact:</strong><br>
-                ROBİN ÖZTUNÇ (Individual Developer)<br>
-                Email: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
-                Response Time: Within 30 days<br><br>
-                <strong>EU/EEA Residents:</strong> Right to lodge a complaint with your local data protection authority<br>
-                <strong>UK Residents:</strong> Information Commissioner's Office (<a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>)<br>
-                <strong>Turkey Residents:</strong> Personal Data Protection Authority (<a href="https://www.kvkk.gov.tr" target="_blank" rel="noopener">www.kvkk.gov.tr</a>)
+                <strong>Contact:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
+                <strong>Response Time:</strong> Within 30 days
             </div>
         </div>
 
@@ -913,193 +461,121 @@
         <!-- ==================== KULLANIM KOŞULLARI (TR) ==================== -->
         <div class="section" id="kullanim">
             <h2>Kullanım Koşulları</h2>
-            <p class="update-date">Son Güncelleme: 4 Mayıs 2026 / Yürürlük Tarihi: 4 Mayıs 2026</p>
+            <p class="update-date">Son Güncelleme: 10 Mayıs 2026</p>
 
-            <p>Bu Kullanım Koşulları ("Sözleşme"), RodiNote mobil uygulamasının ("Uygulama" veya "Hizmet") kullanımına ilişkin yasal şartları belirlemektedir. Uygulamayı indirerek, hesap oluşturarak veya kullanarak bu koşulları okuduğunuzu, anladığınızı ve <strong>yasal olarak bağlayıcı bir şekilde kabul ettiğinizi</strong> beyan edersiniz. Bu koşulları kabul etmiyorsanız uygulamayı kullanmamalısınız.</p>
+            <p>Bu koşullar, RodiNote uygulamasının kullanımına ilişkin yasal şartları belirler. Uygulamayı kullanarak bu koşulları kabul etmiş olursunuz. Koşulları kabul etmiyorsanız uygulamayı kullanmamalısınız.</p>
 
-            <div class="data-controller-box">
-                <strong>Hizmet Sağlayıcı</strong>
-                Hizmet Sağlayıcı: ROBİN ÖZTUNÇ (Bireysel Geliştirici)<br>
-                İletişim: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
-                Uygulama: RodiNote (Bundle ID: com.rodinote.app)
+            <div class="contact-box">
+                <strong>Hizmet Sağlayıcı:</strong> Robin Öztunç<br>
+                <strong>İletişim:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
             </div>
 
             <h3>1. Hizmet Tanımı</h3>
-            <p>RodiNote, öğrencilere ve öğrenmek isteyen herkese yönelik bir çalışma ve flashcard uygulamasıdır. Uygulama şu özellikleri sunmaktadır:</p>
+
+            <p>RodiNote, flashcard oluşturma, öğrenme oyunları ve yapay zeka destekli kart üretme özellikleri sunan bir çalışma uygulamasıdır. Uygulama; bulut senkronizasyonu, hazır şablon mağazası, performans takibi ve çalışma hatırlatma bildirimleri içerir.</p>
+
+            <h3>2. Üyelik ve Ödemeler</h3>
+
+            <p>Üç katmanlı üyelik modeli sunulmaktadır:</p>
             <ul>
-                <li>Flashcard (bilgi kartı) oluşturma, düzenleme ve organize etme</li>
-                <li>8 farklı interaktif öğrenme oyunu</li>
-                <li>Yapay zeka destekli otomatik kart oluşturma (metin, PDF ve fotoğraf desteği)</li>
-                <li>Hazır şablon mağazası (YKS/TYT/AYT, LGS ve diğer müfredat kart setleri)</li>
-                <li>Bulut tabanlı veri senkronizasyonu (cihazlar arası)</li>
-                <li>JSON formatında yedekleme ve dışa aktarma</li>
-                <li>Performans takibi ve istatistikler</li>
-                <li>Birden çok renk teması</li>
-                <li>Çalışma hatırlatma bildirimleri</li>
-                <li>Çalışma serisi (streak) ve rozet sistemi</li>
+                <li><strong>Free (Ücretsiz):</strong> Reklam destekli temel özellikler. AI kart oluşturma günlük olarak sınırlıdır (reklam izleyerek ek hak kazanılabilir).</li>
+                <li><strong>Premium:</strong> Reklamsız deneyim, AI ile metin tabanlı kart oluşturma (aylık limit dahilinde), şablon mağazasına tam erişim.</li>
+                <li><strong>Max:</strong> Tüm Premium özellikler + AI ile PDF ve fotoğraf tabanlı kart oluşturma, yüksek aylık AI limitleri.</li>
             </ul>
 
-            <h3>2. Kullanıcı Yeterliliği ve Hesap Oluşturma</h3>
-            <p>RodiNote'u kullanmak için:</p>
+            <p><strong>Ödeme ve abonelik:</strong> Tüm ödemeler Apple App Store veya Google Play üzerinden işlenir. Abonelikler otomatik yenilenir; iptal etmek için ilgili mağazanın abonelik ayarlarını kullanmanız gerekir. Yenileme tarihinden en az 24 saat önce iptal etmemeniz halinde otomatik yenileme gerçekleşir. İade politikaları Apple ve Google'ın kurallarına tabidir. Fiyatlandırma bölgeye göre değişebilir.</p>
+
+            <h3>3. Kullanım Şartları</h3>
+
+            <p>Uygulamayı kullanırken şunlara <strong>uymayacağınızı</strong> kabul edersiniz:</p>
             <ul>
-                <li>En az 13 yaşında olmanız gerekmektedir</li>
-                <li>13-18 yaş arası kullanıcılar için ebeveyn/yasal vasi izni alınması tavsiye edilir</li>
-                <li>Sağladığınız hesap bilgilerinin doğru ve güncel olması gerekir</li>
-                <li>Hesap güvenliğinden tamamen siz sorumlusunuz</li>
+                <li>Uygulamayı yasadışı amaçlarla kullanmayacaksınız</li>
+                <li>Tersine mühendislik, kaynak kod çıkarma veya türev eserler oluşturmayacaksınız</li>
+                <li>Uygulamayı kopyalamayacak, yetkisiz dağıtmayacak veya kiralanmayacaksınız</li>
+                <li>AI özelliğini yasadışı, zararlı, telif hakkı ihlali içeren içerik oluşturmak için kullanmayacaksınız</li>
+                <li>Birden çok hesap oluşturarak ücretsiz limitleri kötüye kullanmayacaksınız</li>
+                <li>Uygulamanın güvenliğini tehdit eden faaliyetlerde bulunmayacaksınız (bot, scraping vb.)</li>
+                <li>Reklam blokerleri ile Free limitlerini aşmaya çalışmayacaksınız</li>
             </ul>
 
-            <h3>3. Üyelik Katmanları, Reklamlar ve Ödemeler</h3>
-            <p>RodiNote üç katmanlı bir üyelik modeli sunmaktadır:</p>
-            <ul>
-                <li><strong>Free (Ücretsiz):</strong> Temel özellikler, reklamlı deneyim. AI kart oluşturma günlük olarak sınırlıdır (reklam izleyerek ek hak kazanılabilir). Şablon mağazasına erişim sınırlıdır.</li>
-                <li><strong>Premium:</strong> Reklamsız deneyim. AI ile metin tabanlı kart oluşturma (aylık limit dahilinde). Şablon mağazasına tam erişim. Bulut senkronizasyonu ve cihazlar arası veri taşıma.</li>
-                <li><strong>Max:</strong> Tüm Premium özellikler. AI ile metin, PDF ve fotoğraf tabanlı kart oluşturma. Daha yüksek aylık AI limitleri ve gelişmiş özellikler.</li>
-            </ul>
+            <h3>4. Hesap Paylaşımı Yasağı</h3>
 
-            <h4>3.1. Reklam ve İnternet Bağlantısı</h4>
-            <p><strong>Free kullanıcılar</strong> için uygulama internet bağlantısı gerektirir; offline kullanım sınırlıdır. Premium ve Max aboneleri internet bağlantısı olmadan da temel özellikleri kullanabilir; offline yapılan değişiklikler internet bağlantısı sağlandığında otomatik senkronize edilir.</p>
-            <p>Ücretsiz kullanıcılara Google AdMob aracılığıyla reklamlar gösterilir. Reklamlar standart oyun aralarında ve AI özelliği için ödüllü reklam olarak sunulur. Premium ve Max aboneleri reklam görmez.</p>
-
-            <h4>3.2. Ödeme ve Abonelik Yönetimi</h4>
-            <p>Tüm ödemeler Apple App Store veya Google Play Store üzerinden işlenir. Önemli noktalar:</p>
-            <ul>
-                <li>Abonelikler otomatik olarak yenilenir (aksi belirtilmedikçe)</li>
-                <li>İptal etmek için ilgili mağazanın abonelik ayarlarını kullanmanız gerekir</li>
-                <li>Yenileme tarihinden en az 24 saat öncesinden iptal etmemeniz halinde otomatik yenileme gerçekleşir</li>
-                <li>İade politikaları ilgili mağazanın (Apple/Google) kurallarına tabidir</li>
-                <li>Fiyatlandırma bölgeye göre farklılık gösterebilir</li>
-                <li>Promosyon dönemleri ilgili mağaza politikalarına tabidir</li>
-            </ul>
-
-            <h4>3.3. Tier Değişikliği ve Özellik Güncellemeleri</h4>
-            <p>RodiNote, üyelik özelliklerini, fiyatlandırmasını veya katman yapısını yasal sınırlar dahilinde değiştirme hakkını saklı tutar. Önemli değişiklikler önceden uygulama içi bildirimle duyurulacaktır. Mevcut abonelerin değişiklikten önce alındıkları abonelik dönemi sonuna kadar mevcut şartlardan yararlanma hakkı korunur.</p>
-
-            <h3>4. Kullanım Şartları ve Yasaklar</h3>
-            <p>Uygulamayı kullanarak aşağıdaki şartları kabul edersiniz:</p>
-            <ul>
-                <li>Uygulamayı yalnızca yasal amaçlarla ve bu Sözleşme'ye uygun şekilde kullanacaksınız</li>
-                <li>Uygulamayı tersine mühendislik (reverse engineering), kaynak kodu çıkarma, debug, modifiye etme veya türev eserler oluşturma girişiminde bulunmayacaksınız</li>
-                <li>Uygulamayı kopyalamayacak, yetkisiz olarak dağıtmayacak, kiralanmayacak veya başka bir ürün olarak sunmayacaksınız</li>
-                <li>AI özelliğini kötüye kullanmayacak; yasadışı, zararlı, müstehcen, ayrımcı, telif hakkı ihlali içeren veya kötü amaçlı içerik oluşturmak için kullanmayacaksınız</li>
-                <li>Hesabınızı başkalarıyla paylaşmayacak, satmayacak veya devretmeyeceksiniz (detay için Madde 5'e bakınız)</li>
-                <li>Uygulamayı veya altyapısını güvenlik, performans veya bütünlük açısından tehdit edecek faaliyetlerde bulunmayacaksınız (DoS saldırıları, otomatik bot kullanımı, scraping vb.)</li>
-                <li>Aynı kişi tarafından birden çok hesap oluşturarak ücretsiz limitleri kötüye kullanmayacaksınız</li>
-                <li>Reklam blokerleri kullanarak Free kullanıcı limitlerini aşmaya çalışmayacaksınız</li>
-                <li>Yapay zekayı kandırmaya yönelik prompt enjeksiyon saldırıları yapmayacaksınız</li>
-            </ul>
-            <p>Bu yasaklara aykırı davranış halinde RodiNote, hesabınızı askıya alma, sonlandırma ve gerekli görüldüğü takdirde yasal işlem başlatma hakkını saklı tutar.</p>
-
-            <h3>5. Hesap Paylaşımı Yasağı (Önemli)</h3>
             <div class="critical-box">
                 <p><strong>RodiNote Hesabı Kişiseldir ve Devredilemez:</strong></p>
-                <p><strong>1.</strong> RodiNote hesabınızı; aile üyeleri, arkadaşlar, sınıf arkadaşları veya başka herhangi bir kişiyle <strong>paylaşmanız kesinlikle yasaktır</strong>.</p>
-                <p><strong>2.</strong> Bir Premium veya Max aboneliğinin birden fazla kişi tarafından kullanılması, abonelik koşullarının ihlali sayılır.</p>
-                <p><strong>3.</strong> Hesap bilgilerinizi (giriş bilgileri, doğrulama kodları vb.) üçüncü kişilere temin etmeniz yasaktır.</p>
-                <p><strong>4.</strong> Sistem otomatik olarak şüpheli çoklu cihaz erişimlerini, anormal kullanım kalıplarını ve eş zamanlı oturum açma girişimlerini izlemektedir.</p>
-                <p><strong>5.</strong> İhlal tespit edilmesi halinde RodiNote, önceden uyarı yapılmaksızın aşağıdaki yaptırımları uygulama hakkını saklı tutar:</p>
-                <ul>
-                    <li>Hesaba erişimin geçici olarak askıya alınması</li>
-                    <li>Aboneliğin iptal edilmesi (iade yapılmadan)</li>
-                    <li>Hesabın kalıcı olarak sonlandırılması</li>
-                    <li>İlgili kullanıcıların IP veya cihaz bazlı engellenmesi</li>
-                </ul>
-                <p><strong>6.</strong> Bu yasak hem Türk Borçlar Kanunu hem de uluslararası dijital içerik tüketici hakları çerçevesinde geçerlidir.</p>
+                <p>Hesabınızı aile, arkadaş veya başka kişilerle paylaşmanız <strong>kesinlikle yasaktır</strong>. Bir Premium veya Max aboneliği yalnızca tek bir kişi tarafından kullanılabilir. Hesap bilgilerinizi (giriş bilgileri vb.) üçüncü kişilere temin etmeniz yasaktır.</p>
+                <p>Şüpheli çoklu cihaz erişimleri otomatik izlenir. İhlal halinde hesap askıya alınabilir veya sonlandırılabilir; ödenen abonelik için iade yapılmayabilir.</p>
             </div>
 
-            <h3>6. Fikri Mülkiyet Hakları</h3>
-            <p>RodiNote uygulamasının tüm hakları saklıdır:</p>
-            <ul>
-                <li>Uygulamanın tasarımı, kodu, grafikleri, oyun mekanikleri, simgeler, hazır şablonları ve tüm orijinal içeriği telif hakkı ve diğer fikri mülkiyet hakları ile korunmaktadır</li>
-                <li>Bu materyallerin izinsiz kopyalanması, dağıtılması, kamuya açık sunulması, değiştirilmesi veya ticari amaçla kullanılması <strong>kesinlikle yasaktır</strong> ve yasal işlem başlatılabilir</li>
-                <li>"RodiNote" markası ve logosu telif hakkıyla korunmaktadır</li>
-                <li>Üçüncü taraf marka ve logoları ilgili sahiplerinin mülkiyetindedir</li>
-            </ul>
-            <p><strong>Kullanıcı İçeriği:</strong> Kullanıcıların uygulama içinde oluşturdukları kişisel notlar, kartlar ve içerikler kullanıcının kendi mülkiyetindedir. Ancak uygulamayı kullanarak bu içeriklerin RodiNote tarafından hizmet sağlama amacıyla işlenmesine, saklanmasına ve cihazlar arasında senkronize edilmesine izin vermiş olursunuz.</p>
-
-            <h3>7. AI (Yapay Zeka) Özelliği — Detaylı Sorumluluk Reddi</h3>
-            <p>AI kart oluşturma özelliği Google Gemini API altyapısını kullanmaktadır ve metin, PDF ve fotoğraf girişlerini destekler. AI özelliğinin kullanım limitleri üyelik türüne göre farklılık gösterir. RodiNote, AI hizmetinin kesintisiz veya hatasız çalışacağını garanti etmez.</p>
+            <h3>5. Yapay Zeka (AI) Özelliği — Sorumluluk Reddi</h3>
 
             <div class="ai-warning-box">
-                <p><strong>ÖNEMLİ — AI ÇIKTILARI HAKKINDA UYARI VE SORUMLULUK REDDİ:</strong></p>
-                <p><strong>1. Doğruluk Garantisi Yoktur:</strong> Yapay zeka tarafından üretilen flashcard kartları hatalı, eksik, güncel olmayan, çelişkili veya tamamen yanlış bilgi içerebilir. AI çıktılarının akademik, bilimsel, tıbbi, hukuki veya başka türlü doğruluğu hiçbir şekilde garanti edilmez.</p>
-                <p><strong>2. Doğrulama Yükümlülüğü:</strong> Kullanıcı, AI tarafından üretilen tüm kartları kaynak materyalle veya güvenilir başka kaynaklarla doğrulamakla yükümlüdür. Doğrulama yapılmadan kullanılan AI çıktılarından doğacak her türlü sonuç kullanıcının münhasır sorumluluğundadır.</p>
-                <p><strong>3. Önemli Kararlar İçin Uyarı:</strong> AI çıktıları sınav hazırlığı (YKS, LGS, KPSS, vb.), sağlık veya tıbbi kararlar, hukuki konular, finansal yatırım kararları, eğitim sertifikaları veya diğer önemli kararlar için tek başına güvenilir kaynak olarak kullanılmamalıdır. Bu tür konularda mutlaka uzman görüşü alınmalı ve resmi kaynaklara başvurulmalıdır.</p>
-                <p><strong>4. Sorumluluk Sınırlaması:</strong> RodiNote, AI tarafından üretilen içeriklerin doğruluğu, bütünlüğü, güncelliği veya uygunluğu hakkında hiçbir açık veya zımni garanti vermez. AI çıktılarına dayalı olarak alınan kararlardan, kaçırılan sınavlardan, yanlış öğrenmelerden, akademik veya mesleki kayıplardan, sağlık sorunlarından, finansal zararlardan veya diğer doğrudan/dolaylı/tesadüfi/sonuçsal zararlardan RodiNote, sahibi, geliştiricileri, çalışanları, ortakları veya bağlı kuruluşları hiçbir şekilde sorumlu tutulamaz.</p>
-                <p><strong>5. Kullanıcı Onayı:</strong> "AI Kart Üretici" özelliğini ilk kez kullanırken kullanıcıya kapsamlı bir bilgilendirme uyarısı gösterilir. Bu uyarıyı onaylayıp özelliği kullanmaya devam etmek, bu maddenin tamamının ve sorumluluk sınırlamalarının kabul edilmesi anlamına gelir.</p>
-                <p><strong>6. Üçüncü Taraf API Sınırlamaları:</strong> AI hizmeti üçüncü taraf (Google Gemini) tarafından sağlanmaktadır. Hizmet kesintileri, API değişiklikleri veya hatalardan dolayı RodiNote sorumlu tutulamaz.</p>
+                <p><strong>1. Hatalı İçerik Üretimi:</strong> AI tarafından üretilen flashcard kartları <strong>hatalı, eksik, güncel olmayan veya yanıltıcı bilgi içerebilir</strong>. Bu bir tahmin sistemidir ve doğruluk garantisi vermez.</p>
+
+                <p><strong>2. Kullanıcı Sorumluluğu:</strong> Üretilen kartların doğruluğunu kaynak materyal veya güvenilir akademik kaynaklarla <strong>karşılaştırmak kullanıcının sorumluluğundadır</strong>.</p>
+
+                <p><strong>3. Önemli Kararlarda Kullanılmamalıdır:</strong> AI çıktıları <strong>sınav hazırlığı, sağlık, hukuk, finans veya diğer önemli kararlar için tek başına güvenilir kaynak olarak kullanılmamalıdır</strong>. Bu içerikler yalnızca yardımcı tekrar materyali olarak değerlendirilmelidir.</p>
+
+                <p><strong>4. Sorumluluk Reddi:</strong> RodiNote, AI tarafından üretilen içeriklerin doğruluğu, bütünlüğü, güncelliği veya uygunluğu hakkında hiçbir garanti vermez. AI çıktılarına dayalı olarak alınan kararlardan, sınav sonuçlarından, akademik kayıplardan, sağlık sorunlarından, finansal zararlardan veya diğer doğrudan/dolaylı zararlardan RodiNote, sahibi ve geliştiricileri <strong>hiçbir şekilde sorumlu tutulamaz</strong>.</p>
+
+                <p><strong>5. Kullanıcı Onayı:</strong> AI özelliğini ilk kez kullanırken kullanıcıya kapsamlı bir bilgilendirme uyarısı gösterilir. Bu uyarıyı onaylamak, yukarıdaki tüm şartların ve sorumluluk sınırlamalarının kabul edildiği anlamına gelir.</p>
+
+                <p><strong>6. Üçüncü Taraf Hizmet:</strong> AI hizmeti Google Gemini tarafından sağlanmaktadır. Bu hizmette yaşanabilecek kesintiler, değişiklikler veya hatalardan RodiNote sorumlu tutulamaz.</p>
             </div>
 
-            <h3>8. Hazır Şablon Mağaza İçerikleri Hakkında</h3>
-            <p>RodiNote uygulaması, kullanıcılara hızlı tekrar amacıyla TYT, AYT, LGS ve diğer müfredat konularını kapsayan hazır şablon kart setleri sunmaktadır. Bu içerikler hakkında aşağıdaki şartlar geçerlidir:</p>
+            <h3>6. Hazır Şablon Mağazası — Sorumluluk Reddi</h3>
 
-            <div class="content-warning-box">
-                <p><strong>HAZIR ŞABLON İÇERİKLERİ HAKKINDA UYARI:</strong></p>
-                <p><strong>1. İçerik Niteliği:</strong> Mağazada sunulan TYT, AYT, LGS ve diğer hazır şablon kart setleri, eğitim amaçlı <strong>hızlı tekrar materyalleridir</strong>. Bu içerikler MEB resmi ders kitapları, müfredatları veya benzer akademik kaynakların yerini tutmaz ve birincil kaynak olarak kullanılmamalıdır.</p>
-                <p><strong>2. Doğruluk Garantisi Yoktur:</strong> Hazır şablon içerikleri hatalı, eksik, güncel olmayan, tartışmalı veya yanlış bilgiler içerebilir. İçerikler periyodik olarak güncellenebilir, değiştirilebilir veya kaldırılabilir. Müfredat değişikliklerine göre güncellenme garantisi verilmez.</p>
-                <p><strong>3. Kullanıcı Sorumluluğu:</strong> Sınava hazırlık sürecinde <strong>resmi MEB müfredatı, ders kitapları, okul öğretmenlerinizin ders notları ve diğer güvenilir akademik kaynaklar esas alınmalıdır.</strong> Hazır şablon içerikleri yalnızca yardımcı tekrar materyali olarak değerlendirilmelidir. Kullanıcı, içeriklerin doğruluğunu kendi kaynaklarıyla karşılaştırma sorumluluğunu kabul eder.</p>
-                <p><strong>4. Sorumluluk Sınırlaması:</strong> RodiNote, hazır şablon içeriklerinin doğruluğu, bütünlüğü, güncelliği, müfredat uyumluluğu veya akademik uygunluğu hakkında hiçbir açık veya zımni garanti vermez. Bu içeriklere dayalı olarak alınan kararlardan, sınav başarısızlıklarından, yanlış öğrenmelerden, akademik kayıplardan, eğitim hayatınıza etkilerinden veya diğer doğrudan/dolaylı/sonuçsal zararlardan RodiNote, sahibi, geliştiricileri veya çalışanları hiçbir şekilde sorumlu tutulamaz.</p>
-                <p><strong>5. Hata Bildirimi:</strong> Hazır şablonlarda fark ettiğiniz hataları <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a> adresine bildirebilirsiniz. Bildirimler değerlendirilecek ancak güncelleme zamanı veya yapılıp yapılmayacağı RodiNote'un takdirindedir.</p>
-                <p><strong>6. Kullanıcı Onayı:</strong> Mağazadan herhangi bir hazır şablon içeriği indirerek, görüntüleyerek veya kullanarak bu maddenin tamamını ve sorumluluk sınırlamalarını kabul etmiş sayılırsınız.</p>
+            <div class="ai-warning-box">
+                <p><strong>1. İçerik Niteliği:</strong> Mağazada sunulan TYT, AYT, LGS ve diğer hazır şablon kart setleri <strong>yalnızca yardımcı tekrar materyalleridir</strong>. MEB resmi ders kitapları, müfredatları veya akademik kaynakların yerini tutmaz.</p>
+
+                <p><strong>2. Doğruluk Garantisi Yoktur:</strong> Hazır şablon içerikleri <strong>hatalı, eksik, güncel olmayan veya tartışmalı bilgiler içerebilir</strong>. İçerikler periyodik olarak güncellenebilir, değiştirilebilir veya kaldırılabilir; müfredat değişikliklerine göre güncellenme garantisi verilmez.</p>
+
+                <p><strong>3. Kullanıcı Sorumluluğu:</strong> Sınava hazırlık sürecinde <strong>resmi MEB müfredatı, ders kitapları, okul öğretmenlerinizin notları ve diğer güvenilir akademik kaynaklar esas alınmalıdır</strong>. Hazır şablon içerikleri yalnızca yardımcı tekrar materyali olarak değerlendirilmelidir.</p>
+
+                <p><strong>4. Sorumluluk Reddi:</strong> RodiNote, hazır şablon içeriklerinin doğruluğu, bütünlüğü, güncelliği veya akademik uygunluğu hakkında hiçbir garanti vermez. Bu içeriklere dayalı olarak alınan kararlardan, sınav başarısızlıklarından, akademik kayıplardan, eğitim hayatınıza etkilerinden veya diğer zararlardan RodiNote, sahibi ve geliştiricileri <strong>hiçbir şekilde sorumlu tutulamaz</strong>.</p>
+
+                <p><strong>5. Hata Bildirimi:</strong> Fark ettiğiniz hataları <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a> adresine bildirebilirsiniz. Bildirimler değerlendirilir ancak güncelleme zamanı veya yapılıp yapılmayacağı RodiNote'un takdirindedir.</p>
+
+                <p><strong>6. Kullanıcı Onayı:</strong> Mağazadan içerik indirerek, görüntüleyerek veya kullanarak bu maddenin tamamını ve sorumluluk sınırlamalarını kabul etmiş sayılırsınız.</p>
             </div>
 
-            <h3>9. Sorumluluk Sınırları ve Garanti Reddi</h3>
+            <h3>7. Sorumluluk Sınırları ve Garanti Reddi</h3>
+
             <p>Yürürlükteki yasaların izin verdiği azami ölçüde:</p>
             <ul>
-                <li>Uygulama "OLDUĞU GİBİ" ve "MEVCUT OLDUĞU ŞEKİLDE" sunulmaktadır</li>
-                <li>RodiNote, açık veya zımni hiçbir garanti (satılabilirlik, belirli bir amaca uygunluk, ihlal etmeme vb.) vermez</li>
-                <li>Uygulama içeriğinin akademik doğruluğu garanti edilmez</li>
-                <li>Hizmetin kesintisiz, hatasız, virüssüz veya zamanında olacağı garanti edilmez</li>
-                <li>Veri kaybından kaynaklanan zararlardan RodiNote sorumlu tutulamaz; kullanıcıların düzenli yedekleme yapması (JSON yedekleme) önemle önerilir</li>
-                <li>Üçüncü taraf hizmet sağlayıcıların (Google, Apple, RevenueCat) eylemlerinden veya hizmet kesintilerinden RodiNote sorumlu tutulamaz</li>
+                <li>Uygulama "OLDUĞU GİBİ" sunulmaktadır; açık veya zımni hiçbir garanti verilmez</li>
+                <li>Hizmetin kesintisiz, hatasız veya zamanında olacağı garanti edilmez</li>
+                <li>Veri kaybından kaynaklanan zararlardan sorumlu tutulamayız; düzenli yedekleme yapmanız önerilir (JSON dışa aktarma)</li>
+                <li>Üçüncü taraf hizmet sağlayıcıların (Google, Apple, RevenueCat) eylemlerinden veya kesintilerinden sorumlu tutulamayız</li>
+                <li>Mücbir sebepler (doğal afet, internet kesintisi, siber saldırı vb.) nedeniyle oluşan aksaklıklardan sorumlu tutulamayız</li>
             </ul>
-            <p><strong>Sorumluluk Limiti:</strong> Yürürlükteki yasaların izin verdiği azami ölçüde, RodiNote'un toplam sorumluluğu, kullanıcının uygulamaya ödediği son 12 aylık abonelik ücretiyle veya 100 USD ile (hangisi düşükse) sınırlıdır.</p>
 
-            <h3>10. Tazmin Yükümlülüğü</h3>
-            <p>Kullanıcı, bu Kullanım Koşulları'nın ihlalinden veya uygulamanın yasalara aykırı kullanımından doğan tüm talep, dava, kayıp, zarar, masraf ve harcamalardan (avukatlık ücretleri dahil) RodiNote'u, sahibini, geliştiricilerini ve bağlı taraflarını tazmin etmeyi kabul eder.</p>
+            <p><strong>Sorumluluk Limiti:</strong> RodiNote'un toplam sorumluluğu, kullanıcının uygulamaya ödediği son 12 aylık abonelik ücreti veya 100 USD (hangisi düşükse) ile sınırlıdır.</p>
 
-            <h3>11. Hesap Sonlandırma</h3>
-            <p>RodiNote, aşağıdaki durumlarda hesabınızı askıya alma veya sonlandırma hakkını saklı tutar:</p>
+            <h3>8. Hesap Sonlandırma</h3>
+
+            <p>Aşağıdaki durumlarda hesabınız askıya alınabilir veya sonlandırılabilir:</p>
             <ul>
-                <li>Bu Kullanım Koşulları'nın ihlali</li>
+                <li>Bu koşulların ihlali</li>
                 <li>Hesap paylaşımı yasağının ihlali</li>
                 <li>Yasadışı veya kötüye kullanım</li>
-                <li>Hizmetin güvenliğini veya bütünlüğünü tehdit eden faaliyetler</li>
-                <li>Yasal otoritelerin talebi</li>
+                <li>Hizmetin güvenliğini tehdit eden faaliyetler</li>
             </ul>
-            <p>Sonlandırma durumunda, kalan abonelik dönemi için iade yapılmayabilir. Hesabınızı her zaman kendi isteğinizle silebilirsiniz (Gizlilik Politikası Madde 8'e bakınız).</p>
+            <p>Sonlandırma durumunda kalan abonelik dönemi için iade yapılmayabilir. Hesabınızı her zaman kendi isteğinizle silebilirsiniz.</p>
 
-            <h3>12. Hizmet Değişiklikleri ve Sona Erdirme</h3>
-            <p>RodiNote, aşağıdaki hakları saklı tutar:</p>
-            <ul>
-                <li>Uygulamanın özelliklerini, içeriğini veya işlevlerini değiştirmek</li>
-                <li>Belirli özelliklerin desteğini sona erdirmek</li>
-                <li>Uygulamayı geçici veya kalıcı olarak durdurmak</li>
-                <li>Hizmetin sunulduğu coğrafi bölgeleri değiştirmek</li>
-            </ul>
-            <p>Önemli değişiklikler önceden bildirim ile duyurulacaktır. Hizmetin tamamen sona erdirilmesi durumunda kullanıcılara verilerini dışa aktarma için makul bir süre tanınacaktır.</p>
+            <h3>9. Hizmet Değişiklikleri</h3>
 
-            <h3>13. Mücbir Sebepler</h3>
-            <p>Doğal afet, savaş, terör, hükümet kararları, internet kesintileri, üçüncü taraf hizmet kesintileri (Apple, Google, Firebase vb.), siber saldırılar veya kontrolümüz dışındaki diğer mücbir sebepler nedeniyle oluşan hizmet aksaklıklarından RodiNote sorumlu tutulamaz.</p>
+            <p>RodiNote, uygulama özelliklerini, içeriğini, fiyatlandırmasını veya katman yapısını yasal sınırlar dahilinde değiştirme hakkını saklı tutar. Önemli değişiklikler önceden uygulama içi bildirimle duyurulur. Hizmetin sona erdirilmesi durumunda kullanıcılara verilerini dışa aktarmak için makul bir süre tanınır.</p>
 
-            <h3>14. Değişiklikler</h3>
-            <p>Bu Kullanım Koşulları zaman zaman güncellenebilir. Önemli değişiklikler:</p>
-            <ul>
-                <li>Uygulama içinden bildirim olarak duyurulacaktır</li>
-                <li>"Son Güncelleme" tarihi belge başında yenilenecektir</li>
-                <li>Köklü değişikliklerde tekrar onayınız istenebilir</li>
-            </ul>
-            <p>Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, yeni koşulları kabul ettiğiniz anlamına gelir.</p>
+            <h3>10. Değişiklikler ve Uygulanacak Hukuk</h3>
 
-            <h3>15. Bütünlük ve Bölünebilirlik</h3>
-            <p>Bu Kullanım Koşulları, kullanıcı ile RodiNote arasındaki tam ve nihai sözleşmeyi oluşturur. Bu Sözleşme'nin herhangi bir hükmünün geçersiz veya uygulanamaz olduğu tespit edilirse, diğer hükümler tam yürürlükte ve etkili kalır.</p>
+            <p>Bu koşullar zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinde duyurulacaktır. Değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, yeni koşulları kabul ettiğiniz anlamına gelir.</p>
 
-            <h3>16. Uygulanacak Hukuk ve Yetkili Mahkeme</h3>
-            <p>Bu Kullanım Koşulları, Türkiye Cumhuriyeti kanunlarına tabidir. Bu Sözleşme'den doğan veya bununla ilgili her türlü uyuşmazlığın çözümünde <strong>Türkiye Cumhuriyeti İstanbul Merkez Mahkemeleri ve İcra Daireleri</strong> münhasıran yetkilidir. Tüketici hakları ile ilgili uyuşmazlıklar bakımından, tüketicinin yerleşim yerindeki tüketici hakem heyeti veya tüketici mahkemeleri de yetkilidir.</p>
+            <p>Bu koşullar, Türkiye Cumhuriyeti kanunlarına tabidir. Tüketici hakları ile ilgili uyuşmazlıklar tüketicinin yerleşim yerindeki tüketici hakem heyetine veya tüketici mahkemelerine taşınabilir.</p>
 
-            <h3>17. İletişim</h3>
+            <h3>11. İletişim</h3>
+
             <div class="contact-box">
-                Kullanım koşullarımız hakkında sorularınız veya talepleriniz için bize ulaşabilirsiniz:<br><br>
-                <strong>Hizmet Sağlayıcı:</strong> ROBİN ÖZTUNÇ<br>
+                <strong>Hizmet Sağlayıcı:</strong> Robin Öztunç<br>
                 <strong>E-posta:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
                 <strong>Yanıt Süresi:</strong> En geç 30 gün
             </div>
@@ -1110,203 +586,125 @@
         <!-- ==================== TERMS OF USE (EN) ==================== -->
         <div class="section" id="terms">
             <h2>Terms of Use</h2>
-            <p class="update-date">Last Updated: May 4, 2026 / Effective Date: May 4, 2026</p>
+            <p class="update-date">Last Updated: May 10, 2026</p>
 
-            <p>These Terms of Use ("Agreement") set forth the legal conditions regarding the use of the RodiNote mobile application ("App" or "Service"). By downloading the App, creating an account, or using it, you acknowledge that you have read, understood, and <strong>legally bindingly accepted</strong> these terms. If you do not accept these terms, you must not use the application.</p>
+            <p>These terms govern your use of RodiNote. By using the app, you accept these terms. If you do not agree, do not use the app.</p>
 
-            <div class="data-controller-box">
-                <strong>Service Provider</strong>
-                Service Provider: ROBİN ÖZTUNÇ (Individual Developer)<br>
-                Contact: <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
-                Application: RodiNote (Bundle ID: com.rodinote.app)
+            <div class="contact-box">
+                <strong>Service Provider:</strong> Robin Öztunç<br>
+                <strong>Contact:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
             </div>
 
             <h3>1. Service Description</h3>
-            <p>RodiNote is a study and flashcard application designed for students and anyone who wants to learn. The app offers the following features:</p>
+
+            <p>RodiNote is a study app offering flashcard creation, learning games, and AI-powered card generation. The app includes cloud sync, a template store, performance tracking, and study reminder notifications.</p>
+
+            <h3>2. Membership and Payments</h3>
+
+            <p>Three membership tiers are offered:</p>
             <ul>
-                <li>Flashcard creation, editing, and organization</li>
-                <li>8 different interactive learning games</li>
-                <li>AI-powered automatic card generation (text, PDF, and photo input support)</li>
-                <li>Ready-made template store (YKS/TYT/AYT, LGS, and other curriculum card sets)</li>
-                <li>Cloud-based data synchronization (across devices)</li>
-                <li>JSON format backup and export</li>
-                <li>Performance tracking and statistics</li>
-                <li>Multiple color themes</li>
-                <li>Study reminder notifications</li>
-                <li>Study streak and badge system</li>
+                <li><strong>Free:</strong> Ad-supported basic features. AI card creation has daily limits (extra credits earned by watching ads).</li>
+                <li><strong>Premium:</strong> Ad-free experience, AI text-based card creation (within monthly limits), full template store access.</li>
+                <li><strong>Max:</strong> All Premium features + AI PDF and photo-based card creation, higher monthly AI limits.</li>
             </ul>
 
-            <h3>2. User Eligibility and Account Creation</h3>
-            <p>To use RodiNote:</p>
+            <p><strong>Payment and subscription:</strong> All payments are processed via Apple App Store or Google Play. Subscriptions auto-renew; to cancel, use the relevant store's subscription settings. Failure to cancel at least 24 hours before renewal results in automatic renewal. Refund policies are governed by Apple and Google. Pricing may vary by region.</p>
+
+            <h3>3. Usage Rules</h3>
+
+            <p>You agree <strong>not</strong> to:</p>
             <ul>
-                <li>You must be at least 13 years old</li>
-                <li>For users aged 13-18, parental/legal guardian consent is recommended</li>
-                <li>Account information you provide must be accurate and current</li>
-                <li>You are fully responsible for the security of your account</li>
+                <li>Use the app for unlawful purposes</li>
+                <li>Reverse engineer, decompile, or create derivative works</li>
+                <li>Copy, distribute without authorization, or rent the app</li>
+                <li>Use the AI feature to create unlawful, harmful, or copyright-infringing content</li>
+                <li>Create multiple accounts to abuse free tier limits</li>
+                <li>Engage in activities that threaten the app's security (bots, scraping, etc.)</li>
+                <li>Use ad blockers to bypass Free tier limits</li>
             </ul>
 
-            <h3>3. Membership Tiers, Advertising, and Payments</h3>
-            <p>RodiNote offers a three-tier membership model:</p>
-            <ul>
-                <li><strong>Free:</strong> Basic features, ad-supported experience. AI card generation is limited daily (additional usage can be earned by watching rewarded ads). Limited access to the template store.</li>
-                <li><strong>Premium:</strong> Ad-free experience. AI text-based card generation (within monthly limits). Full access to the template store. Cloud synchronization and cross-device data transfer.</li>
-                <li><strong>Max:</strong> All Premium features. AI text, PDF, and photo-based card generation. Higher monthly AI limits and advanced features.</li>
-            </ul>
+            <h3>4. Account Sharing Prohibition</h3>
 
-            <h4>3.1. Advertising and Internet Connection</h4>
-            <p><strong>Free users</strong> require an internet connection for the application; offline use is limited. Premium and Max subscribers can use core features even without an internet connection; offline changes are automatically synchronized when connectivity is restored.</p>
-            <p>Advertisements are displayed to free users through Google AdMob. Ads are presented during standard game intervals and as rewarded ads for the AI feature. Premium and Max subscribers do not see ads.</p>
-
-            <h4>3.2. Payment and Subscription Management</h4>
-            <p>All payments are processed through Apple App Store or Google Play Store. Important points:</p>
-            <ul>
-                <li>Subscriptions automatically renew (unless otherwise specified)</li>
-                <li>To cancel, you must use the subscription settings of the respective store</li>
-                <li>If not canceled at least 24 hours before the renewal date, automatic renewal will occur</li>
-                <li>Refund policies are subject to the rules of the respective store (Apple/Google)</li>
-                <li>Pricing may vary by region</li>
-                <li>Promotional periods are subject to the policies of the respective store</li>
-            </ul>
-
-            <h4>3.3. Tier Changes and Feature Updates</h4>
-            <p>RodiNote reserves the right to change membership features, pricing, or tier structure within legal limits. Significant changes will be announced in advance through in-app notifications. Existing subscribers retain the right to enjoy current terms until the end of their subscription period prior to the change.</p>
-
-            <h3>4. Terms of Use and Prohibitions</h3>
-            <p>By using the application, you agree to the following:</p>
-            <ul>
-                <li>You will use the application only for lawful purposes and in accordance with this Agreement</li>
-                <li>You will not attempt to reverse engineer, extract source code, debug, modify, or create derivative works of the application</li>
-                <li>You will not copy, distribute without authorization, rent, or present the application as another product</li>
-                <li>You will not misuse the AI feature or use it to generate illegal, harmful, obscene, discriminatory, copyright-infringing, or malicious content</li>
-                <li>You will not share, sell, or transfer your account to others (see Article 5 for details)</li>
-                <li>You will not engage in activities that threaten the security, performance, or integrity of the application or its infrastructure (DoS attacks, automated bot use, scraping, etc.)</li>
-                <li>You will not abuse free-tier limits by creating multiple accounts</li>
-                <li>You will not attempt to bypass Free user limits using ad blockers</li>
-                <li>You will not perform prompt injection attacks targeting the AI</li>
-            </ul>
-            <p>In case of violation of these prohibitions, RodiNote reserves the right to suspend or terminate your account and, if deemed necessary, initiate legal action.</p>
-
-            <h3>5. Account Sharing Prohibition (Important)</h3>
             <div class="critical-box">
-                <p><strong>RodiNote Account is Personal and Non-Transferable:</strong></p>
-                <p><strong>1.</strong> Sharing your RodiNote account with family members, friends, classmates, or any other person is <strong>strictly prohibited</strong>.</p>
-                <p><strong>2.</strong> Use of a single Premium or Max subscription by multiple people constitutes a violation of the subscription terms.</p>
-                <p><strong>3.</strong> Providing your account credentials (login information, verification codes, etc.) to third parties is prohibited.</p>
-                <p><strong>4.</strong> The system automatically monitors suspicious multi-device access, abnormal usage patterns, and concurrent login attempts.</p>
-                <p><strong>5.</strong> If a violation is detected, RodiNote reserves the right to apply the following sanctions without prior notice:</p>
-                <ul>
-                    <li>Temporary suspension of access to the account</li>
-                    <li>Cancellation of subscription (without refund)</li>
-                    <li>Permanent termination of the account</li>
-                    <li>IP or device-based blocking of relevant users</li>
-                </ul>
-                <p><strong>6.</strong> This prohibition applies under both Turkish Code of Obligations and international digital content consumer rights frameworks.</p>
+                <p><strong>RodiNote Accounts Are Personal and Non-Transferable:</strong></p>
+                <p>Sharing your account with family, friends, or any other person is <strong>strictly prohibited</strong>. A Premium or Max subscription may be used by only one person. Providing account credentials (login info, etc.) to third parties is prohibited.</p>
+                <p>Suspicious multi-device access is automatically monitored. Violations may result in account suspension or termination; subscription refunds may not be issued.</p>
             </div>
 
-            <h3>6. Intellectual Property Rights</h3>
-            <p>All rights to the RodiNote application are reserved:</p>
-            <ul>
-                <li>The application's design, code, graphics, game mechanics, icons, ready-made templates, and all original content are protected by copyright and other intellectual property rights</li>
-                <li>Unauthorized copying, distribution, public display, modification, or commercial use of these materials is <strong>strictly prohibited</strong> and may result in legal action</li>
-                <li>The "RodiNote" brand and logo are protected by copyright</li>
-                <li>Third-party trademarks and logos are the property of their respective owners</li>
-            </ul>
-            <p><strong>User Content:</strong> Personal notes, cards, and content created by users within the application remain the property of the user. However, by using the application, you grant RodiNote permission to process, store, and synchronize this content across devices for service delivery purposes.</p>
-
-            <h3>7. AI (Artificial Intelligence) Feature — Detailed Disclaimer</h3>
-            <p>The AI card generation feature uses Google Gemini API infrastructure and supports text, PDF, and photo inputs. Usage limits of the AI feature vary based on membership type. RodiNote does not guarantee uninterrupted or error-free operation of the AI service.</p>
+            <h3>5. Artificial Intelligence (AI) Feature — Disclaimer</h3>
 
             <div class="ai-warning-box">
-                <p><strong>IMPORTANT — WARNING AND DISCLAIMER ABOUT AI OUTPUTS:</strong></p>
-                <p><strong>1. No Accuracy Guarantee:</strong> Flashcards generated by artificial intelligence may contain incorrect, incomplete, outdated, contradictory, or entirely false information. The accuracy of AI outputs—academic, scientific, medical, legal, or otherwise—is not guaranteed in any way.</p>
-                <p><strong>2. Verification Obligation:</strong> Users are obligated to verify all AI-generated cards against source materials or other reliable sources. Any consequences arising from the use of unverified AI outputs are the sole responsibility of the user.</p>
-                <p><strong>3. Warning for Important Decisions:</strong> AI outputs should not be used as a sole reliable source for exam preparation (YKS, LGS, KPSS, SAT, etc.), health or medical decisions, legal matters, financial investment decisions, educational certifications, or other important decisions. For such matters, expert advice should be sought and official sources should be consulted.</p>
-                <p><strong>4. Limitation of Liability:</strong> RodiNote provides no express or implied warranty regarding the accuracy, completeness, timeliness, or suitability of AI-generated content. RodiNote, its owner, developers, employees, partners, or affiliates cannot be held responsible in any way for decisions made based on AI outputs, missed exams, incorrect learning, academic or professional losses, health issues, financial damages, or other direct/indirect/incidental/consequential damages.</p>
-                <p><strong>5. User Consent:</strong> A comprehensive informational warning is displayed to users when they first use the "AI Card Generator" feature. By acknowledging this warning and continuing to use the feature, the user accepts this entire clause and the limitations of liability herein.</p>
-                <p><strong>6. Third-Party API Limitations:</strong> The AI service is provided by a third party (Google Gemini). RodiNote cannot be held responsible for service interruptions, API changes, or errors.</p>
+                <p><strong>1. Inaccurate Output:</strong> Flashcards generated by AI <strong>may contain incorrect, incomplete, outdated, or misleading information</strong>. This is a predictive system and does not guarantee accuracy.</p>
+
+                <p><strong>2. User Responsibility:</strong> It is the <strong>user's responsibility to verify</strong> generated cards against source material or reliable academic sources.</p>
+
+                <p><strong>3. Not for Important Decisions:</strong> AI outputs <strong>must not be used as the sole reliable source for exam preparation, health, legal, financial, or other important decisions</strong>. They should be treated only as supplementary review materials.</p>
+
+                <p><strong>4. Disclaimer of Liability:</strong> RodiNote provides no warranty regarding the accuracy, completeness, currency, or suitability of AI-generated content. RodiNote, its owner, and developers <strong>cannot be held liable in any way</strong> for any decisions, exam outcomes, academic losses, health issues, financial damages, or other direct or indirect harms arising from AI outputs.</p>
+
+                <p><strong>5. User Acknowledgement:</strong> Users are shown a comprehensive disclaimer notice on first use. Acknowledging this notice constitutes acceptance of all conditions and liability limitations above.</p>
+
+                <p><strong>6. Third-Party Service:</strong> AI service is provided by Google Gemini. RodiNote is not liable for any disruptions, changes, or errors in this service.</p>
             </div>
 
-            <h3>8. About Ready-Made Template Store Content</h3>
-            <p>RodiNote provides users with ready-made template card sets covering TYT, AYT, LGS, and other curriculum topics for quick review purposes. The following terms apply to this content:</p>
+            <h3>6. Template Store — Disclaimer</h3>
 
-            <div class="content-warning-box">
-                <p><strong>WARNING ABOUT READY-MADE TEMPLATE CONTENT:</strong></p>
-                <p><strong>1. Content Nature:</strong> Ready-made template card sets offered in the store, including TYT, AYT, LGS and other materials, are <strong>quick review materials</strong> for educational purposes. This content does not replace official MEB textbooks, curricula, or similar academic sources and should not be used as a primary source.</p>
-                <p><strong>2. No Accuracy Guarantee:</strong> Ready-made template content may contain incorrect, incomplete, outdated, contested, or false information. Content may be periodically updated, changed, or removed. There is no guarantee of updates according to curriculum changes.</p>
-                <p><strong>3. User Responsibility:</strong> During exam preparation, <strong>official MEB curriculum, textbooks, your school teachers' lecture notes, and other reliable academic sources should be the primary basis.</strong> Ready-made template content should be considered only as supplementary review material. The user accepts the responsibility of verifying content accuracy with their own sources.</p>
-                <p><strong>4. Limitation of Liability:</strong> RodiNote provides no express or implied warranty regarding the accuracy, completeness, timeliness, curriculum compliance, or academic suitability of ready-made template content. RodiNote, its owner, developers, or employees cannot be held responsible in any way for decisions made based on this content, exam failures, incorrect learning, academic losses, impacts on educational life, or other direct/indirect/consequential damages.</p>
-                <p><strong>5. Error Reporting:</strong> You can report errors you notice in ready-made templates to <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>. Reports will be evaluated, but the timing of updates or whether they will be made is at RodiNote's discretion.</p>
-                <p><strong>6. User Consent:</strong> By downloading, viewing, or using any ready-made template content from the store, you are deemed to have accepted this entire clause and the limitations of liability herein.</p>
+            <div class="ai-warning-box">
+                <p><strong>1. Content Nature:</strong> The TYT, AYT, LGS, and other ready-made template card sets are <strong>supplementary review materials only</strong>. They do not replace official curriculum textbooks or academic sources.</p>
+
+                <p><strong>2. No Accuracy Guarantee:</strong> Template content <strong>may contain incorrect, incomplete, outdated, or contested information</strong>. Content may be updated, modified, or removed periodically; updates aligned with curriculum changes are not guaranteed.</p>
+
+                <p><strong>3. User Responsibility:</strong> For exam preparation, <strong>official curriculum, textbooks, your teachers' notes, and other reliable academic sources should be the primary references</strong>. Template content should be treated only as supplementary review material.</p>
+
+                <p><strong>4. Disclaimer of Liability:</strong> RodiNote provides no warranty regarding the accuracy, completeness, currency, or academic suitability of template content. RodiNote, its owner, and developers <strong>cannot be held liable in any way</strong> for any decisions, exam failures, academic losses, impacts on your education, or other harms arising from this content.</p>
+
+                <p><strong>5. Error Reports:</strong> You can report errors to <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>. Reports are reviewed, but timing or whether updates will be made is at RodiNote's discretion.</p>
+
+                <p><strong>6. User Acknowledgement:</strong> By downloading, viewing, or using template content from the store, you accept this entire clause and its liability limitations.</p>
             </div>
 
-            <h3>9. Limitation of Liability and Disclaimer of Warranties</h3>
+            <h3>7. Limitation of Liability and Disclaimer of Warranties</h3>
+
             <p>To the maximum extent permitted by applicable law:</p>
             <ul>
-                <li>The application is provided "AS IS" and "AS AVAILABLE"</li>
-                <li>RodiNote provides no express or implied warranties (merchantability, fitness for a particular purpose, non-infringement, etc.)</li>
-                <li>The academic accuracy of application content is not guaranteed</li>
-                <li>The service is not guaranteed to be uninterrupted, error-free, virus-free, or timely</li>
-                <li>RodiNote cannot be held responsible for damages resulting from data loss; users are strongly advised to perform regular backups (JSON backup)</li>
-                <li>RodiNote cannot be held responsible for actions or service interruptions of third-party service providers (Google, Apple, RevenueCat)</li>
+                <li>The app is provided "AS IS"; no express or implied warranties are given</li>
+                <li>The service is not guaranteed to be uninterrupted, error-free, or timely</li>
+                <li>We are not liable for damages from data loss; regular backups (JSON export) are recommended</li>
+                <li>We are not liable for actions or service disruptions of third parties (Google, Apple, RevenueCat)</li>
+                <li>We are not liable for disruptions caused by force majeure (natural disasters, internet outages, cyber attacks, etc.)</li>
             </ul>
-            <p><strong>Liability Cap:</strong> To the maximum extent permitted by applicable law, RodiNote's total liability shall be limited to the subscription fees paid by the user to the application during the last 12 months, or USD 100, whichever is less.</p>
 
-            <h3>10. Indemnification</h3>
-            <p>The user agrees to indemnify RodiNote, its owner, developers, and affiliated parties for all claims, lawsuits, losses, damages, costs, and expenses (including attorney's fees) arising from violation of these Terms of Use or unlawful use of the application.</p>
+            <p><strong>Liability Cap:</strong> RodiNote's total liability is limited to the amount paid to the app in the last 12 months or USD 100, whichever is lower.</p>
 
-            <h3>11. Account Termination</h3>
-            <p>RodiNote reserves the right to suspend or terminate your account in the following situations:</p>
+            <h3>8. Account Termination</h3>
+
+            <p>Your account may be suspended or terminated for:</p>
             <ul>
-                <li>Violation of these Terms of Use</li>
+                <li>Violation of these terms</li>
                 <li>Violation of the account sharing prohibition</li>
-                <li>Illegal use or abuse</li>
-                <li>Activities that threaten the security or integrity of the service</li>
-                <li>Request from legal authorities</li>
+                <li>Unlawful or abusive use</li>
+                <li>Activities that threaten service security</li>
             </ul>
-            <p>In case of termination, refunds may not be provided for the remaining subscription period. You can always delete your account at your own request (see Privacy Policy Section 8).</p>
+            <p>Upon termination, refunds may not be issued for the remaining subscription period. You may always delete your account voluntarily.</p>
 
-            <h3>12. Service Changes and Discontinuation</h3>
-            <p>RodiNote reserves the following rights:</p>
-            <ul>
-                <li>To modify the features, content, or functions of the application</li>
-                <li>To discontinue support for certain features</li>
-                <li>To temporarily or permanently halt the application</li>
-                <li>To change the geographical regions where the service is offered</li>
-            </ul>
-            <p>Significant changes will be announced through prior notification. In case of complete discontinuation of the service, users will be given a reasonable period to export their data.</p>
+            <h3>9. Service Changes</h3>
 
-            <h3>13. Force Majeure</h3>
-            <p>RodiNote cannot be held responsible for service disruptions due to natural disasters, war, terrorism, government decisions, internet outages, third-party service interruptions (Apple, Google, Firebase, etc.), cyber attacks, or other force majeure events beyond our control.</p>
+            <p>RodiNote reserves the right to modify app features, content, pricing, or tier structure within legal limits. Significant changes will be announced in-app. If the service is discontinued, users will be given a reasonable period to export their data.</p>
 
-            <h3>14. Changes</h3>
-            <p>These Terms of Use may be updated from time to time. Significant changes:</p>
-            <ul>
-                <li>Will be announced as in-app notifications</li>
-                <li>The "Last Updated" date at the top of the document will be renewed</li>
-                <li>For fundamental changes, your re-consent may be requested</li>
-            </ul>
-            <p>Your continued use of the application after changes constitutes acceptance of the new terms.</p>
+            <h3>10. Changes and Governing Law</h3>
 
-            <h3>15. Entirety and Severability</h3>
-            <p>These Terms of Use constitute the entire and final agreement between the user and RodiNote. If any provision of this Agreement is found to be invalid or unenforceable, the other provisions will remain in full force and effect.</p>
+            <p>These terms may be updated. Significant changes will be announced in-app. Continued use of the app after changes means you accept the new terms.</p>
 
-            <h3>16. Governing Law and Jurisdiction</h3>
-            <p>These Terms of Use are governed by the laws of the Republic of Turkey. The <strong>Istanbul Central Courts and Enforcement Offices of the Republic of Turkey</strong> have exclusive jurisdiction in resolving any disputes arising from or relating to this Agreement. For consumer rights-related disputes, the consumer arbitration committee or consumer courts at the consumer's place of residence are also competent.</p>
+            <p>These terms are governed by the laws of the Republic of Türkiye. Consumer-related disputes may be brought before the consumer arbitration committee or consumer courts in the consumer's place of residence.</p>
 
-            <h3>17. Contact</h3>
+            <h3>11. Contact</h3>
+
             <div class="contact-box">
-                For questions or requests about our terms of use, you can reach us at:<br><br>
-                <strong>Service Provider:</strong> ROBİN ÖZTUNÇ<br>
+                <strong>Service Provider:</strong> Robin Öztunç<br>
                 <strong>Email:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
                 <strong>Response Time:</strong> Within 30 days
             </div>
         </div>
-
-        <div class="footer">
-            <p>&copy; 2026 RodiNote. Tüm hakları saklıdır. / All rights reserved.</p>
-            <p><a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a></p>
-        </div>
-
     </div>
 </body>
 </html>
