@@ -6,8 +6,6 @@
     <title>RodiNote — Hukuki Belgeler / Legal Documents</title>
     <meta name="description" content="RodiNote Gizlilik Politikası ve Kullanım Koşulları / Privacy Policy and Terms of Use">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
@@ -31,7 +29,7 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.7;
@@ -246,13 +244,13 @@
         <!-- ==================== GİZLİLİK POLİTİKASI (TR) ==================== -->
         <div class="section" id="gizlilik">
             <h2>Gizlilik Politikası</h2>
-            <p class="update-date">Son Güncelleme: 10 Mayıs 2026</p>
+            <p class="update-date">Son Güncelleme: 20 Mayıs 2026</p>
 
             <p>Bu politika, RodiNote uygulamasını kullanırken kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar. Uygulamayı kullanarak bu politikayı kabul etmiş olursunuz.</p>
 
             <div class="contact-box">
                 <strong>Veri Sorumlusu:</strong> Robin Öztunç<br>
-                <strong>İletişim:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
+                <strong>İletişim:</strong> <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a>
             </div>
 
             <h3>1. Toplanan Veriler</h3>
@@ -276,18 +274,23 @@
                     <tr>
                         <th>Hizmet</th>
                         <th>Amaç</th>
+                        <th>Gizlilik Politikası</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Firebase (Authentication, Firestore, Functions)</td><td>Hesap, veri saklama, sunucu işlemleri</td></tr>
-                    <tr><td>Google Gemini API</td><td>AI ile kart oluşturma</td></tr>
-                    <tr><td>Google AdMob</td><td>Reklam (sadece ücretsiz kullanıcılar)</td></tr>
-                    <tr><td>RevenueCat</td><td>Abonelik yönetimi</td></tr>
-                    <tr><td>Apple / Google Play</td><td>Ödeme işlemleri</td></tr>
+                    <tr><td>Firebase (Authentication, Firestore, Functions)</td><td>Hesap, veri saklama, sunucu işlemleri</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>Google Sign-In / Apple Sign-In</td><td>Hesap girişi</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> / <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a></td></tr>
+                    <tr><td>Google Gemini API</td><td>AI ile kart oluşturma</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>Google AdMob & UMP (Consent SDK)</td><td>Reklam ve onay yönetimi (yalnızca ücretsiz kullanıcılar)</td><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>Apple ATT (App Tracking Transparency)</td><td>iOS izleme izni</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>RevenueCat</td><td>Abonelik yönetimi</td><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>Apple App Store / Google Play</td><td>Ödeme işlemleri</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a> / <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td></tr>
                 </tbody>
             </table>
 
             <p>Verileriniz <strong>satılmaz veya kiralanmaz</strong>. Yalnızca yukarıdaki hizmetlerle, hizmetin sağlanması için gereken kadar paylaşılır.</p>
+
+            <p><strong>Yurt Dışı Veri Aktarımı:</strong> Firebase verileri Avrupa (eur3) bölgesinde saklanır. Google Gemini API isteklerinizi işlerken veriler Google'ın küresel altyapısı üzerinden Amerika Birleşik Devletleri'nde işlenebilir. Uygulamayı kullanarak ve AI özelliğini çalıştırarak bu yurt dışı aktarıma KVKK madde 9 kapsamında açık rıza vermiş sayılırsınız. Veri yalnızca isteğin işlenmesi süresince geçici tutulur, saklanmaz.</p>
 
             <h3>3. Veri Saklama</h3>
 
@@ -304,7 +307,7 @@
 
             <h3>5. Çocukların Gizliliği</h3>
 
-            <p>RodiNote, 13 yaşından küçük çocuklardan bilerek veri toplamaz. 13-18 yaş arası kullanıcılar için ebeveyn/yasal vasi gözetimi tavsiye edilir. 13 yaşın altındaki bir çocuğun veri paylaştığını fark ederseniz <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a> adresinden bizimle iletişime geçin; veri en kısa sürede silinecektir. COPPA, GDPR-K ve KVKK çocuk koruma hükümlerine uygun davranılır.</p>
+            <p>RodiNote'un App Store yaş derecelendirmesi <strong>13+</strong>'dır (Kore Cumhuriyeti'nde 12+, Brezilya'da AM olarak sınıflandırılmıştır). 13 yaşından küçük çocuklardan bilerek kişisel veri toplamayız ve onlara yönelik pazarlama yapmayız. Avrupa Birliği kullanıcıları için GDPR-K kapsamında 16 yaş altı kullanıcıların hesap oluşturması ebeveyn/yasal vasi rızasını gerektirir. 13-18 yaş arası kullanıcılar için ebeveyn/yasal vasi gözetimi önerilir. 13 yaşın altındaki bir çocuğun veri paylaştığını fark ederseniz <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a> adresinden bize bildirin; veri en kısa sürede silinecektir. COPPA, GDPR-K ve KVKK çocuk koruma hükümlerine uygun davranılır.</p>
 
             <h3>6. Kullanıcı Haklarınız (KVKK / GDPR / CCPA)</h3>
 
@@ -334,7 +337,7 @@
             <p>Hesabınızı ve tüm verilerinizi iki yolla silebilirsiniz:</p>
             <ol>
                 <li><strong>Uygulama içinden:</strong> Ayarlar → Hesabım → Hesabımı Sil</li>
-                <li><strong>E-posta ile:</strong> <a href="mailto:rodinoteapp@gmail.com?subject=Hesap%20Silme%20Talebi">rodinoteapp@gmail.com</a> adresine "Hesap Silme Talebi" konulu mesaj gönderin (kayıtlı e-postanızdan)</li>
+                <li><strong>E-posta ile:</strong> <a href="mailto:rodinotesupport@gmail.com?subject=Hesap%20Silme%20Talebi">rodinotesupport@gmail.com</a> adresine "Hesap Silme Talebi" konulu mesaj gönderin (kayıtlı e-postanızdan)</li>
             </ol>
             <p>Talep alındıktan sonra verileriniz en geç 30 gün içinde kalıcı olarak silinir. Bu işlem geri alınamaz; verilerinizi yedeklemek için JSON dışa aktarma özelliğini kullanabilirsiniz.</p>
 
@@ -343,7 +346,7 @@
             <p>Bu politika güncellenebilir. Önemli değişiklikler uygulama içinde bildirilecek ve "Son Güncelleme" tarihi yenilenecektir. Uygulamayı kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir.</p>
 
             <div class="contact-box">
-                <strong>İletişim:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
+                <strong>İletişim:</strong> <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a><br>
                 <strong>Yanıt Süresi:</strong> En geç 30 gün<br>
                 <strong>KVKK Şikayet:</strong> <a href="https://www.kvkk.gov.tr" target="_blank" rel="noopener">www.kvkk.gov.tr</a>
             </div>
@@ -354,13 +357,13 @@
         <!-- ==================== PRIVACY POLICY (EN) ==================== -->
         <div class="section" id="privacy">
             <h2>Privacy Policy</h2>
-            <p class="update-date">Last Updated: May 10, 2026</p>
+            <p class="update-date">Last Updated: May 20, 2026</p>
 
             <p>This policy explains how your personal data is collected, used, and protected when using RodiNote. By using the app, you accept this policy.</p>
 
             <div class="contact-box">
                 <strong>Data Controller:</strong> Robin Öztunç<br>
-                <strong>Contact:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
+                <strong>Contact:</strong> <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a>
             </div>
 
             <h3>1. Data We Collect</h3>
@@ -384,18 +387,23 @@
                     <tr>
                         <th>Service</th>
                         <th>Purpose</th>
+                        <th>Privacy Policy</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Firebase (Authentication, Firestore, Functions)</td><td>Account, data storage, server operations</td></tr>
-                    <tr><td>Google Gemini API</td><td>AI card generation</td></tr>
-                    <tr><td>Google AdMob</td><td>Advertising (free users only)</td></tr>
-                    <tr><td>RevenueCat</td><td>Subscription management</td></tr>
-                    <tr><td>Apple / Google Play</td><td>Payment processing</td></tr>
+                    <tr><td>Firebase (Authentication, Firestore, Functions)</td><td>Account, data storage, server operations</td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>Google Sign-In / Apple Sign-In</td><td>Account sign-in</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> / <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a></td></tr>
+                    <tr><td>Google Gemini API</td><td>AI card generation</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>Google AdMob & UMP (Consent SDK)</td><td>Advertising and consent management (free users only)</td><td><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>Apple ATT (App Tracking Transparency)</td><td>iOS tracking permission</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>RevenueCat</td><td>Subscription management</td><td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Link</a></td></tr>
+                    <tr><td>Apple App Store / Google Play</td><td>Payment processing</td><td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple</a> / <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td></tr>
                 </tbody>
             </table>
 
             <p>Your data is <strong>never sold or rented</strong>. It is shared only with the services above, only as needed to provide the service.</p>
+
+            <p><strong>International Data Transfers:</strong> Firebase data is stored in European (eur3) regions. The Google Gemini API may process your requests on Google's global infrastructure, including servers located in the United States. By using the app and the AI feature, you consent to this international transfer. Content is held in memory only for the duration of the request and is not stored.</p>
 
             <h3>3. Data Retention</h3>
 
@@ -412,7 +420,7 @@
 
             <h3>5. Children's Privacy</h3>
 
-            <p>RodiNote does not knowingly collect data from children under 13. Users aged 13-18 are advised to use the app under parental/guardian supervision. If you become aware that a child under 13 has shared data, please contact <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a> and we will delete it as soon as possible. We comply with COPPA, GDPR-K, and KVKK child protection provisions.</p>
+            <p>RodiNote's App Store age rating is <strong>13+</strong> (12+ in Korea, AM in Brazil). We do not knowingly collect personal data from children under 13 or market to them. For European Union users, GDPR-K requires parental/guardian consent for account creation by users under 16. Users aged 13-18 are advised to use the app under parental/guardian supervision. If you become aware that a child under 13 has shared data, please contact <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a> and we will delete it as soon as possible. We comply with COPPA, GDPR-K, and KVKK child protection provisions.</p>
 
             <h3>6. Your Rights (GDPR / CCPA / KVKK)</h3>
 
@@ -442,7 +450,7 @@
             <p>You can delete your account and all data in two ways:</p>
             <ol>
                 <li><strong>In-app:</strong> Settings → Account → Delete My Account</li>
-                <li><strong>By email:</strong> Send a message titled "Account Deletion Request" to <a href="mailto:rodinoteapp@gmail.com?subject=Account%20Deletion%20Request">rodinoteapp@gmail.com</a> (from your registered email)</li>
+                <li><strong>By email:</strong> Send a message titled "Account Deletion Request" to <a href="mailto:rodinotesupport@gmail.com?subject=Account%20Deletion%20Request">rodinotesupport@gmail.com</a> (from your registered email)</li>
             </ol>
             <p>Once requested, your data will be permanently deleted within 30 days. This action is irreversible; you can use the JSON export feature to back up your data first.</p>
 
@@ -451,7 +459,7 @@
             <p>This policy may be updated. Significant changes will be announced in-app and the "Last Updated" date will be revised. Continued use of the app means you accept the updated policy.</p>
 
             <div class="contact-box">
-                <strong>Contact:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
+                <strong>Contact:</strong> <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a><br>
                 <strong>Response Time:</strong> Within 30 days
             </div>
         </div>
@@ -461,13 +469,13 @@
         <!-- ==================== KULLANIM KOŞULLARI (TR) ==================== -->
         <div class="section" id="kullanim">
             <h2>Kullanım Koşulları</h2>
-            <p class="update-date">Son Güncelleme: 10 Mayıs 2026</p>
+            <p class="update-date">Son Güncelleme: 20 Mayıs 2026</p>
 
             <p>Bu koşullar, RodiNote uygulamasının kullanımına ilişkin yasal şartları belirler. Uygulamayı kullanarak bu koşulları kabul etmiş olursunuz. Koşulları kabul etmiyorsanız uygulamayı kullanmamalısınız.</p>
 
             <div class="contact-box">
                 <strong>Hizmet Sağlayıcı:</strong> Robin Öztunç<br>
-                <strong>İletişim:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
+                <strong>İletişim:</strong> <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a>
             </div>
 
             <h3>1. Hizmet Tanımı</h3>
@@ -491,7 +499,7 @@
             <ul>
                 <li>Uygulamayı yasadışı amaçlarla kullanmayacaksınız</li>
                 <li>Tersine mühendislik, kaynak kod çıkarma veya türev eserler oluşturmayacaksınız</li>
-                <li>Uygulamayı kopyalamayacak, yetkisiz dağıtmayacak veya kiralanmayacaksınız</li>
+                <li>Uygulamayı kopyalamayacak, yetkisiz dağıtmayacak veya kiralamayacaksınız</li>
                 <li>AI özelliğini yasadışı, zararlı, telif hakkı ihlali içeren içerik oluşturmak için kullanmayacaksınız</li>
                 <li>Birden çok hesap oluşturarak ücretsiz limitleri kötüye kullanmayacaksınız</li>
                 <li>Uygulamanın güvenliğini tehdit eden faaliyetlerde bulunmayacaksınız (bot, scraping vb.)</li>
@@ -525,7 +533,7 @@
             <h3>6. Hazır Şablon Mağazası — Sorumluluk Reddi</h3>
 
             <div class="ai-warning-box">
-                <p><strong>1. İçerik Niteliği:</strong> Mağazada sunulan TYT, AYT, LGS ve diğer hazır şablon kart setleri <strong>yalnızca yardımcı tekrar materyalleridir</strong>. MEB resmi ders kitapları, müfredatları veya akademik kaynakların yerini tutmaz.</p>
+                <p><strong>1. İçerik Niteliği:</strong> Mağazada sunulan TYT, AYT, LGS ve diğer hazır şablon kart setleri <strong>yalnızca yardımcı tekrar materyalleridir</strong>. Millî Eğitim Bakanlığı (MEB) resmi ders kitapları, müfredatları veya akademik kaynakların yerini tutmaz.</p>
 
                 <p><strong>2. Doğruluk Garantisi Yoktur:</strong> Hazır şablon içerikleri <strong>hatalı, eksik, güncel olmayan veya tartışmalı bilgiler içerebilir</strong>. İçerikler periyodik olarak güncellenebilir, değiştirilebilir veya kaldırılabilir; müfredat değişikliklerine göre güncellenme garantisi verilmez.</p>
 
@@ -533,7 +541,7 @@
 
                 <p><strong>4. Sorumluluk Reddi:</strong> RodiNote, hazır şablon içeriklerinin doğruluğu, bütünlüğü, güncelliği veya akademik uygunluğu hakkında hiçbir garanti vermez. Bu içeriklere dayalı olarak alınan kararlardan, sınav başarısızlıklarından, akademik kayıplardan, eğitim hayatınıza etkilerinden veya diğer zararlardan RodiNote, sahibi ve geliştiricileri <strong>hiçbir şekilde sorumlu tutulamaz</strong>.</p>
 
-                <p><strong>5. Hata Bildirimi:</strong> Fark ettiğiniz hataları <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a> adresine bildirebilirsiniz. Bildirimler değerlendirilir ancak güncelleme zamanı veya yapılıp yapılmayacağı RodiNote'un takdirindedir.</p>
+                <p><strong>5. Hata Bildirimi:</strong> Fark ettiğiniz hataları <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a> adresine bildirebilirsiniz. Bildirimler değerlendirilir ancak güncelleme zamanı veya yapılıp yapılmayacağı RodiNote'un takdirindedir.</p>
 
                 <p><strong>6. Kullanıcı Onayı:</strong> Mağazadan içerik indirerek, görüntüleyerek veya kullanarak bu maddenin tamamını ve sorumluluk sınırlamalarını kabul etmiş sayılırsınız.</p>
             </div>
@@ -549,7 +557,7 @@
                 <li>Mücbir sebepler (doğal afet, internet kesintisi, siber saldırı vb.) nedeniyle oluşan aksaklıklardan sorumlu tutulamayız</li>
             </ul>
 
-            <p><strong>Sorumluluk Limiti:</strong> RodiNote'un toplam sorumluluğu, kullanıcının uygulamaya ödediği son 12 aylık abonelik ücreti veya 100 USD (hangisi düşükse) ile sınırlıdır.</p>
+            <p><strong>Sorumluluk Limiti:</strong> RodiNote'un toplam sorumluluğu, kullanıcının uygulamaya ödediği son 12 aylık abonelik ücreti veya 100 USD (hangisi düşükse) ile sınırlıdır. Tüketici Hukuku (TKHK) kapsamındaki tüketici hakları saklıdır; bu sınırlama tüketicinin yasal haklarını ortadan kaldırmaz.</p>
 
             <h3>8. Hesap Sonlandırma</h3>
 
@@ -576,7 +584,7 @@
 
             <div class="contact-box">
                 <strong>Hizmet Sağlayıcı:</strong> Robin Öztunç<br>
-                <strong>E-posta:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
+                <strong>E-posta:</strong> <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a><br>
                 <strong>Yanıt Süresi:</strong> En geç 30 gün
             </div>
         </div>
@@ -586,13 +594,13 @@
         <!-- ==================== TERMS OF USE (EN) ==================== -->
         <div class="section" id="terms">
             <h2>Terms of Use</h2>
-            <p class="update-date">Last Updated: May 10, 2026</p>
+            <p class="update-date">Last Updated: May 20, 2026</p>
 
             <p>These terms govern your use of RodiNote. By using the app, you accept these terms. If you do not agree, do not use the app.</p>
 
             <div class="contact-box">
                 <strong>Service Provider:</strong> Robin Öztunç<br>
-                <strong>Contact:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>
+                <strong>Contact:</strong> <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a>
             </div>
 
             <h3>1. Service Description</h3>
@@ -658,7 +666,7 @@
 
                 <p><strong>4. Disclaimer of Liability:</strong> RodiNote provides no warranty regarding the accuracy, completeness, currency, or academic suitability of template content. RodiNote, its owner, and developers <strong>cannot be held liable in any way</strong> for any decisions, exam failures, academic losses, impacts on your education, or other harms arising from this content.</p>
 
-                <p><strong>5. Error Reports:</strong> You can report errors to <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a>. Reports are reviewed, but timing or whether updates will be made is at RodiNote's discretion.</p>
+                <p><strong>5. Error Reports:</strong> You can report errors to <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a>. Reports are reviewed, but timing or whether updates will be made is at RodiNote's discretion.</p>
 
                 <p><strong>6. User Acknowledgement:</strong> By downloading, viewing, or using template content from the store, you accept this entire clause and its liability limitations.</p>
             </div>
@@ -674,7 +682,7 @@
                 <li>We are not liable for disruptions caused by force majeure (natural disasters, internet outages, cyber attacks, etc.)</li>
             </ul>
 
-            <p><strong>Liability Cap:</strong> RodiNote's total liability is limited to the amount paid to the app in the last 12 months or USD 100, whichever is lower.</p>
+            <p><strong>Liability Cap:</strong> RodiNote's total liability is limited to the amount paid to the app in the last 12 months or USD 100, whichever is lower. Mandatory consumer rights under applicable law are reserved; this limitation does not override any statutory consumer rights.</p>
 
             <h3>8. Account Termination</h3>
 
@@ -701,7 +709,7 @@
 
             <div class="contact-box">
                 <strong>Service Provider:</strong> Robin Öztunç<br>
-                <strong>Email:</strong> <a href="mailto:rodinoteapp@gmail.com">rodinoteapp@gmail.com</a><br>
+                <strong>Email:</strong> <a href="mailto:rodinotesupport@gmail.com">rodinotesupport@gmail.com</a><br>
                 <strong>Response Time:</strong> Within 30 days
             </div>
         </div>
