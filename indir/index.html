@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RodiNote — İndir</title>
+  <meta name="description" content="RodiNote: notlarını oyuna dönüştür. Turn your notes into games.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #F6F5F2; --card: #FFFFFF; --text: #1A1815; --sub: #5C5751; --accent: #4B3BD1; --line: rgba(23,21,18,0.08); }
+    @media (prefers-color-scheme: dark) { :root { --bg: #13111F; --card: #1C1930; --text: #ECEAF6; --sub: #A39FBD; --accent: #9C93F0; --line: #2E2A47; } }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg); color: var(--text);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px 16px; -webkit-font-smoothing: antialiased; }
+    .kart { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 32px 24px; max-width: 420px; width: 100%; text-align: center; }
+    h1 { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+    p { color: var(--sub); line-height: 1.55; margin-bottom: 24px; }
+    .dugmeler { display: flex; flex-direction: column; gap: 12px; }
+    a.dugme, span.dugme { display: block; padding: 14px 18px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+    a.dugme { background: var(--accent); color: #fff; }
+    span.dugme { border: 1px solid var(--line); color: var(--sub); }
+    .not { font-size: 0.85rem; margin-top: 16px; margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <main class="kart">
+    <h1>RodiNote</h1>
+    <p id="alt">Notlarını oyuna dönüştür.</p>
+    <div class="dugmeler">
+      <a class="dugme" id="play" href="https://play.google.com/store/apps/details?id=com.rodinote.app">Google Play</a>
+      <span class="dugme" id="ios">App Store · yakında</span>
+    </div>
+    <p class="not" id="not"></p>
+  </main>
+  <script>
+    // iOS UYGULAMA KIMLIGI: App Store'a cikinca buraya yazilir (yalniz rakamlar). Bos iken iOS "yakinda" der.
+    // Uygulamadaki karsiligi: app.json → expo.extra.iosUygulamaKimligi (ikisi AYNI sayi olmali).
+    var IOS_KIMLIK = '';
+    var PLAY = 'https://play.google.com/store/apps/details?id=com.rodinote.app';
+    var tr = (navigator.language || 'tr').toLowerCase().indexOf('tr') === 0;
+    var ua = navigator.userAgent || '';
+    var android = /Android/i.test(ua);
+    var ios = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && 'ontouchend' in document);
+    var appStore = IOS_KIMLIK ? 'https://apps.apple.com/app/id' + IOS_KIMLIK : null;
+    if (!tr) {
+      document.documentElement.lang = 'en';
+      document.getElementById('alt').textContent = 'Turn your notes into games.';
+    }
+    var iosEl = document.getElementById('ios');
+    if (appStore) {
+      var a = document.createElement('a'); a.className = 'dugme'; a.href = appStore; a.textContent = 'App Store';
+      iosEl.parentNode.replaceChild(a, iosEl);
+    } else if (!tr) {
+      iosEl.textContent = 'App Store · coming soon';
+    }
+    if (android) {
+      window.location.replace(PLAY);
+    } else if (ios) {
+      if (appStore) window.location.replace(appStore);
+      else document.getElementById('not').textContent = tr ? 'iPhone sürümü yakında App Store’da.' : 'The iPhone version is coming soon to the App Store.';
+    }
+  </script>
+</body>
+</html>
